@@ -2,8 +2,8 @@
 
 ## Basic Literal Types
 
-### null -- intentional empty value
-null is often found in a place where an object can be expected but no object is relevant.
+### `null` -- intentional empty value
+`null` is often found in a place where an object can be expected but no object is relevant.
 
   > // foo does not exist, it is not defined and has never been initialized:
   
@@ -17,8 +17,8 @@ null is often found in a place where an object can be expected but no object is 
   
   > "null"
 
-### Boolean -- has two literal values- 'true' and 'false'
-The Boolean data type is primarily associated with conditional statements, which allow different actions and change control flow depending on whether a programmer-specified Boolean condition evaluates to true or false.
+### `Boolean` -- has two literal values- 'true' and 'false'
+The `Boolean` data type is primarily associated with conditional statements, which allow different actions and change control flow depending on whether a programmer-specified `Boolean` condition evaluates to `true` or `false`.
 
   > Boolean(5>6); /* false */
   
@@ -28,7 +28,7 @@ The Boolean data type is primarily associated with conditional statements, which
   
   > Boolean(1); /* true */
 
-### Number -- numeric data type
+### `Number` -- numeric data type
 In JavaScript numbers are typically integers (whole numbers and decimals)
 
   > 1
@@ -50,7 +50,7 @@ sequence of characters used to represent text
 
 ## Special Constants
 
-### Infinity --
+### `Infinity` --
 
   > console.log(1 / Infinity); /* 0 */
 
@@ -64,13 +64,13 @@ sequence of characters used to represent text
 
 
 
-### NaN --
+### `NaN` -- not a number
+numeric data type that means an undefined value or value that cannot be represented, especially results of floating-point calculations.
 
-    
-    
-    
+  > 12/0 //NaN
 
-### undefined -- variable that has not been assigned a value
+
+### `undefined` -- variable that has not been assigned a value
 
   > // logs "foo string"
 
