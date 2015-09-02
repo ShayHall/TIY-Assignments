@@ -121,6 +121,16 @@ The `remainder` operator returns the first operand modulo the second operand.
 
   > 15%2 // yields 1
 
+### `Unary Operators` -- Operators that only take one operand
+Most operators require two operands, but some don't!
+
+#### `typeof` -- determines type of given operand
+
+> typeof "Word" // returns String
+
+#### `-` -- makes a value negative
+> var one = 1;
+> `-one` = -1 // Makes a value negative
 
 ### Comparisons
 
@@ -133,11 +143,9 @@ The greater than operator returns true if the left operand is greater than the r
 
 #### `<` -- less than
 
-  > 
+  > 5 < 10 // yields "true"
   
-  > 
-  
-  >   
+  > "this".length < 2 // yields "false"
 
 #### `==` -- equal to
 
@@ -200,4 +208,67 @@ A sequence of characters in the code that identifies a variable, function, or pr
   
   >variableName +2 // yields 7
 
+## Control Flow
+
+### Functions
+
+Functions are a form of [control flow](http://en.wikipedia.org/wiki/Control_flow) used in computer programs... (you fill in the rest)
+
+#### `function` -- keyword
+
+The `function` keyword is used to _define_ a function with parentheses and curly braces:
+
+    // This is a Function Definition for `whatever`...
+    function whatever ( /* arguments go here */ ) {
+      // body of function goes here
+    }
+
+A function has three things: 1) input, 2) output, 3) side effects.
+The output is `undefined` by default.
+
+##### `anonymous function` -- no name has been assigned 
+
+> console.log(2);
+> function(){};
+
+##### `function expression` -- defines function as part of larger expression syntax
+A Function Expression is typically a variable assignment.
+
+> //anonymous function expression
+> var a = function() {
+>    return 3;
+> }
+> 
+> //named function expression
+>var a = function bar() {
+>    return 3;
+>}
+> 
+> //self invoking function expression
+>(function sayHello() {
+>    alert("hello!");
+> })();
+
+##### `function delcaration` -- defines a function with specified parameters
+
+> function (a,b) {
+> };
+
+##### `function invocation` -- puts the function to work
+
+> functionName ();
+
+##### `function definition` -- gives a job to a function
+
+> function <identifier>() {
+> };
+
+> function bar() {
+>    return 3;
+> }
+
+##### `parameters` -- named variable passed into a function
+> Parameter variables are used to import arguments into functions.
+> function functionName (parameter1, parameter2) {
+> };
 
