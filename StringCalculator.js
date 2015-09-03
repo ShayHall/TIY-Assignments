@@ -187,5 +187,5 @@ function minus(A, B) {
       break;
    }
  }; //END MINUS
-
+  
 // What about multiplication? Division? Exponents?
