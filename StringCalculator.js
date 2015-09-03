@@ -23,23 +23,23 @@ function fromEnglish(word){
   if (word == "zero") {
   word == 0;
   } else if (word == "one"){
-    word == 1;
+    word = 1;
   } else if (word == "two") {
-    word == 2;
+    word = 2;
   } else if (word == "three") {
-    word == 3;
+    word = 3;
   } else if (word == "four") {
-    word == 4;
+    word = 4;
   } else if (word == "five") {
-    word == 5;
+    word = 5;
   } else if (word == "six") {
-    word == 6;
+    word = 6;
   } else if (word == "seven") {
-  word == 7;
+  word = 7;
   } else if (word == "eight") {
-    word == 8;
+    word = 8;
   } else if (word == "nine") {
-    word == 9
+    word = 9
   };
 };
 } // END fromEnglish
@@ -64,14 +64,63 @@ test('plus: ("zero", "zero") through ("zero", "nine")', function(){
  * @return {Number} the value of `A` added to `B`
  */
 function plus(A, B){
-  // write those tests first, please...
-} // END plus
+  if (A == "zero") {
+    A = 0;
+
+    if (B == "zero") {
+      B = 0;
+      return A + B;
+    } else if (B == "one"){
+      B = 1;
+      return A + B;
+    } else if (B == "two") {
+      B = 1;
+      return A + B;
+    } else if (B == "three") {
+      B = 1;
+      return A + B;
+    } else if (B == "four") {
+      B = 1;
+      return A + B;
+    } else if (B == "five") {
+      B = 1;
+      return A + B;
+    } else if (B == "six") {
+      B = 1;
+      return A + B;
+    } else if (B == "seven") {
+      B = 1;
+      return A + B;
+    } else if (B == "eight") {
+      B = 1;
+      return A + B;
+    } else if (B == "nine") {
+      B = 1;
+      return A + B;
+    };
+};
+  };// END plus
 
 test('minus: ("zero", "zero") through ("zero", "nine")', function(){
   expect(minus).to.exist;
   expect(minus("zero", "zero")).to.equal(0);
   expect(minus("zero", "one")).to.equal(-1);
-  // etc, etc, etc
-}); // END test(minus)
+  expect(minus("zero", "two")).to.equal(-2);
+  expect(minus("zero", "three")).to.equal(-3);
+  expect(minus("zero", "four")).to.equal(-4);
+  expect(minus("zero", "five")).to.equal(-5);
+  expect(minus("zero", "six")).to.equal(-6);
+  expect(minus("zero", "seven")).to.equal(-7);
+  expect(minus("zero", "eight")).to.equal(-8);
+  expect(minus("zero", "nine")).to.equal(-9);
+});
+/**
+ * @param {String} A representing an English number word
+ * @param {String} B representing an English number word
+ * @return {Number} the value of `A` added to `B`
+ */
+function minus(A, B){
+  return A - B;
+} // END test(minus)
 
 // What about multiplication? Division? Exponents?
