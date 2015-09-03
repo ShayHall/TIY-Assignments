@@ -7,7 +7,7 @@ test('fromEnglish: "zero" through "nine"', function(){
   expect(fromEnglish("one")).to.equal(1);
   // more tests here, please...
 }); // END test(fromEnglish)
-
+ 
 /**
  * @param {String} word representing an English number
  * @return {Number} value corresponding to `word`
