@@ -272,3 +272,13 @@ A Function Expression is typically a variable assignment.
 > function functionName (parameter1, parameter2) {
 > };
 
+//todo
+Reading JavaScript: Control Flow
+
+Using the MDN and your own research, describe the control flow constructs: { } as a block operator, if and else Then read and cover the looping and iteration keywords: for, while, and do/while.
+BEAST MODE
+
+If you're looking for more of a challenge, read up on switch / case and the other for-type loops. Document them, as well, providing examples.
+NIGHTMARE MODE
+
+The error handling constructs -- try / catch / finally and throw -- can be a bit puzzling. Review them if you're still not satisfied with your understanding of Control Flow. Be prepared for some wackiness.
