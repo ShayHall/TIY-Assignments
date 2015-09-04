@@ -309,11 +309,31 @@ identifies blocks of code that are executed when first condition is false.
   a += 1;
 } while (a < 10);```
 
-/* This is all Beast and Nightmare...
+###### switch -- evaluates an expression and checks it against case clauses and if true executes that case's statements
+`break` is used to move to next case.
+`default` gives a statement to execute if no
 
-###### switch
+```switch (1 + 2) {
+  case 3:
+  console.log("Truth!");
+  break;
+  case "bananas":
+  console.log("Lies!");
+  break;
+  default:
+  return "Do some math."
+}```
 
-###### for
+###### for -- a loop that repeats until specific condition evaluates to false
+```for (`initial expression`; `condition`; `incrementExpression`)
+statement
+
+for (var i=0; i<4; i+=1) {
+  console.log(i);
+} //yields 1,2,3 ```
+
+
+
 
 ###### for ( . . . in . . .)
 
@@ -321,4 +341,4 @@ identifies blocks of code that are executed when first condition is false.
 
 ###### throw
 
-###### the Exception type */
+###### the Exception type
