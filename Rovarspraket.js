@@ -18,13 +18,13 @@ console.assert(isNaN(max("aaa","bbb")));
  * @param {Number} B to compare to A
  * @return {Number} the greater of A or B
  */
-function max(A, B){
-    if (A > B) {
-      return A;
-    } else {
-      return B;
-    };
-    }
+function max(A, B) {
+  if (A > B) {
+    return A;
+  } else {
+    return B;
+  };
+}
 
 /**
  * Write a function `maxOfThree` that takes _three_
@@ -48,15 +48,14 @@ console.assert(isNaN(maxOfThree("aaa","bbb","ccc")));
  * @return {Number} greatest of A, B, and C
  */
 function maxOfThree(A, B, C) {
-    if (A > B > C) {
-      return A;
-    } else if (C > B) {
-      return C;
-    } else {
-      return B;
-    };
-  }
-  } //end of maxOfThree
+  if ((A > B) && (A > C)) {
+    return A;
+  } else if (B > C) {
+    return B;
+  } else {
+    return C;
+  };
+} //end of maxOfThree
 
 
 /**
@@ -66,7 +65,7 @@ function maxOfThree(A, B, C) {
  */
 
 // What a cruel, cruel master you are...
-//console.assert(isVowel(0) === false);
+console.assert(isVowel(0) === false);
 
 console.assert(isVowel("B") === false);
 console.assert(isVowel("b") === false);
@@ -81,27 +80,16 @@ console.assert(isVowel("E") === true);
  * @return {Boolean} whether `char` is an English vowel
  */
 function isVowel(char) {
-      if (char === "a") {
-        case "a":
-          return true;
-          break;
-        case "e":
-          return true;
-          break;
-        case "i":
-          return true;
-          break;
-        case "o":
-          return true;
-          break;
-        case "u":
-          return true;
-          break;
-        default:
-          return false;
-      }
-    } // end of isVowel
-
+  var vowel = ["A", "a", "E", "e", "I", "i", "O", "o", "U", "u"];
+  for (var i=0; i < isVowel.length; i++) {
+    if (char === i) {
+      return true;
+    } else {
+      return false;
+    }
+  };//END for loop
+}//END isVowel
+//stop auto atom!
 /**
  * The `disemvowel` function combats the Internet
  * Trolls by handily removing all of the vowels from
