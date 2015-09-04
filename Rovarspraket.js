@@ -23,9 +23,8 @@ function max(A, B){
       return A;
     } else {
       return B;
+    };
     }
-    }// YOUR CODE HERE
-}
 
 /**
  * Write a function `maxOfThree` that takes _three_
@@ -48,9 +47,17 @@ console.assert(isNaN(maxOfThree("aaa","bbb","ccc")));
  * @param {Number} C
  * @return {Number} greatest of A, B, and C
  */
-function maxOfThree(A, B, C){
-    // YOUR CODE HERE
-}
+function maxOfThree(A, B, C) {
+    if (A > B > C) {
+      return A;
+    } else if (C > B) {
+      return C;
+    } else {
+      return B;
+    };
+  }
+  } //end of maxOfThree
+
 
 /**
  * Write a function `isVowel` that takes a character
