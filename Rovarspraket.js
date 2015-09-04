@@ -80,24 +80,50 @@ console.assert(isVowel("E") === true);
  * @return {Boolean} whether `char` is an English vowel
  */
 function isVowel(char) {
-  var vowel = ["A", "a", "E", "e", "I", "i", "O", "o", "U", "u"];
-  for (var i=0; i < isVowel.length; i++) {
-    if (char === i) {
-      return true;
-    } else {
-      return false;
-    }
-  };//END for loop
-}//END isVowel
-//stop auto atom!
+switch(char) {
+  case 'a':
+    return true;
+    break;
+  case "A":
+    return true;
+    break;
+  case 'e':
+    return true;
+    break;
+  case 'E':
+    return true;
+    break;
+  case 'i':
+    return true;
+    break;
+  case 'I':
+    return true;
+    break;
+  case 'o':
+    return true;
+    break;
+  case 'O':
+    return true;
+    break;
+  case 'u':
+    return true;
+    break;
+  case 'U':
+    return true;
+    break;
+  default:
+    return false;
+  }  //END isVowel
+
 /**
  * The `disemvowel` function combats the Internet
  * Trolls by handily removing all of the vowels from
- * their angry, hurtful comments. It's Super-Effective!
+ * their angry, hurtful comments. Its Super-Effective!
  *
  * @param {String} comment to disemvowel
  * @return {String} cmmnt dsmvwld
  */
+
 function disemvowel(comment){
   // YOUR CODE HERE
 }
