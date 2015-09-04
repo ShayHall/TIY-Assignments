@@ -335,10 +335,20 @@ for (var i=0; i<4; i+=1) {
 
 
 
-###### for ( . . . in . . .)
+###### for ( . . . in . . .) -- statement iterates specified variable over all enumerable properties of an object.
+For each distince property the specific statement will be executed.
 
-###### try/catch
+###### try/catch --marks a block of statement to try, and if there is an exception thrown, it specified a response
+```try {
+  "TRYcycle" === "bicycle",
+}
+catch (false) {
+  return "Grow up"
+}```
 
-###### throw
+###### throw -- throws a user-defined exception
+``` example??? ```
 
-###### the Exception type
+
+###### the Exception type -- condition that interrupts normal code execution
+```SyntaxError: Unexpected identifier (real familiar with this one...)```
