@@ -19,7 +19,12 @@ console.assert(isNaN(max("aaa","bbb")));
  * @return {Number} the greater of A or B
  */
 function max(A, B){
-    // YOUR CODE HERE
+    if (A > B) {
+      return A;
+    } else {
+      return B;
+    }
+    }// YOUR CODE HERE
 }
 
 /**
@@ -48,7 +53,7 @@ function maxOfThree(A, B, C){
 }
 
 /**
- * Write a function `isVowel` that takes a character 
+ * Write a function `isVowel` that takes a character
  * (i.e. a `String` of length 1) and returns a `Boolean`
  * indicating whether the input is a vowel or not.
  */
@@ -90,8 +95,8 @@ console.assert(
 );
 
 /**
- * The function `rovarspraket` will translate text into 
- * a "rövarspråket", i.e. double every consonant and 
+ * The function `rovarspraket` will translate text into
+ * a "rövarspråket", i.e. double every consonant and
  * place an occurrence of "o" in between them.
  *
  * For example, `rovarspraket("this is fun")` should
