@@ -17,7 +17,7 @@ test('toEnglish: `0` to `9`', function(){
 }); // END test(toEnglish)
 
 test('toEnglish: `10` to `20`', function(){
-  /*assert.isDefined(toEnglish);
+  assert.isDefined(toEnglish);
   assert.isFunction(toEnglish);
   assert.equal(toEnglish(10), "ten");
   assert.equal(toEnglish(11), "eleven");
@@ -28,7 +28,7 @@ test('toEnglish: `10` to `20`', function(){
   assert.equal(toEnglish(16), "sixteen");
   assert.equal(toEnglish(17), "seventeen");
   assert.equal(toEnglish(18), "eighteen");
-  assert.equal(toEnglish(19), "nineteen");});*/ // END test(toEnglish)
+  assert.equal(toEnglish(19), "nineteen");}); // END test(toEnglish)
 
 test('toEnglish: `21` to `30`', function(){
   // this is where `toEnglish` starts to get interesting...

@@ -66,7 +66,7 @@ function maxOfThree(A, B, C) {
  */
 
 // What a cruel, cruel master you are...
-console.assert(isVowel(0) === false);
+//console.assert(isVowel(0) === false);
 
 console.assert(isVowel("B") === false);
 console.assert(isVowel("b") === false);
@@ -74,15 +74,33 @@ console.assert(isVowel("a") === true);
 console.assert(isVowel("E") === true);
 
 // What should _this_ do?
-// console.assert(isVowel("AEIOU") === FILL_ME_IN);
+//console.assert(isVowel("AEIOU") === false);
 
 /**
  * @param {String} char of length 1
  * @return {Boolean} whether `char` is an English vowel
  */
-function isVowel(char){
-    // YOUR CODE HERE
-}
+function isVowel(char) {
+      if (char === "a") {
+        case "a":
+          return true;
+          break;
+        case "e":
+          return true;
+          break;
+        case "i":
+          return true;
+          break;
+        case "o":
+          return true;
+          break;
+        case "u":
+          return true;
+          break;
+        default:
+          return false;
+      }
+    } // end of isVowel
 
 /**
  * The `disemvowel` function combats the Internet
