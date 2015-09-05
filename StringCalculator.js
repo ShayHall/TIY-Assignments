@@ -154,7 +154,7 @@ test('minus: ("zero", "zero") through ("zero", "nine")', function(){
  */
 
 function minus(A, B) {
-   switch(B, A) {
+   switch(A, B) {
      case 'zero', 'zero':
       return 0;
       break;
@@ -187,5 +187,106 @@ function minus(A, B) {
       break;
    }
  }; //END MINUS
-  
-// What about multiplication? Division? Exponents?
+
+ test('multiply: ("zero", "zero") through ("zero", "nine")', function(){
+   expect(multiply).to.exist;
+   expect(multiply("zero", "zero")).to.equal(0);
+   expect(multiply("zero", "one")).to.equal(0);
+   expect(multiply("zero", "two")).to.equal(0);
+   expect(multiply("zero", "three")).to.equal(0);
+   expect(multiply("zero", "four")).to.equal(0);
+   expect(multiply("zero", "five")).to.equal(0);
+   expect(multiply("zero", "six")).to.equal(0);
+   expect(multiply("zero", "seven")).to.equal(0);
+   expect(multiply("zero", "eight")).to.equal(0);
+   expect(multiply("zero", "nine")).to.equal(0);
+   // etc, etc, etc
+ }); // END test(multiply)
+
+ function multiply(A, B) {
+    switch(A, B) {
+      case 'zero', 'zero':
+       return 0;
+       break;
+      case 'zero', 'one':
+       return 0;
+       break;
+     case 'zero', 'two':
+       return 0;
+       break;
+     case 'zero', 'three':
+       return 0;
+       break;
+     case 'zero', 'four':
+       return 0;
+       break;
+     case 'zero', 'five':
+       return 0;
+       break;
+     case 'zero', 'six':
+       return 0;
+       break;
+     case 'zero', 'seven':
+       return 0;
+       break;
+     case 'zero', 'eight':
+       return 0;
+       break;
+     case 'zero', 'nine':
+       return 0;
+       break;
+    }
+  }; //END MULTIPLICATION
+
+  test('divide: ("zero", "zero") through ("zero", "nine")', function(){
+    expect(divide).to.exist;
+    expect(divide("zero", "zero")).to.equal(undefined);
+    expect(divide("zero", "one")).to.equal(0);
+    expect(divide("zero", "two")).to.equal(0);
+    expect(divide("zero", "three")).to.equal(0);
+    expect(divide("zero", "four")).to.equal(0);
+    expect(divide("zero", "five")).to.equal(0);
+    expect(divide("zero", "six")).to.equal(0);
+    expect(divide("zero", "seven")).to.equal(0);
+    expect(divide("zero", "eight")).to.equal(0);
+    expect(divide("zero", "nine")).to.equal(0);
+    // etc, etc, etc
+  }); // END test(multiply)
+
+  function divide(A, B) {
+     switch(A, B) {
+       case 'zero', 'zero':
+        return undefined;
+        break;
+       case 'zero', 'one':
+        return 0;
+        break;
+      case 'zero', 'two':
+        return 0;
+        break;
+      case 'zero', 'three':
+        return 0;
+        break;
+      case 'zero', 'four':
+        return 0;
+        break;
+      case 'zero', 'five':
+        return 0;
+        break;
+      case 'zero', 'six':
+        return 0;
+        break;
+      case 'zero', 'seven':
+        return 0;
+        break;
+      case 'zero', 'eight':
+        return 0;
+        break;
+      case 'zero', 'nine':
+        return 0;
+        break;
+     }
+   }; //END DIVISION
+
+
+  // What about Exponents?
