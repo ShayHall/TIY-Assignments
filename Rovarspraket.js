@@ -71,7 +71,6 @@ function maxOfThree(A, B, C) {
 
 // What a cruel, cruel master you are...
 console.assert(isVowel(0) === false);
-
 console.assert(isVowel("B") === false);
 console.assert(isVowel("b") === false);
 console.assert(isVowel("a") === true);
@@ -86,8 +85,23 @@ console.assert(isVowel("AEIOU") === false);
  */
 function isVowel(char) {
   if (typeof char == "string") {
-    if (char.length === 1) {
-      return true;
+    if (char.length == 1) {
+      switch (char) {
+        case "A":
+        case "E":
+        case "I":
+        case "O":
+        case "U":
+        case "a":
+        case "e":
+        case "i":
+        case "o":
+        case "u":
+          return true;
+          break;
+        default:
+          return false;
+      }
     } else {
       return false;
     };//END length if
