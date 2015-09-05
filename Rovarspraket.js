@@ -65,7 +65,8 @@ function maxOfThree(A, B, C) {
 
 * First we must determine if we are working with a string.
     -Use typeof
-
+*Next we must determine if string is 1 character long.
+    -Use .length
  */
 
 // What a cruel, cruel master you are...
@@ -77,7 +78,7 @@ console.assert(isVowel("a") === true);
 console.assert(isVowel("E") === true);
 
 // What should _this_ do?
-//console.assert(isVowel("AEIOU") === false);
+console.assert(isVowel("AEIOU") === false);
 
 /**
  * @param {String} char of length 1
@@ -85,8 +86,14 @@ console.assert(isVowel("E") === true);
  */
 function isVowel(char) {
   if (typeof char == "string") {
-    return true;
-  };
+    if (char.length === 1) {
+      return true;
+    } else {
+      return false;
+    };//END length if
+  } else {
+    return false;
+  };//END typeof if
 };
 //END isVowel
 
