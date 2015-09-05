@@ -62,6 +62,10 @@ function maxOfThree(A, B, C) {
  * Write a function `isVowel` that takes a character
  * (i.e. a `String` of length 1) and returns a `Boolean`
  * indicating whether the input is a vowel or not.
+
+* First we must determine if we are working with a string.
+    -Use typeof
+
  */
 
 // What a cruel, cruel master you are...
@@ -80,40 +84,11 @@ console.assert(isVowel("E") === true);
  * @return {Boolean} whether `char` is an English vowel
  */
 function isVowel(char) {
-switch(char) {
-  case 'a':
+  if (typeof char == "string") {
     return true;
-    break;
-  case "A":
-    return true;
-    break;
-  case 'e':
-    return true;
-    break;
-  case 'E':
-    return true;
-    break;
-  case 'i':
-    return true;
-    break;
-  case 'I':
-    return true;
-    break;
-  case 'o':
-    return true;
-    break;
-  case 'O':
-    return true;
-    break;
-  case 'u':
-    return true;
-    break;
-  case 'U':
-    return true;
-    break;
-  default:
-    return false;
-  }  //END isVowel
+  };
+};
+//END isVowel
 
 /**
  * The `disemvowel` function combats the Internet
