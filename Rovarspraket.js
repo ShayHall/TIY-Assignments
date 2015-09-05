@@ -86,30 +86,25 @@ console.assert(isVowel("AEIOU") === false);
 function isVowel(char) {
   if (typeof char == "string") {
     if (char.length == 1) {
+      char = char.toUpperCase();
       switch (char) {
         case "A":
         case "E":
         case "I":
         case "O":
         case "U":
-        case "a":
-        case "e":
-        case "i":
-        case "o":
-        case "u":
           return true;
           break;
         default:
           return false;
-      }
+      }//END switch
     } else {
       return false;
     };//END length if
   } else {
     return false;
   };//END typeof if
-};
-//END isVowel
+};//END isVowel
 
 /**
  * The `disemvowel` function combats the Internet
