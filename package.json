@@ -1,7 +1,7 @@
 {
   "name": "tiyassign",
   "version": "0.0.0",
-  "description": "",
+  "description": "entry point (index.js)",
   "main": "StringCalculator.js",
   "scripts": {
     "test": "mocha"
