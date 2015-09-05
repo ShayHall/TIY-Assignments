@@ -28,11 +28,23 @@ test('toEnglish: `10` to `20`', function(){
   assert.equal(toEnglish(16), "sixteen");
   assert.equal(toEnglish(17), "seventeen");
   assert.equal(toEnglish(18), "eighteen");
-  assert.equal(toEnglish(19), "nineteen");}); // END test(toEnglish)
+  assert.equal(toEnglish(19), "nineteen");
+}); // END test(toEnglish)
 
 test('toEnglish: `21` to `30`', function(){
-  // this is where `toEnglish` starts to get interesting...
-}); // END test(toEnglish)
+  assert.isDefined(toEnglish);
+  assert.isFunction(toEnglish);
+  assert.equal(toEnglish(20), "twenty");
+  assert.equal(toEnglish(21), "twenty one");
+  assert.equal(toEnglish(22), "twenty two");
+  assert.equal(toEnglish(23), "twenty three");
+  assert.equal(toEnglish(24), "twenty four");
+  assert.equal(toEnglish(25), "twenty five");
+  assert.equal(toEnglish(26), "twenty six");
+  assert.equal(toEnglish(27), "twenty seven");
+  assert.equal(toEnglish(28), "twenty eight");
+  assert.equal(toEnglish(29), "twenty nine");
+}); }); // END test(toEnglish)
 
 /**
  * @param {Number} value to convert to English number word
@@ -40,36 +52,48 @@ test('toEnglish: `21` to `30`', function(){
  */
 function toEnglish(value){
   switch(value) {
-      case 0:
-        return "zero";
-        break;
-      case 1:
-        return "one";
-        break;
-      case 2:
-        return "two";
-        break;
-      case 3:
-        return "three";
-        break;
-      case 4:
-        return "four";
-        break;
-      case 5:
-        return "five";
-        break;
-      case 6:
-        return "six";
-        break;
-      case 7:
-        return "seven";
-        break;
-      case 8:
-        return "eight";
-        break;
-      case 9:
-        return "nine";
-        break;
+    case 0:
+      return "zero";
+      break;
+    case 1:
+      return "one";
+      break;
+    case 2:
+      return "two";
+      break;
+    case 3:
+      return "three";
+      break;
+    case 4:
+      return "four";
+      break;
+    case 5:
+      return "five";
+      break;
+    case 6:
+      return "six";
+      break;
+    case 7:
+      return "seven";
+      break;
+    case 8:
+      return "eight";
+      break;
+    case 9:
+      return "nine";
+      break;
+    case 10:
+      return "ten";
+      break;
+    case 11:
+      return "eleven";
+      break;
+    case 12:
+      return "twelve";
+      break;
+    case 13:
+    return "thirteen";
+    break;
     }
 
   // start simply and refactor...
