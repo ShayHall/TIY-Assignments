@@ -6,11 +6,7 @@ console.assert(max(1,3) === 3);
 console.assert(max(0,3) === 3);
 console.assert(max(10,3) === 10);
 console.assert(max(-1,-3) === -1);
-
-// Why would you do this?
 console.assert(max("aaa",0) === 0);
-
-// Okay, that's just silly...
 console.assert(isNaN(max("aaa","bbb")));
 
 /**
@@ -24,7 +20,7 @@ function max(A, B) {
   } else {
     return B;
   };
-}
+}//END max
 
 /**
  * Write a function `maxOfThree` that takes _three_
@@ -34,11 +30,7 @@ console.assert(maxOfThree(1,3,2) === 3);
 console.assert(maxOfThree(0,3,-1) === 3);
 console.assert(maxOfThree(10,3,50) === 50);
 console.assert(maxOfThree(-1,-3,-10) === -1);
-
-// Look, that's just mean...
 console.assert(maxOfThree("aaa",0,1) === 1);
-
-// Who's running this picture, anyway?
 console.assert(isNaN(maxOfThree("aaa","bbb","ccc")));
 
 /**
@@ -55,7 +47,7 @@ function maxOfThree(A, B, C) {
   } else {
     return C;
   };
-} //end of maxOfThree
+} //END maxOfThree
 
 
 /**
@@ -69,14 +61,11 @@ function maxOfThree(A, B, C) {
     -Use .length
  */
 
-// What a cruel, cruel master you are...
 console.assert(isVowel(0) === false);
 console.assert(isVowel("B") === false);
 console.assert(isVowel("b") === false);
 console.assert(isVowel("a") === true);
 console.assert(isVowel("E") === true);
-
-// What should _this_ do?
 console.assert(isVowel("AEIOU") === false);
 
 /**
@@ -116,12 +105,34 @@ function isVowel(char) {
  */
 
 function disemvowel(comment){
-  // YOUR CODE HERE
-}
+  if (typeof comment == "string") {
+    /*if (comment.length == 1) {
+      comment = comment.toLowerCase();
+      switch (char) {
+        case "A":
+        case "E":
+        case "I":
+        case "O":
+        case "U":
+          return true;
+          break;
+        default:
+          return false;
+      }//END switch
+    } else {
+      return false;
+    };//END length if*/
+    return true;
+  } else {
+    return false;
+  };//END typeof if
+}  //END DISEMVOWEL
+
 
 // Shorter test cases might be appreciated...
-console.assert(
-  disemvowel("This website is for losers LOL!") === "Ths wbst s fr lsrs LL!"
+console.assert(disemvowel(0) === false);
+console.assert(disemvowel("string") === true);
+console.assert(disemvowel("This website is for losers LOL!") === "Ths wbst s fr lsrs LL!"
 );
 
 /**
@@ -133,7 +144,7 @@ console.assert(
  * return `"tothohisos isos fofunon"`
  *
  * @see https://en.wikipedia.org/wiki/R%C3%B6varspr%C3%A5ket
- *
+
  * @param {String} text to translate into "rövarspråket"
  * @return {String} translation
  */
