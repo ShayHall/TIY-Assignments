@@ -50,11 +50,10 @@ function maxOfThree(A, B, C) {
 } //END maxOfThree
 
 
-/**
+/** Explanation of isVowel solution
  * Write a function `isVowel` that takes a character
  * (i.e. a `String` of length 1) and returns a `Boolean`
  * indicating whether the input is a vowel or not.
-
 * First we must determine if we are working with a string.
     -Use typeof
 *Next we must determine if string is 1 character long.
@@ -95,15 +94,13 @@ function isVowel(char) {
   };//END typeof if
 };//END isVowel
 
-
-/*
+/* Explanation of disemvowelment
  * The `disemvowel` function combats the Internet
  * Trolls by handily removing all of the vowels from
  * their angry, hurtful comments. Its Super-Effective!
  *
  * @param {String} comment to disemvowel
  * @return {String} cmmnt dsmvwld
-
 *1st I made sure comment is a string using type of
 *2nd I made disemvowel return comment as itself
 *3rd I made disemvowel recognize individual characters.
@@ -115,7 +112,6 @@ function isVowel(char) {
 How do I combine multiple separators?
 -I need to split, then run isVowel function BUT return != vowels, then join what has been returned...
 *pick apart individual characters to evaluate.  turn string into array?
-
 */
 
 function disemvowel(comment){
@@ -137,8 +133,6 @@ function disemvowel(comment){
   };//END typeof if
 }  //END DISEMVOWEL
 
-
-
 console.assert(disemvowel(0) === false);
 console.assert(disemvowel("banana") === "bnn");
 console.assert(disemvowel("This website is for losers LOL!") === "Ths wbst s fr lsrs LL!");
@@ -157,10 +151,10 @@ console.assert(disemvowel("This website is for losers LOL!") === "Ths wbst s fr 
  * @return {String} translation
  */
 function rovarspraket(input){
-    // YOUR CODE HERE
-}
+    return input.replace(/[b]/ig, /$&o$&/);
+};
 
-// Feel free to provide additional examples...
+console.log(rovarspraket("b"));
 console.assert(rovarspraket("a") === "a")
 console.assert(rovarspraket("b") === "bob")
 console.assert(rovarspraket("cat") === "cocatot")
