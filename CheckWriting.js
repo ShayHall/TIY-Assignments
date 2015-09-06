@@ -35,72 +35,77 @@ test('toEnglish: `21` to `30`', function(){
   assert.isDefined(toEnglish);
   assert.isFunction(toEnglish);
   assert.equal(toEnglish(20), "twenty");
-  assert.equal(toEnglish(21), "twenty one");
-  assert.equal(toEnglish(22), "twenty two");
-  assert.equal(toEnglish(23), "twenty three");
-  assert.equal(toEnglish(24), "twenty four");
-  assert.equal(toEnglish(25), "twenty five");
-  assert.equal(toEnglish(26), "twenty six");
-  assert.equal(toEnglish(27), "twenty seven");
-  assert.equal(toEnglish(28), "twenty eight");
-  assert.equal(toEnglish(29), "twenty nine");
-}); }); // END test(toEnglish)
+  assert.equal(toEnglish(21), "twenty-one");
+  assert.equal(toEnglish(22), "twenty-two");
+  assert.equal(toEnglish(23), "twenty-three");
+  assert.equal(toEnglish(24), "twenty-four");
+  assert.equal(toEnglish(25), "twenty-five");
+  assert.equal(toEnglish(26), "twenty-six");
+  assert.equal(toEnglish(27), "twenty-seven");
+  assert.equal(toEnglish(28), "twenty-eight");
+  assert.equal(toEnglish(29), "twenty-nine");
+}); // END test(toEnglish)
 
 /**
  * @param {Number} value to convert to English number word
  * @return {String} representing `value` in English
  */
 function toEnglish(value){
+
   switch(value) {
     case 0:
       return "zero";
-      break;
     case 1:
       return "one";
-      break;
     case 2:
       return "two";
-      break;
     case 3:
       return "three";
-      break;
     case 4:
       return "four";
-      break;
     case 5:
       return "five";
-      break;
     case 6:
       return "six";
-      break;
     case 7:
       return "seven";
-      break;
     case 8:
       return "eight";
-      break;
     case 9:
       return "nine";
-      break;
     case 10:
       return "ten";
-      break;
     case 11:
       return "eleven";
-      break;
     case 12:
       return "twelve";
-      break;
     case 13:
-    return "thirteen";
-    break;
-    }
+      return "thirteen";
+    case 14:
+      return "fourteen";
+    case 15:
+      return "fifteen";
+    case 16:
+      return "sixteen";
+    case 17:
+      return "seventeen";
+    case 18:
+      return "eighteen";
+    case 19:
+      return "nineteen";
+    case 20:
+      return "twenty";
 
-  // start simply and refactor...
+    break;
+    default:
+      return false;
+  }
+  start simply and refactor...
 } // END toEnglish
 
 test('BEAST MODE: toCheck', function(){
   assert.isFunction(toCheck);
+
   assert.equal(toCheck(1.23), "one & 23/100s");
   assert.equal(toCheck(12.34), "twelve & 34/100s");
   assert.equal(toCheck(123.45), "one hundred twenty three & 45/100s");
