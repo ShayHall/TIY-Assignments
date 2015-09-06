@@ -95,7 +95,8 @@ function isVowel(char) {
   };//END typeof if
 };//END isVowel
 
-/**
+
+/*
  * The `disemvowel` function combats the Internet
  * Trolls by handily removing all of the vowels from
  * their angry, hurtful comments. Its Super-Effective!
@@ -103,65 +104,41 @@ function isVowel(char) {
  * @param {String} comment to disemvowel
  * @return {String} cmmnt dsmvwld
 
-*Make sure comment is a string
-  -use type of
-*Get disemvowel to return comment as itself
-*Get disemvowel to recognize individual characters.
-*Get disemvowel to recognize vowels (see isVowel test... Check!)
+*1st I made sure comment is a string using type of
+*2nd I made disemvowel return comment as itself
+*3rd I made disemvowel recognize individual characters.
+*I also made disemvowel recognize vowels (see isVowel test... Check!)
 *Get disemvowel to delete vowels.
 *Get disemvowel to return string without vowels (wtht vwls)
     -AH! I remember coming across split method... that should do everything I just described.
- */
+/*passes "banana" but not troll.
+How do I combine multiple separators?
+-I need to split, then run isVowel function BUT return != vowels, then join what has been returned...
+*pick apart individual characters to evaluate.  turn string into array?
+
+*/
 
 function disemvowel(comment){
   if (typeof comment == "string") {
-    return comment.split("a").join("");/*should pass "banana" but not troll.
-How do I combine multiple separators?
--I need to split, then run isVowel function BUT return != vowels, then join what has been returned...
-*/
+    removeLittleA = comment.split("a").join("");
+    removeBigA    = removeLittleA.split("A").join("");
+    removeLittleE = removeBigA.split("e").join("");
+    removeBigE    = removeLittleE.split("E").join("");
+    removeLittleI = removeBigE.split("i").join("");
+    removeBigI    = removeLittleI.split("I").join("");
+    removeLittleO = removeBigI.split("o").join("");
+    removeBigO    = removeLittleO.split("O").join("");
+    removeLittleU = removeBigO.split("u").join("");
+    removeBigU    = removeLittleU.split("U").join("");
+    comment = removeBigU;
+    return comment;
   } else {
     return false;
   };//END typeof if
 }  //END DISEMVOWEL
-    /*switch (char) {
-      case "A":
-      case "E":
-      case "I":
-      case "O":
-      case "U":
-      case "a":
-      case "e":
-      case "i":
-      case "o":
-      case "u":
-        char = evilVowel;
-        break;
-      default:
-        throw char; //catch char & rebuild string? .join()???
-    }//END switch*/
-
-
-//pick apart individual characters to evaluate.  turn string into array?
-
-/***
-try {
-
-}
-[catch (exception_var_1 if condition_1) { // non-standard
-   catch_statements_1
-}]
-...
-[catch (exception_var_2) {
-   catch_statements_2
-}]
-[finally {
-   finally_statements
-}]//END TRY
-***/
 
 
 
-// Shorter test cases might be appreciated...
 console.assert(disemvowel(0) === false);
 console.assert(disemvowel("banana") === "bnn");
 console.assert(disemvowel("This website is for losers LOL!") === "Ths wbst s fr lsrs LL!");
