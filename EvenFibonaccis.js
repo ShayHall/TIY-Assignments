@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 var test = require('mocha').it,
     expect = require('chai').expect;
     assert = require('chai').assert;  // OR use `assert.equal` etc

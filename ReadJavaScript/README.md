@@ -17,9 +17,11 @@ foo is known to exist now but it has no type or value:
 
 "null" ```
 
+
 ### `Boolean` -- has two literal values- 'true' and 'false'
 The `Boolean` data type is primarily associated with conditional statements, which allow different actions and change control flow depending on whether a programmer-specified `Boolean` condition evaluates to `true` or `false`.
 
+<<<<<<< HEAD
 ``` Boolean(5>6); /* false */
 
 Boolean(null); /* false */
@@ -27,6 +29,7 @@ Boolean(null); /* false */
 Boolean(true); /* true */
 
 Boolean(1); /* true */ ```
+
 
 ### `Number` -- numeric data type
 In JavaScript numbers are typically integers (whole numbers and decimals)
@@ -241,7 +244,6 @@ The output is `undefined` by default.
 function (){
 }```
 
-
 ##### `function expression` -- defines function as part of larger expression syntax
 A Function Expression is typically a variable assignment.
 
@@ -260,25 +262,27 @@ var a = function bar() {
 >    alert("hello!");
 > })();
 
+
 ##### `function delcaration` -- defines a function with specified parameters
 
-> function (a,b) {
-> };
+``` function (a,b) {
+ }; ```
 
 ##### `function invocation` -- puts the function to work
 
-> functionName ();
+``` functionName ();```
 
 ##### `function definition` -- gives a job to a function
 
-> function <identifier>() {
-> };
+``` function <identifier>() {
+ };```
 
-> function bar() {
->    return 3;
-> }
+```function bar() {
+   return 3;
+ } ```
 
 ##### `parameters` -- named variable passed into a function
+
 > Parameter variables are used to import arguments into functions.
 > function functionName (parameter1, parameter2) {
 > };
@@ -393,3 +397,85 @@ console.log(noise); //returns "I h", "ve ", " splitting he", "d", "che"
 ## `Objects` -- a named container for values
 collection of properties. Property is an association between a name (or key) and a value.
 A property's value can be a function.
+
+```Parameter variables are used to import arguments into functions.
+   function functionName (parameter1, parameter2) {
+ };```
+
+#### Control Flow constructs -- allow flow of a program to change within some code.
+These statements are often `conditional statements` utilizing Booleans within `{ }`
+
+##### { } as block operator -- used to group 0 or more statements
+``` function () {
+  thisIsAStatement = "in the block"
+  return "This is a statement in the block"
+} ```
+
+###### if -- statement that executes based on a Boolean value.
+if value is `true` the statement executes, otherwise it is skipped.
+```if (`Expression that produces a Boolean Value of true`) {
+  return true;
+} //yields true```
+
+###### else -- part of an `if` statement
+identifies blocks of code that are executed when first condition is false.
+``` if (false) {
+  return "Yes";
+} else {
+  return "NOOOOO!!!";
+}```
+
+###### while -- executes a given statement as long as it is true
+``` while (a > b) {
+  a -=100;
+  console.log(a + "is more than" + b);
+}```
+`while` recognizes `break` and `continue` keywords.  
+`break` will terminate loop.
+`continue` finishes current iteration of while block of statements and if true loops
+
+###### do-while -- just like while, but executes block at least once.
+``` do {
+  a += 1;
+} while (a < 10);```
+
+###### switch -- evaluates an expression and checks it against case clauses and if true executes that case's statements
+`break` is used to move to next case.
+`default` gives a statement to execute if no
+
+```switch (1 + 2) {
+  case 3:
+  console.log("Truth!");
+  break;
+  case "bananas":
+  console.log("Lies!");
+  break;
+  default:
+  return "Do some math."
+}```
+
+###### for -- a loop that repeats until specific condition evaluates to false
+```for (`initial expression`; `condition`; `incrementExpression`)
+statement
+
+for (var i=0; i<4; i+=1) {
+  console.log(i);
+} //yields 1,2,3 ```
+
+
+###### for ( . . . in . . .) -- statement iterates specified variable over all enumerable properties of an object.
+For each distince property the specific statement will be executed.
+
+###### try/catch --marks a block of statement to try, and if there is an exception thrown, it specified a response
+```try {
+  "TRYcycle" === "bicycle",
+}
+catch (false) {
+  return "Grow up"
+}```
+
+###### throw -- throws a user-defined exception
+``` example??? ```
+
+###### the Exception type -- condition that interrupts normal code execution
+```SyntaxError: Unexpected identifier (real familiar with this one...)```

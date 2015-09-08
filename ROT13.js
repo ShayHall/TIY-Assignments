@@ -24,6 +24,22 @@ console.assert(reverse("books") === "skoob"); // Rokey, dokey...
 console.assert(reverse("we don't want no trouble") === "elbuort on tnaw t'nod ew");
 console.assert(reverse("ti esrever dna ti pilf nwod gniht ym tup I") === "I put my thing down flip it and reverse it");
 
+    // YOUR CODE HERE: NO INTERNET COPY-PASTA!
+}
+
+console.assert(reverse("") === ""); // Really?
+
+console.assert(reverse("A") === "A"); // Jerk.
+
+console.assert(reverse("cat") === "tac");
+
+console.assert(reverse("ward") === "draw");
+
+console.assert(reverse("books") === "skoob"); // Rokey, dokey...
+
+console.assert(
+  reverse("we don't want no trouble") === "elbuort on tnaw t'nod ew"
+);
 
 /**
  * Function `encode` accepts a `String` and produces
@@ -70,6 +86,10 @@ console.assert(encode("hello", 13) === "uryyb");
 console.assert(encode("uryyb", 13) === "hello");
 console.assert(encode("hello", 2) === "jgnnq");
 
+function encode(phrase/*, N */){
+    // YOUR CODE HERE... EMPHASIS ON **YOUR**
+}
+
 /**
  * Function `decode` accepts a `phrase` and `N` and
  * decoded it appropriately, i.e. every _word_ character
@@ -92,4 +112,14 @@ function decode(phrase, N){
   return code.join("");
 }
 
+ */
+function decode(phrase, N){
+    // YOUR CODE HERE
+}
+
+// Produce more examples, please...
+console.assert(encode("hello") === "uryyb");
+console.assert(encode("uryyb") === "hello");
+
+console.assert(encode("hello", 2) === "jgnnq")
 console.assert(decode("jgnnq", 2) === "hello")

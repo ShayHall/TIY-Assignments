@@ -1,7 +1,7 @@
 {
   "name": "tiyassign",
   "version": "0.0.0",
-  "description": "fibbonacci",
+  "description": "entry point (index.js)",
   "main": "StringCalculator.js",
   "scripts": {
     "test": "mocha"
@@ -21,6 +21,10 @@
     "mocha": "^2.3.2"
   },
   "devDependencies": {
+    "mocha": "^2.3.0"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
     "mocha": "^2.3.0"
   }
 }
