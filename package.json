@@ -1,7 +1,7 @@
 {
   "name": "tiyassign",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.0",
+  "description": "fibbonacci",
   "main": "StringCalculator.js",
   "scripts": {
     "test": "mocha"
@@ -10,14 +10,17 @@
     "type": "git",
     "url": "git+https://github.com/ShayHall/TIY-Assignments.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Shay Hall",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ShayHall/TIY-Assignments/issues"
   },
   "homepage": "https://github.com/ShayHall/TIY-Assignments#readme",
   "dependencies": {
     "chai": "^3.2.0",
+    "mocha": "^2.3.2"
+  },
+  "devDependencies": {
     "mocha": "^2.3.0"
   }
 }
