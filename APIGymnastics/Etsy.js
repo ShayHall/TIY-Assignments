@@ -4,7 +4,6 @@ var items = require('items.json');
     test = require('mocha').it,
     expect = require('chai').expect;
 
-// TODO: Setup mocha and chai...
 
 test('this is the easy one', function(){
   expect(Array.isArray(items)).to.be.true; // What.
@@ -19,10 +18,8 @@ function isArray(items) {
 
 test('finding the average price', function(){
 
-
   var yourAnswer = items.indexOf(10);
   return yourAnswer;
-
 
   expect(yourAnswer).to.be.closeTo(23.63, 0.01);
 });
@@ -34,7 +31,7 @@ test('finding that perfect $15 item', function(){
    */
   function pricedBetween(items, min, max){
     return [];
-  }
+  }//
 
   expect( pricedBetween(items, 14, 18) ).to.deep.equal([
     // Can you find their names _without_ code first?
@@ -42,8 +39,8 @@ test('finding that perfect $15 item', function(){
 });
 
 test('pond hopping', function(){
-  expect( /* your answer */ ).to.deep.equal({
-    name: "1970s Schlitz Malt Liquor Glass Beer Pitcher",
+  expect( items.filter(title, price) ).to.deep.equal({
+    title: "1970s Schlitz Malt Liquor Glass Beer Pitcher",
     price: 18.00
   });
 });
