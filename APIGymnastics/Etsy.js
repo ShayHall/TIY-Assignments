@@ -1,9 +1,7 @@
-
 // Put `items.json` in your `APIGymnastics` directory...
 var items = require('items.json');
     test = require('mocha').it,
     expect = require('chai').expect;
-
 
 test('this is the easy one', function(){
   expect(Array.isArray(items)).to.be.true; // What.
@@ -39,7 +37,6 @@ expect(prices).to.deep.equal([12]);
 
   expect(items.length).to.equal(25);
 
-
   expect(yourAnswer).to.be.closeTo(23.63, 0.01);
 });
 
@@ -51,7 +48,6 @@ test('finding that perfect $15 item', function(){
   function pricedBetween(items, min, max){
     return [];
   }//
-
   expect( pricedBetween(items, 14, 18) ).to.deep.equal([
     // Can you find their names _without_ code first?
   ]);
