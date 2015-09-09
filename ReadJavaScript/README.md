@@ -284,29 +284,34 @@ A Function Expression is typically a variable assignment.
 
 
 
-#### Reading JavaScript: DOM EDITION
+## Reading JavaScript: DOM EDITION
+###`DOM: Document Object Model` -- programming interface for HTML, EML, and SVG documents
+provides structured representation of the document or tree and defines a way that the structure can be accessed from programs in order to manipulate structure, style, and content.
 
-Start investigating [the DOM on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model) and add some documentation to your "Reading JavaScript" file. Pay particular attention to the following:
+### `Window` Object -- represents a window that contains a DOM document.
+The document property points to the DOM document loaded in that window.
 
-### `Window` Object --
+##### `location` -- `window.location` is a read-only property that returns a `location` object with info about current location of document.  While it is read-only, it can be made into a string in most cases.
 
-##### `location` --
+##### `document` -- returns a reference to the document contained in the window.
+`doc = window.document` doc is an object reference to a document
 
-##### `document` --
+##### `history` --`window.history` is a read-only property that returns a reference to the History object. This provides an interface for manipulating the browser session history.
+``` var _historyObj_ = window.history;
+ex. history.back();  //equivalent to clicking back button
+```
 
-##### `history` --
+##### `alert` -- displays an alert dialog with optional specified content and an `OK button`
+It is used to inform the user with no required response other than acknowledgment of message.
+``` window.alert(["message"]);```
 
-##### (Things stored in properties) -->
+##### `confirm` -- displays a modal dialog (user cannot access the rest of the program's interface until the dialog box is closed) with an optional message and two buttons `OK` and `Cancel`
+``` result = window.confirm(["message"] // result is a Boolean value determined by selecting `OK` or `Cancel`
 
-#### Methods
+##### `reload` -- `location.reload` method reloads resources from current URL.
+```object.reload([forcedReload]);```
 
-##### `alert`
-
-##### `confirm`
-
-##### `reload`
-
-#####`open`
+#####`open` --
 
 ##### `close`
 
