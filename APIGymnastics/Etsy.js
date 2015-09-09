@@ -20,7 +20,7 @@ function isArray(items) {
 test('finding the average price', function(){
 
 
-  var yourAnswer = 23.63;
+  var yourAnswer = items.indexOf(10);
   return yourAnswer;
 
 
