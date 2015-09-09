@@ -378,29 +378,31 @@ document.body = objRef;```
 
 ##### `writeIn` -- writes a string of text followed by a newline character to a document.
 
-### `HTMLElement` type
+### `HTMLElement` type -- an interface that represents any `HTML` element.  
 
-##### `id`
+##### `id` -- property representing the element's identifier, reflecting the id global attribute.
 
-##### `className`
+##### `className` -- gets and sets the value of the class attribute of specified element
 
-##### `innerHTML`
+##### `innerHTML` -- sets or gets the HTML syntax describing the elements descendants
 
-##### `outerHTML`
+##### `outerHTML` -- gets the serialized HTML fragment describing the element including its descendants.  It can be set to replace the element with nodes parsed from the given string.
 
-##### `children`
+##### `Node `tree -- the order in which objects implementing the `Document`, `DocumentFragment`, `DocumentType`, `Element`, `Text`, `ProcessingInstruction`, or `Comment` interface (nodes).
 
-##### `parent`
+##### `children` -- `node.children` is a read-only property that returns a live `HTMLCollection` of the child elements of Node.
 
-##### `sibling`
+##### `parent` --`ParentNode` interface contains methods that are particular to `Node` objects that can have children.  `ParentNode` is a raw interface and no object of this type can be created; it is implemented by `Element`, `Document`, and `DocumentFragment` objects.
 
-##### `nextSibling`
+##### `sibling` --
 
-##### `firstChild`
+##### `nextSibling` -- read-only property returns the node immediately following the specified one in its parent's `childNodes` list.
 
-##### `addEventListener`
+##### `firstChild` -- read-only property returns the node's first child in the tree.
 
-##### `dispatchEvent`
+##### `addEventListener` -- registers the specified listener on the `EventTarget` it's called on.
+
+##### `dispatchEvent` -- invokes the affected `EventListener` in the appropriate order.
 
 ##### `*Attribute` family
 
