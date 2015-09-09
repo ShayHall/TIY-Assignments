@@ -20,13 +20,13 @@
 ### `Boolean` -- has two literal values- 'true' and 'false'
 The `Boolean` data type is primarily associated with conditional statements, which allow different actions and change control flow depending on whether a programmer-specified `Boolean` condition evaluates to `true` or `false`.
 
-  > Boolean(5>6); /* false */
+  > Boolean(5>6); `false`
 
-  > Boolean(null); /* false */
+  > Boolean(null); `false`
 
-  > Boolean(true); /* true */
+  > Boolean(true); `true`
 
-  > Boolean(1); /* true */
+  > Boolean(1); `true`
 
 ### `Number` -- numeric data type
 In JavaScript numbers are typically integers (whole numbers and decimals)
@@ -108,11 +108,11 @@ A number called the dividend being 'divided' by another number called the diviso
   > 5 / 2 // yields 2.5
 
 
-#### `*` -- multiplication
+#### `*` - multiplication
 Given two `Number` values, produces the product of those values as another `Number`.
-  > 2 * 5 // yields 10
+  > 2 * 5 `yields 10`
 
-  > 1 * 2 // yields 2
+  > 1 * 2 `yields 2`
 
 #### `%` -- remainder
 The `remainder` operator returns the first operand modulo the second operand.
@@ -210,6 +210,14 @@ A sequence of characters in the code that identifies a variable, function, or pr
 
 ## Control Flow
 
+Using the MDN and your own research, describe the control flow constructs: { } as a block operator, if and else Then read and cover the looping and iteration keywords: for, while, and do/while.
+BEAST MODE
+
+If you're looking for more of a challenge, read up on switch / case and the other for-type loops. Document them, as well, providing examples.
+NIGHTMARE MODE
+
+The error handling constructs -- try / catch / finally and throw -- can be a bit puzzling. Review them if you're still not satisfied with your understanding of Control Flow. Be prepared for some wackiness.
+
 ### Functions
 
 Functions are a form of [control flow](http://en.wikipedia.org/wiki/Control_flow) used in computer programs... (you fill in the rest)
@@ -272,45 +280,91 @@ A Function Expression is typically a variable assignment.
 > function functionName (parameter1, parameter2) {
 > };
 
-//todo
-Reading JavaScript: Control Flow
-
-Using the MDN and your own research, describe the control flow constructs: { } as a block operator, if and else Then read and cover the looping and iteration keywords: for, while, and do/while.
-BEAST MODE
-
-If you're looking for more of a challenge, read up on switch / case and the other for-type loops. Document them, as well, providing examples.
-NIGHTMARE MODE
-
-The error handling constructs -- try / catch / finally and throw -- can be a bit puzzling. Review them if you're still not satisfied with your understanding of Control Flow. Be prepared for some wackiness.
 
 
-Reading JavaScript: DOM EDITION
 
-Start investigating the DOM on MDN and add some documentation to your "Reading JavaScript" file. Pay particular attention to the following:
 
-the Window object
-    properties like location, document, history
-    what kind of things are stored in those properties (warning: rabbit holes)
-    methods like alert, confirm, reload, open and close
-the Location object
-    all the properties here are important
-    what happens when you mess around with them?
-the Document object
-    properties like head and body
-    methods like
-        getElementById and getElementsByClassName
-        querySelector and querySelectorAll
-        appendChild and the create* family
-        write and writeln
-the HTMLElement type
-    properties like
-        id and className
-        innerHTML and outerHTML
-        children, parent, nextSibling, and firstChild
-    methods like
-        addEventListener and dispatchEvent
-        the *Attribute family
-the HTMLCollection and NodeList types
-    how they differ from Array
-    how they can be used like an Array
-    the item method
+#### Reading JavaScript: DOM EDITION
+
+Start investigating [the DOM on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model) and add some documentation to your "Reading JavaScript" file. Pay particular attention to the following:
+
+### `Window` Object --
+
+##### `location` --
+
+##### `document` --
+
+##### `history` --
+
+##### (Things stored in properties) -->
+
+#### Methods
+
+##### `alert`
+
+##### `confirm`
+
+##### `reload`
+
+#####`open`
+
+##### `close`
+
+#### `location object` (all the properties here are important as well as what happens when you mess around with them)
+
+### `Document` Object
+
+##### `head` property
+
+##### `body` property
+
+##### `getElementById` Method
+
+##### `getElementsByClassName` Method
+
+##### `querySelector`
+
+##### `querySelectorAll`
+
+##### `appendChild`
+
+##### `create*` family
+
+##### `write`
+
+##### `written`
+
+### `HTMLElement` type
+
+##### `id`
+
+##### `className`
+
+##### `innerHTML`
+
+##### `outerHTML`
+
+##### `children`
+
+##### `parent`
+
+##### `sibling`
+
+##### `nextSibling`
+
+##### `firstChild`
+
+##### `addEventListener`
+
+##### `dispatchEvent`
+
+##### `*Attribute` family
+
+##### `HTMLCollection` type
+
+##### `NodeList`type
+
+(How they differ from `Array`
+how they can be used _like_ an `Array`
+
+##### `item` method
