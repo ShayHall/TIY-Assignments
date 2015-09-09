@@ -17,9 +17,28 @@ function isArray(items) {
 });
 
 test('finding the average price', function(){
+// var yourAnswer = "start with `items`, use `array` methods
+//*items.json is an array of dictionaries(objects)
+var yourAnswer = 0;
+//to calculate average priuce, we need:
+// each item's price
+var prices = [ ];
 
-  var yourAnswer = items.indexOf(10);
-  return yourAnswer;
+var item = items[0];
+
+expect(items[0]).to.be.an('object');
+expect(item.price).to.be.a('number');
+expect(item.price).to.be.equal(12);
+prices.push(item.price);
+expect(prices).to.deep.equal([12]);
+//* sum of all items's prices
+//*total number of items
+//
+//* average = sum of all item prices/number of items
+
+
+  expect(items.length).to.equal(25);
+
 
   expect(yourAnswer).to.be.closeTo(23.63, 0.01);
 });
