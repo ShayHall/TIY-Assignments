@@ -311,33 +311,72 @@ It is used to inform the user with no required response other than acknowledgmen
 ##### `reload` -- `location.reload` method reloads resources from current URL.
 ```object.reload([forcedReload]);```
 
-#####`open` --
+#####`open` -- loads a resource into either a new browsing context (like a window) or one that already exists.
+Creates a new secondary browser window.
+``` var windowObjectReference = window.open(strUrl, strWindowName, [strWindowFeatures]); //`windowObjectReference` refers to newly created window.
+// `strUrl` is the URL to be loaded in the newly opened window like HTML document, image file, or other resource supported by browser.
+//`strWindowName` a string name for new window.
+//`strWindowFeatures` optional parameter listing features(size, position, scrollbars, etc) of new window as a string.
+```
 
-##### `close`
 
-#### `location object` (all the properties here are important as well as what happens when you mess around with them)
+##### `close` -- closes the current window
+This method is only allowed to be called for windows that were opened by a script using `window.open()` method.
+```window.close()
 
-### `Document` Object
+#### `location object` -- represents location of the object it is linked to.  Changes done to it are reflected on the object to which it relates.  Both `Document` and `Window` interface have linked `Location`.
 
-##### `head` property
+##### URLUtils.href -- property that has DOMString containing whole URL
+```string = object.href;
+object.href = string;```
 
-##### `body` property
+##### URLUtils.protocol -- represents the protocol scheme of the URL
 
-##### `getElementById` Method
+##### URLUtils.host -- DOMString containing host (hostname, `:`, and port of URL)
 
-##### `getElementsByClassName` Method
+##### URLUtils.hostname -- DOMString containing the domain of URL
 
-##### `querySelector`
+##### URLUtils.port -- DOMString containing port number of URL
 
-##### `querySelectorAll`
+##### URLUtils.pathname -- DOMString containing initial `/` followed by path of URL
 
-##### `appendChild`
+##### URLUtils.search -- DOMString containing a `?` followed by parameters of URL
 
-##### `create*` family
+##### URLUtils.hash -- DOMString containing a `#` followed by the fragment identifier of the URL
 
-##### `write`
+##### URLUtils.hash -- is DOMString containing the username specified before the domain name
 
-##### `written`
+##### URLUtils.hash --is DOMString containing the password specified before the domain name.
+
+##### URLUtils.origin -- returns DOMString containing canonical form of origin of the specific location
+
+### `Document` Object -- each web page loaded in browser has its own `document object`.
+Document interface serves as an entry point into the web page's content and provides functionality which is global to the document.
+Can be obtained from various APIs.
+
+##### `head` -- Read-only property that returns the `<head>` element of current document.  
+``` car objRef = document.head```
+
+##### `body` -- property that returns `<body>` or `<frameset>` node of current document.
+```var objRef = document.body;
+document.body = objRef;```
+
+##### `getElementById` -- Method that returns an object reference to the identified element
+```element = document.getElementById(id);```
+
+##### `getElementsByClassName` -- Method that returns a list of elements with the given class name.
+
+##### `querySelector` -- returns first element within document that matches specified group of selectors
+
+##### `querySelectorAll` -- returns list of the elements within the document that match the specified group of selectors.  Returns a NodeList object.
+
+##### `appendChild` -- `Node.appendChild()` method adds a node to the end of the list of children in a specified parent node.  
+
+##### `create*` create new nodes
+
+##### `write` -- writes a string of text to a document stream opened by `document.open()`
+
+##### `writeIn` -- writes a string of text followed by a newline character to a document.
 
 ### `HTMLElement` type
 
