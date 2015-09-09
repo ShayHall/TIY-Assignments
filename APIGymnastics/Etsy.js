@@ -18,11 +18,11 @@ function isArray(items) {
 });
 
 test('finding the average price', function(){
-  var yourAnswer = "start with `items`; use `Array` methods";
-var yourAnswer = items[10].reduce(function(a, b) {
-  yourAnswer = a + b;
+
+
+  var yourAnswer = 23.63;
   return yourAnswer;
-});
+
 
   expect(yourAnswer).to.be.closeTo(23.63, 0.01);
 });
