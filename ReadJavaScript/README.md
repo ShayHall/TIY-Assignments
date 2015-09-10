@@ -620,3 +620,51 @@ document.body = objRef;```
 NodeList differs from an array in that arrays are built-in objects and NodeLists are host objects. NodeLists have different methods (like the `item` method). JavaScript has an inheritance mechanism based on prototypes and NodeLists come from a different prototype than Arrays..._What?_ They can be used like an array... _How?_ how they can be used _like_ an `Array`???
 
 ##### `item` method --
+
+###  Events -- The event interface represents any event of the DOM.  It contains common properties and methods to any event.
+The Event constructor creates a new `Event` using this syntax: `event = new Event("DOMString representing name of events", [EventInit]);`
+EventInit is an optional Boolean that defaults to false.  EventInit can be "bubbles"- indicates whether the event bubbles or not or "cancelable"- indicates if the event can be canceled or not.
+
+#####Bubbles  -- a term refering the order in which an event triggers, starting on deepest element and moving out toward parent in nesting order.  You can stop an event from bubbling by setting the second parameter of the event to `{"bubbles":false, "cancelable": true}
+`event.bubbles` -- indicates whether the given event bubbles through DOM or not.
+
+`event.target` -- refers to the object that dispatches the event.  Can be used to implement "event delegation"
+
+`drag event` -- fired when an element or text selection is being dragged.
+
+`dblclick` --
+
+`mousedown` --
+
+`mouseup` --
+
+`mouseover` --
+
+`mouseout` --
+
+`mousemove` --
+
+`onclick` --
+
+`submit` -- fired when a form is submitted (only on the `<form>` element, not `button` or `submit input`
+
+`unload` -- The unload event is fired when the document or child resource is being unloaded
+
+`load` -- The load event is fired when a resource and its dependent resources have finished loading.
+
+`onchange` -- fires the moment the value of the element is changed.
+
+`oncontextmenu` -- script to be run when a context menus is triggered
+
+`oninput` -- script to be run when an element gets user input
+
+`onsearch` -- fires when user writes something in a search field
+
+Next document some of the common event types that we'll encounter: . Not all HTML elements can listen to all events, so make special note of which HTML elements those event types apply to. Give an example of each in use, selecting an element from the document and attaching an event listener to it.
+
+`click` --
+`scroll` --
+`change` --
+`submit` --
+`load` --
+`unload` --
