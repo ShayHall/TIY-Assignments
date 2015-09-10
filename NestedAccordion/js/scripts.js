@@ -11,5 +11,7 @@ TODO
 * We want an `onclick:` event handler--> document.getElementByClassName("cbp-nttrigger").onclick = //some function or method or object that will activate the HTML changes.
 * Function and/or method(s) will : 1) reveal 'nested' <div> and align clicked header to top of page.
 *
+*Other things we might need:
 *
+*Interface, Events, Elements or nodes, Event handler, Event Target, Properties, Methods
 *
