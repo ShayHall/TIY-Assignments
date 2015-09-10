@@ -9,7 +9,7 @@ TODO
     -Run test like `alert` to see if link was established.
 * Connect "Oat cake tootsie roll" <h3> class = "cbp-nttrigger"> to javascript
 * We want an `onclick:` event handler--> document.getElementByClassName("cbp-nttrigger").onclick = //some function or method or object that will activate the HTML changes.
-*
+* Function and/or method(s) will : 1) reveal 'nested' <div> and align clicked header to top of page.
 *
 *
 *
