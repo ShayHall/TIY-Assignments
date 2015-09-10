@@ -632,25 +632,17 @@ EventInit is an optional Boolean that defaults to false.  EventInit can be "bubb
 
 `drag event` -- fired when an element or text selection is being dragged.
 
-`dblclick` --
+`dblclick` -- fired when a pointing device button is clicked twice on a single element.
 
-`mousedown` --
+`mousedown` -- fired when pointing device button is pressed on an element
 
-`mouseup` --
+`mouseup` -- fired when a pointing device is released over an element
 
-`mouseover` --
+`mouseover` -- fired when a pointing device is moved onto the element that has the listener attached or onto one of its children
 
-`mouseout` --
+`mouseout` -- fired when pointing device is moved off the element that has the listener attached or off one of its children
 
-`mousemove` --
-
-`onclick` --
-
-`submit` -- fired when a form is submitted (only on the `<form>` element, not `button` or `submit input`
-
-`unload` -- The unload event is fired when the document or child resource is being unloaded
-
-`load` -- The load event is fired when a resource and its dependent resources have finished loading.
+`mousemove` -- fired when a pointing device is moved while over an element
 
 `onchange` -- fires the moment the value of the element is changed.
 
@@ -660,11 +652,18 @@ EventInit is an optional Boolean that defaults to false.  EventInit can be "bubb
 
 `onsearch` -- fires when user writes something in a search field
 
-Next document some of the common event types that we'll encounter: . Not all HTML elements can listen to all events, so make special note of which HTML elements those event types apply to. Give an example of each in use, selecting an element from the document and attaching an event listener to it.
+_Next document some of the common event types that we'll encounter: . Not all HTML elements can listen to all events, so make special note of which HTML elements those event types apply to. Give an example of each in use, selecting an element from the document and attaching an event listener to it._
 
-`click` --
-`scroll` --
-`change` --
-`submit` --
-`load` --
-`unload` --
+`click` -- fired when a pointing device button is pressed and released on a single element
+
+`scroll` -- fired when the document view or an element has been scrolled
+
+`change` -- fired for `input`, `select`, and `textarea` elements when a change to the element's value is committed by the user.
+
+`onclick` --  an event handler that is called when the object is clicked
+
+`submit` -- fired when a form is submitted (only on the `<form>` element, not `button` or `submit input`
+
+`unload` -- The unload event is fired when the document or child resource is being unloaded
+
+`load` -- The load event is fired when a resource and its dependent resources have finished loading.
