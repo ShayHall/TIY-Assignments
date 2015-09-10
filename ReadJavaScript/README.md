@@ -406,7 +406,7 @@ console.log(noise); //returns "I h", "ve ", " splitting he", "d", "che"
 ```
 
 ## `Objects` -- a named container for values
-collection of properties. Property is an association between a name (or key) and a value.
+* collection of properties. Property is an association between a name (or key) and a value.
 A property's value can be a function.
 
 ```Parameter variables are used to import arguments into functions.
@@ -612,13 +612,11 @@ document.body = objRef;```
 
 ##### `dispatchEvent` -- invokes the affected `EventListener` in the appropriate order.
 
-##### `*Attribute` family --
+##### `*Attribute` family -- HTML attributes are additional values that configure the elements or adjust their behavior in various ways to meet the criteria the user wants.
 
-##### `HTMLCollection` type --
+##### `HTMLCollection` -- an interface that represents a generic collection (array-like object) of elements (in document order) and offers methods and properties for selecting from the list.
 
-##### `NodeList`type --
-
-(How they differ from `Array`
-how they can be used _like_ an `Array`
+##### `NodeList` -- objects that are collections of nodes such as those returned by `Node.childNodes` and the `document.querySelectorAll` method.  It takes the property of length from the number of nodes in the NodeList.  
+NodeList differs from an array in that arrays are built-in objects and NodeLists are host objects. NodeLists have different methods (like the `item` method). JavaScript has an inheritance mechanism based on prototypes and NodeLists come from a different prototype than Arrays..._What?_ They can be used like an array... _How?_ how they can be used _like_ an `Array`???
 
 ##### `item` method --
