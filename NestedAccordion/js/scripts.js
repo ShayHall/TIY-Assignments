@@ -14,51 +14,60 @@ heading.addEventListener('click', function() { //Register a listener to 'heading
 * WORKING CODE DO NOT DELETE!
 * WORKING CODE DO NOT DELETE!
 */
-var heading = document.querySelectorAll("h3.cbp-nttrigger"); //Assigned name "heading" to the method of identifying the first element with class="cbp-nttrigger"
-heading[0].addEventListener('click', function() { //Register a listener to 'heading'
-  if (document.querySelector("li").className === "cbp-ntopen") { //created an if/else statement to recognize whether the li class = cbp-ntopen exists or not.
-    document.querySelector("li").className= ""; //removes li class ="cbp-ntopen"
+var heading = document.querySelectorAll("h3.cbp-nttrigger");
+var liHeading = document.querySelectorAll("li.cbp-ntopen");
+console.log("before messin'" + liHeading[0]);
+
+/*Oat*/heading[0].addEventListener('click', function() {//opens oats when oats clicked
+  if (document.querySelector("li").className === "cbp-ntopen") {
+    document.querySelector("li").className= "";//closes
     } else {
-    document.querySelector("li").className= "cbp-ntopen";//adds class ="cbp-ntopen"
+    document.querySelector("li").className= "cbp-ntopen";//open
+  };
+console.log("durin' messin" + liHeading);
+});//
+
+console.log("after" + liHeading[0]);
+/*Gummy*/heading[1].addEventListener('click', function() {//opens oats when Gummy clicked
+  if (document.querySelector("li").className === "cbp-ntopen") {
+    document.querySelector("li").className= "";//closes
+    } else {
+    document.querySelector("li").className= "cbp-ntopen";//opens
+  };
+console.log("heading" + heading);
+});
+
+/*Jelly*/heading[2].addEventListener('click', function() {
+  if (document.querySelector("li").className === "cbp-ntopen") {
+    document.querySelector("li").className= "";
+    } else {
+    document.querySelector("li").className= "cbp-ntopen";
   };
 console.log(heading);
 });
 
-heading[1].addEventListener('click', function() { //Register a listener to 'heading'
-  if (document.querySelector("li").className === "cbp-ntopen") { //created an if/else statement to recognize whether the li class = cbp-ntopen exists or not.
-    document.querySelector("li").className= ""; //removes li class ="cbp-ntopen"
+/*Danish*/heading[3].addEventListener('click', function() {
+  if (document.querySelector("li").className === "cbp-ntopen") {
+    document.querySelector("li").className= "";
     } else {
-    document.querySelector("li").className= "cbp-ntopen";//adds class ="cbp-ntopen"
+    document.querySelector("li").className= "cbp-ntopen";
   };
 console.log(heading);
 });
 
-heading[2].addEventListener('click', function() { //Register a listener to 'heading'
-  if (document.querySelector("li").className === "cbp-ntopen") { //created an if/else statement to recognize whether the li class = cbp-ntopen exists or not.
-    document.querySelector("li").className= ""; //removes li class ="cbp-ntopen"
+/*BearClaw*/heading[4].addEventListener('click', function() {
+  if (document.querySelector("li").className === "cbp-ntopen") {
+    document.querySelector("li").className= "";
     } else {
-    document.querySelector("li").className= "cbp-ntopen";//adds class ="cbp-ntopen"
+    document.querySelector("li").className= "cbp-ntopen";
   };
 console.log(heading);
 });
 
-heading[3].addEventListener('click', function() { //Register a listener to 'heading'
-  if (document.querySelector("li").className === "cbp-ntopen") { //created an if/else statement to recognize whether the li class = cbp-ntopen exists or not.
-    document.querySelector("li").className= ""; //removes li class ="cbp-ntopen"
-    } else {
-    document.querySelector("li").className= "cbp-ntopen";//adds class ="cbp-ntopen"
-  };
-console.log(heading);
-});
 
-heading[4].addEventListener('click', function() { //Register a listener to 'heading'
-  if (document.querySelector("li").className === "cbp-ntopen") { //created an if/else statement to recognize whether the li class = cbp-ntopen exists or not.
-    document.querySelector("li").className= ""; //removes li class ="cbp-ntopen"
-    } else {
-    document.querySelector("li").className= "cbp-ntopen";//adds class ="cbp-ntopen"
-  };
-console.log(heading);
-});
+
+
+
 
 // var heading = document.querySelectorAll(".cbp-nttrigger");
 //
