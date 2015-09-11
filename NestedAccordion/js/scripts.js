@@ -3,29 +3,27 @@
 * WORKING CODE DO NOT DELETE!
 
 var heading = document.querySelector(".cbp-nttrigger");
-heading.addEventListener('click', function(){
-document.querySelector("li").className= "cbp-ntopen";
+heading.addEventListener('click', function() {
+  if (document.querySelector("li").className === "cbp-ntopen") {
+    document.querySelector("li").className= "";
+    } else {
+    document.querySelector("li").className= "cbp-ntopen";
+  };
 });
 
 * WORKING CODE DO NOT DELETE!
 * WORKING CODE DO NOT DELETE!
 */
 
-
 var heading = document.querySelector(".cbp-nttrigger");
-var closeHeading = document.querySelector(".cbp-nttrigger");
+heading.addEventListener('click', function() {
+  if (document.querySelector("li").className === "cbp-ntopen") {
+    document.querySelector("li").className= "";
+    } else {
+    document.querySelector("li").className= "cbp-ntopen";
+  };
+});
 
-
-if (document.querySelector("li").className="cbp-ntopen" = ) {
-  return closeHeading.addEventListener('click', function(){
-  document.querySelector("li").className= "";
-  });
-
-  } else {
-
-  return heading.addEventListener('click', function(){
-  document.querySelector("li").className= "cbp-ntopen";;
-};
 
 
 
