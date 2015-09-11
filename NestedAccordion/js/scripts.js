@@ -2,12 +2,12 @@
 * WORKING CODE DO NOT DELETE!
 * WORKING CODE DO NOT DELETE!
 
-var heading = document.querySelector(".cbp-nttrigger");
-heading.addEventListener('click', function() {
-  if (document.querySelector("li").className === "cbp-ntopen") {
-    document.querySelector("li").className= "";
+var heading = document.querySelector(".cbp-nttrigger"); //Assigned name "heading" to the method of identifying the first element with class="cbp-nttrigger"
+heading.addEventListener('click', function() { //Register a listener to 'heading'
+  if (document.querySelector("li").className === "cbp-ntopen") { //created an if/else statement to recognize whether the li class = cbp-ntopen exists or not.
+    document.querySelector("li").className= ""; //removes li class ="cbp-ntopen"
     } else {
-    document.querySelector("li").className= "cbp-ntopen";
+    document.querySelector("li").className= "cbp-ntopen";//adds class ="cbp-ntopen"
   };
 });
 
@@ -16,12 +16,13 @@ heading.addEventListener('click', function() {
 */
 
 var heading = document.querySelector(".cbp-nttrigger");
+
 heading.addEventListener('click', function() {
-  if (document.querySelector("li").className === "cbp-ntopen") {
-    document.querySelector("li").className= "";
-    } else {
+  // if (document.querySelector("li").className === "cbp-ntopen") {
+  //   document.querySelector("li").className= "";
+  //   } else {
     document.querySelector("li").className= "cbp-ntopen";
-  };
+  // };
 });
 
 
