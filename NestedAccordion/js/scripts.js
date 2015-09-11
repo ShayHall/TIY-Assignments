@@ -1,26 +1,23 @@
 // *TODO
-// * When I click...
-//   <h3> class = "cbp-nttrigger">
+// * When I click on a header...
+ //selected the first element with class "cbp-nttrigger"
+  var heading = document.querySelector(".cbp-nttrigger"); //get an error saying:
 
-// * on a header...
-//   `onclick:` event handler--> document.getElementByClassName("cbp-nttrigger").onclick = //some function or method or object that will activate the HTML changes.
+heading.addEventListener('click', function(){ //get an error saying: "Uncaught TypeError: Cannot read property 'addEventListener' of null" (anonymous function)	@	scripts.js:6
+  var tracer = console.log("Tracy McTracerton"); // Just checking to see if it works
+  document.querySelector("li").className= "cbp-ntopen";// * a new block of text open up by making function that will : 1) add	 class="cbp-ntopen" to first <li> (first child?) of <ul id="cbp-ntaccordion" class="cbp-ntaccordion">
+  heading.addEventListener('click', tracer); //Just checking to see if it works.
 
-// * a new block of text open up...
-//   Function and/or method(s) will : 1) reveal 'nested' <div> and align clicked header to top of page.
+});
 
-// * When I click again...
-//
 
-// * on the same header...
+// Align clicked header to top of page....
+
+// * When I click again on the same header...
 //
 
 // * the block of text closes...
 //
 
-// * We want an
-// *
-
-// *Other things we might need: Interface, Events, Elements or nodes, Event handler, Event Target, Properties, Methods
-
-
+// * We want all top-level accordians to open and close at same time...
 //
