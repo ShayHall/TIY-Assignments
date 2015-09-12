@@ -17,7 +17,7 @@ var list = document.getElementsByClassName("cbp-vm-list");
 *
 
 * What events will I use?
-
+Event- HashChangeEvent- (https://developer.mozilla.org/en-US/docs/Web/API/HashChangeEvent)
 *1) Focus on the `button`
     - How to `switch` the active button?  -- class = "bp-vm-selected" switches betwteen 'a' elements
         <a href="#" class="cbp-vm-icon cbp-vm-grid" data-view="cbp-vm-view-grid">Grid View</a>
@@ -47,49 +47,72 @@ TODO
   -When grid is added, list is removed
   -When list is added, grid is removed
 */
-var monkey = document.getElementById("cbp-vm-list");
-
-monkey.addEventListener('click', function() {
-  function toggleClass(flip) {
-    var layout = document.getElementById("cb-vm-options").children;
-    for (var i = 0; i < layout.length; i++) {
-      layout[i].className = "a.cbp-vm-icon";
-    }; //End for loop
-    flip.className = "class2";
-  }; //END function toggleClass
-});//END eventListener
-
-// var grid = document.getElementsByClassName("cbp-vm-grid");
-//
-// grid.addEventListener('click', function () {
-//   grid.className += 'cbp-vm-selected'
-//
-// });
-
-// var list = document.getElementsByClassName("cbp-vm-list");
-//
-//   console.log(list);// logs --> [a.cbp-vm-icon.cbp-vm-list]
-//
-//   layout.addEventListener('click', function() {
-//     list.className = '.cbp-vm-selected';
-//     console.log(list);
-// });
 
 
-// function toggleClass(list, "cbp-vm-selected"){
-//     if (!list || !"cbp-vm-selected"){
-//         return;
-//     }
-//
-//     var classString = element.className, nameIndex = classString.indexOf(className);
-//     if (nameIndex == -1) {
-//         classString += ' ' + className;
-//     }
-//     else {
-//         classString = classString.substr(0, nameIndex) + classString.substr(nameIndex+className.length);
-//     }
-//     element.className = classString;
+var switcheroo = document.getElementById("cbp-vm");//Define 'list' as the div ID='cbp-vm'
+var grid = switcheroo.firstChild;
+var list = switcheroo.lastChild;
+console.log(grid);
+console.log(list);
+list.addEventListener('click', function() { //add an event listener to listen for a `click` on the div ID='cbp-vm'
+grid.className = "cbp-vm-icon cbp-vm-grid";//when `click` is heard, change class of firstChild to this
+list.className = "cbp-vm-icon cbp-vm-list cbp-vm-selected"// when `click is heard, change class of secondChild to this
+console.log(grid);
+console.log(list);
+});//END addEventListener and END function to switch selected to list.
 
+
+
+
+
+
+
+
+
+/*
+*
+* vvv Code graveyard below. vvv
+
+var list = document.getElementsByClassName('.cbp-vm-list');
+
+  list.addEventListener('click', function() {
+    list.className += ' cbp-vm-selected';
+    console.log("tracer arrows =-->");
+});
+
+function modifyText() {
+  var t2 = document.getElementById("t2");
+  if (t2.firstChild.nodeValue == "three") {
+    t2.firstChild.nodeValue = "two";
+  } else {
+    t2.firstChild.nodeValue = "three";
+  }
+}
+
+// add event listener to table
+var el = document.getElementById("outside");
+el.addEventListener("click", modifyText, false);
+
+
+var grid = document.getElementsByClassName("cbp-vm-grid");
+
+grid.addEventListener('click', function () {
+  grid.className += 'cbp-vm-selected'
+
+});
+
+var list = document.getElementsByClassName("cbp-vm-list");
+
+  console.log(list);// logs --> [a.cbp-vm-icon.cbp-vm-list]
+
+  layout.addEventListener('click', function() {
+    list.className = '.cbp-vm-selected';
+    console.log(list);
+});
+
+* ^^^ Code Graveyard above ^^^
+*
+*/
 
 
 
@@ -102,5 +125,3 @@ monkey.addEventListener('click', function() {
 
 
 // parameter.target.style.visibility='hidden'
-
-//
