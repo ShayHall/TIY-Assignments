@@ -1,4 +1,20 @@
 /*
+*
+* vvv THIS IS OUR WORKING CODE!!!  DON'T DELETE!!! vvv
+
+var list = document.getElementsByClassName("cbp-vm-list");
+
+  console.log(list);// logs --> [a.cbp-vm-icon.cbp-vm-list]
+
+  list.addEventListener('click', function() {
+    list.className = '.cbp-vm-selected';
+    console.log(list);
+});
+
+* ^^^ THIS IS OUR WORKING CODE!!!  DON'T DELETE!!! ^^^
+
+*
+*
 
 * What events will I use?
 
@@ -31,23 +47,48 @@ TODO
   -When grid is added, list is removed
   -When list is added, grid is removed
 */
+var monkey = document.getElementById("cbp-vm-list");
+
+monkey.addEventListener('click', function() {
+  function toggleClass(flip) {
+    var layout = document.getElementById("cb-vm-options").children;
+    for (var i = 0; i < layout.length; i++) {
+      layout[i].className = "a.cbp-vm-icon";
+    }; //End for loop
+    flip.className = "class2";
+  }; //END function toggleClass
+});//END eventListener
+
+// var grid = document.getElementsByClassName("cbp-vm-grid");
+//
+// grid.addEventListener('click', function () {
+//   grid.className += 'cbp-vm-selected'
+//
+// });
+
+// var list = document.getElementsByClassName("cbp-vm-list");
+//
+//   console.log(list);// logs --> [a.cbp-vm-icon.cbp-vm-list]
+//
+//   layout.addEventListener('click', function() {
+//     list.className = '.cbp-vm-selected';
+//     console.log(list);
+// });
 
 
-var grid = document.getElementByClassName("cbp-vm-grid");
-
-grid.addEventListener('click', function () {
-  grid.className = 'cbp-vm-selected'
-
-});
-
-var list = document.getElementByClassName("cbp-vm-grid");
-
-list.addEventListener('click', function() {
-  list.className = 'cbp-vm-selected';
-});
-
-
-
+// function toggleClass(list, "cbp-vm-selected"){
+//     if (!list || !"cbp-vm-selected"){
+//         return;
+//     }
+//
+//     var classString = element.className, nameIndex = classString.indexOf(className);
+//     if (nameIndex == -1) {
+//         classString += ' ' + className;
+//     }
+//     else {
+//         classString = classString.substr(0, nameIndex) + classString.substr(nameIndex+className.length);
+//     }
+//     element.className = classString;
 
 
 
