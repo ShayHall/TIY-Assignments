@@ -49,10 +49,12 @@ TODO
 */
 
 
-var switcheroo = document.getElementById("cbp-vm");//Define 'list' as the div ID='cbp-vm'
-var grid = switcheroo.firstChild;
-var list = switcheroo.lastChild;
+var switcheroo = document.getElementsByClassName("cbp-vm-options");//Define 'list' as the div ID='cbp-vm'
+console.log("Switcheroo is " + switcheroo.item({}));
+var grid = switcheroo.item({}).firstChild;
 console.log(grid);
+
+var list = grid.nextSibling;
 console.log(list);
 list.addEventListener('click', function() { //add an event listener to listen for a `click` on the div ID='cbp-vm'
 grid.className = "cbp-vm-icon cbp-vm-grid";//when `click` is heard, change class of firstChild to this
