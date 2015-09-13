@@ -34,21 +34,41 @@ document.activeElement (https://developer.mozilla.org/en-US/docs/Web/API/Documen
 
 console.log(varName.data)
 */
-var form = document.querySelectorAll("form");
-var firstName = document.getElementById("first_name");
 
-function casualName() {
-  console.log(firstName.value);//console.log prints values as they are typed.
+var firstName = document.getElementById("first_name");
+var lastName = document.getElementById("last_name");
+var email = document.getElementById("email");
+var country = document.getElementById("country");
+var bio = document.getElementById("bio");
+
+var info = document.getElementsByClassName("cbp-mc-submit-wrap");//This isn't working...YET!
+
+
+function collectedInfo () {
+  var data = [firstName.value, lastName.value, email.value, country.value, bio.value];
+  console.log(data);//console.log prints values as they are typed.
 };
 
+firstName.addEventListener('input', collectedInfo);
+lastName.addEventListener('input', collectedInfo);
+email.addEventListener('input', collectedInfo);
+country.addEventListener('input', collectedInfo);
+bio.addEventListener('input', collectedInfo);
+
+info.addEventListener('submit', giveInfo);//This isn't working... YET!
 
 
 
 
-firstName.addEventListener('input', casualName);
-form.addEventListener('submit', function() {
-  console.log(firstName.value);
-};);
+
+
+
+
+
+
+// info.addEventListener('click', function() {
+//   console.log(casualName);
+// });
 /*
 * PUT both `script.js` code in repo as well as results of the output as comment in WIP Issue
 *For good measure, drop a few comments and be sure to use code fences.
