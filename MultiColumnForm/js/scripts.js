@@ -40,80 +40,43 @@ var lastName = document.getElementById("last_name");
 var email = document.getElementById("email");
 var country = document.getElementById("country");
 var bio = document.getElementById("bio");
+var phone = document.getElementById("phone");
+var affiliations = document.getElementById("affiliations");
+var occupation = document.getElementById("occupation");
+var catName = document.getElementById("cat_name");
+var gadget = document.getElementById("gagdet");
+var talent = document.getElementById("talent");
+var drink = document.getElementById("drink");
+var power = document.getElementById("power");
+var weapon = document.getElementById("weapon");
+var comments = document.getElementById("comments");
 
-var info = document.getElementsByClassName("cbp-mc-submit-wrap");//This isn't working...YET!
+
+// var info = document.getElementsByClassName("cbp-mc-submit-wrap");//This isn't working...YET!
 
 
 function collectedInfo () {
-  var data = [firstName.value, lastName.value, email.value, country.value, bio.value];
+  var data = [firstName.value, lastName.value, email.value, country.value, bio.value, phone.value, affiliations.value, occupation.value, catName.value, gadget.value, talent.value, drink.value, power.value, weapon.value, comments.value];
   console.log(data);//console.log prints values as they are typed.
 };
+
 
 firstName.addEventListener('input', collectedInfo);
 lastName.addEventListener('input', collectedInfo);
 email.addEventListener('input', collectedInfo);
 country.addEventListener('input', collectedInfo);
 bio.addEventListener('input', collectedInfo);
-
-info.addEventListener('submit', giveInfo);//This isn't working... YET!
-
-
-
-
-
-
-
-
-
+phone.addEventListener('input', collectedInfo);
+affiliations.addEventListener('input', collectedInfo);
+occupation.addEventListener('input', collectedInfo);
+catName.addEventListener('input', collectedInfo);
+gadget.addEventListener('input', collectedInfo);
+talent.addEventListener('input', collectedInfo);
+drink.addEventListener('input', collectedInfo);
+power.addEventListener('input', collectedInfo);
+weapon.addEventListener('input', collectedInfo);
+comments.addEventListener('input', collectedInfo);
 
 // info.addEventListener('click', function() {
-//   console.log(casualName);
-// });
-/*
-* PUT both `script.js` code in repo as well as results of the output as comment in WIP Issue
-*For good measure, drop a few comments and be sure to use code fences.
-*/
-
-
-
-
-
-
-
-/*
-**From Nested Accordion w/exact classnames changed for generic
-
-var heading = document.querySelector("class0");
-heading.addEventListener('click', function() {
-  if (document.querySelector("li").className === "class1") {
-    document.querySelector("li").className= "";
-    } else {
-    document.querySelector("li").className= "class1";
-  };
-});
-
-**
-*/
-
-/*
-** from ViewModeSwitch
-
-var buttons = document.querySelector("div #cbp-vm");
-var grid = document.querySelector("a.cbp-vm-icon.cbp-vm-grid");
-var list = document.querySelector("a.cbp-vm-icon.cbp-vm-list")
-
-grid.addEventListener('click', function(gridButton) {
-  var currentButton = gridButton.currentTarget;
-buttons.className = "cbp-vm-switcher cbp-vm-view-grid";
-grid.className = "cbp-vm-icon cbp-vm-grid cbp-vm-selected";
-list.className = "cbp-vm-icon cbp-vm-list"
-});
-
-list.addEventListener('click', function (listButton) {
-  var currentButton = listButton.currentTarget;
-  buttons.className = "cbp-vm-switcher cbp-vm-view-list";
-  list.className = "cbp-vm-icon cbp-vm-list cbp-vm-selected";
-  grid.className = "cbp-vm-icon cbp-vm-grid";
-});
-
-*/
+//   console.log(currentTarget);
+// });//This isn't working... YET!
