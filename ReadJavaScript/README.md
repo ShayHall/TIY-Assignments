@@ -406,7 +406,7 @@ console.log(noise); //returns "I h", "ve ", " splitting he", "d", "che"
 ```
 
 ## `Objects` -- a named container for values
-collection of properties. Property is an association between a name (or key) and a value.
+* collection of properties. Property is an association between a name (or key) and a value.
 A property's value can be a function.
 
 ```Parameter variables are used to import arguments into functions.
@@ -493,10 +493,10 @@ catch (false) {
 
 
 ## Reading JavaScript: DOM EDITION
-###`DOM: Document Object Model` -- programming interface for HTML, EML, and SVG documents
-provides structured representation of the document or tree and defines a way that the structure can be accessed from programs in order to manipulate structure, style, and content.
+##### `DOM: Document Object Model` -- programming interface for HTML, EML, and SVG documents
+DOM provides structured representation of the document (or tree) and defines a way that the structure can be accessed from programs in order to manipulate structure, style, and content.
 
-### `Window` Object -- represents a window that contains a DOM document.
+#### `Window` -- represents a window that contains a DOM document.
 The document property points to the DOM document loaded in that window.
 
 ##### `location` -- `window.location` is a read-only property that returns a `location` object with info about current location of document.  While it is read-only, it can be made into a string in most cases.
@@ -506,59 +506,64 @@ The document property points to the DOM document loaded in that window.
 
 ##### `history` --`window.history` is a read-only property that returns a reference to the History object. This provides an interface for manipulating the browser session history.
 ``` var _historyObj_ = window.history;
-ex. history.back();  //equivalent to clicking back button
-```
+ex. history.back();  //equivalent to clicking back button```
 
 ##### `alert` -- displays an alert dialog with optional specified content and an `OK button`
-It is used to inform the user with no required response other than acknowledgment of message.
-``` window.alert(["message"]);```
+`alert` is used to inform the user with no required response other than acknowledgment of message.
+
+`window.alert(["message"]);`
 
 ##### `confirm` -- displays a modal dialog (user cannot access the rest of the program's interface until the dialog box is closed) with an optional message and two buttons `OK` and `Cancel`
 ``` result = window.confirm(["message"] // result is a Boolean value determined by selecting `OK` or `Cancel`
 
 ##### `reload` -- `location.reload` method reloads resources from current URL.
-```object.reload([forcedReload]);```
+ex. `object.reload([forcedReload]);`
 
-#####`open` -- loads a resource into either a new browsing context (like a window) or one that already exists.
+##### `open` -- loads a resource into either a new browsing context (like a window) or one that already exists.
 Creates a new secondary browser window.
-``` var windowObjectReference = window.open(strUrl, strWindowName, [strWindowFeatures]); //`windowObjectReference` refers to newly created window.
-// `strUrl` is the URL to be loaded in the newly opened window like HTML document, image file, or other resource supported by browser.
-//`strWindowName` a string name for new window.
-//`strWindowFeatures` optional parameter listing features(size, position, scrollbars, etc) of new window as a string.
-```
+
+`var windowObjectReference = window.open(strUrl, strWindowName, [strWindowFeatures]);`
+
+`windowObjectReference` refers to newly created window.
+
+`strUrl` is the URL to be loaded in the newly opened window like HTML document, image file, or other resource supported by browser.
+
+`strWindowName` a string name for new window.
+
+`strWindowFeatures` optional parameter listing features(size, position, scrollbars, etc) of new window as a string.`
 
 
 ##### `close` -- closes the current window
 This method is only allowed to be called for windows that were opened by a script using `window.open()` method.
-```window.close()
 
-#### `location object` -- represents location of the object it is linked to.  Changes done to it are reflected on the object to which it relates.  Both `Document` and `Window` interface have linked `Location`.
+##### `location object` -- represents location of the object it is linked to.  Changes done to it are reflected on the object to which it relates.  Both `Document` and `Window` interface have linked `Location`.
 
-##### URLUtils.href -- property that has DOMString containing whole URL
+##### `URLUtils.hash` -- DOMString containing a `#` followed by the fragment identifier of the URL
+
+##### `URLUtils.host` -- DOMString containing host (hostname, `:`, and port of URL)
+
+##### `URLUtils.hostname` -- DOMString containing the domain of URL
+
+##### `URLUtils.href` -- property that has DOMString containing whole URL
 ```string = object.href;
 object.href = string;```
 
-##### URLUtils.protocol -- represents the protocol scheme of the URL
+##### `URLUtils.origin` -- returns DOMString containing canonical form of origin of the specific location
 
-##### URLUtils.host -- DOMString containing host (hostname, `:`, and port of URL)
+##### `URLUtils.password` --is DOMString containing the password specified before the domain name.
 
-##### URLUtils.hostname -- DOMString containing the domain of URL
+##### `URLUtils.pathname` -- DOMString containing initial `/` followed by path of URL
 
-##### URLUtils.port -- DOMString containing port number of URL
+##### `URLUtils.port` -- DOMString containing port number of URL
 
-##### URLUtils.pathname -- DOMString containing initial `/` followed by path of URL
+##### `URLUtils.protocol` -- represents the protocol scheme of the URL
 
-##### URLUtils.search -- DOMString containing a `?` followed by parameters of URL
+##### `URLUtils.search` -- DOMString containing a `?` followed by parameters of URL
 
-##### URLUtils.hash -- DOMString containing a `#` followed by the fragment identifier of the URL
+##### `URLUtils.username` -- is DOMString containing the username specified before the domain name
 
-##### URLUtils.hash -- is DOMString containing the username specified before the domain name
 
-##### URLUtils.hash --is DOMString containing the password specified before the domain name.
-
-##### URLUtils.origin -- returns DOMString containing canonical form of origin of the specific location
-
-### `Document` Object -- each web page loaded in browser has its own `document object`.
+#### `Document` Object -- each web page loaded in browser has its own `document object`.
 Document interface serves as an entry point into the web page's content and provides functionality which is global to the document.
 Can be obtained from various APIs.
 
@@ -586,7 +591,7 @@ document.body = objRef;```
 
 ##### `writeIn` -- writes a string of text followed by a newline character to a document.
 
-### `HTMLElement` type -- an interface that represents any `HTML` element.  
+#### `HTMLElement` -- an interface that represents any `HTML` element.  
 
 ##### `id` -- property representing the element's identifier, reflecting the id global attribute.
 
@@ -602,8 +607,6 @@ document.body = objRef;```
 
 ##### `parent` --`ParentNode` interface contains methods that are particular to `Node` objects that can have children.  `ParentNode` is a raw interface and no object of this type can be created; it is implemented by `Element`, `Document`, and `DocumentFragment` objects.
 
-##### `sibling` --
-
 ##### `nextSibling` -- read-only property returns the node immediately following the specified one in its parent's `childNodes` list.
 
 ##### `firstChild` -- read-only property returns the node's first child in the tree.
@@ -612,13 +615,58 @@ document.body = objRef;```
 
 ##### `dispatchEvent` -- invokes the affected `EventListener` in the appropriate order.
 
-##### `*Attribute` family --
+##### `*Attribute` family -- HTML attributes are additional values that configure the elements or adjust their behavior in various ways to meet the criteria the user wants.
 
-##### `HTMLCollection` type --
+##### `HTMLCollection` -- an interface that represents a generic collection (array-like object) of elements (in document order) and offers methods and properties for selecting from the list.
 
-##### `NodeList`type --
+##### `NodeList` -- objects that are collections of nodes such as those returned by `Node.childNodes` and the `document.querySelectorAll` method.  It takes the property of length from the number of nodes in the NodeList.  
+NodeList differs from an array in that arrays are built-in objects and NodeLists are host objects. NodeLists have different methods (like the `item` method). JavaScript has an inheritance mechanism based on prototypes and NodeLists come from a different prototype than Arrays..._What?_ They can be used like an array... _How?_ how they can be used _like_ an `Array`???
 
-(How they differ from `Array`
-how they can be used _like_ an `Array`
+##### `item` method -- gets an element by position.
 
-##### `item` method --
+####  Events -- The event interface represents any event of the DOM.  It contains common properties and methods to any event.
+The Event constructor creates a new `Event` using this syntax: `event = new Event("DOMString representing name of events", [EventInit]);`
+EventInit is an optional Boolean that defaults to false.  EventInit can be "bubbles"- indicates whether the event bubbles or not or "cancelable"- indicates if the event can be canceled or not.
+
+##### `Bubbles`  -- a term refering the order in which an event triggers, starting on deepest element and moving out toward parent in nesting order.  You can stop an event from bubbling by setting the second parameter of the event to `{"bubbles":false, "cancelable": true}
+`event.bubbles` -- indicates whether the given event bubbles through DOM or not.
+
+`event.target` -- refers to the object that dispatches the event.  Can be used to implement "event delegation"
+
+`drag event` -- fired when an element or text selection is being dragged.
+
+`dblclick` -- fired when a pointing device button is clicked twice on a single element.
+
+`mousedown` -- fired when pointing device button is pressed on an element
+
+`mouseup` -- fired when a pointing device is released over an element
+
+`mouseover` -- fired when a pointing device is moved onto the element that has the listener attached or onto one of its children
+
+`mouseout` -- fired when pointing device is moved off the element that has the listener attached or off one of its children
+
+`mousemove` -- fired when a pointing device is moved while over an element
+
+`onchange` -- fires the moment the value of the element is changed.
+
+`oncontextmenu` -- script to be run when a context menus is triggered
+
+`oninput` -- script to be run when an element gets user input
+
+`onsearch` -- fires when user writes something in a search field
+
+_Next document some of the common event types that we'll encounter: . Not all HTML elements can listen to all events, so make special note of which HTML elements those event types apply to. Give an example of each in use, selecting an element from the document and attaching an event listener to it._
+
+`click` -- fired when a pointing device button is pressed and released on a single element
+
+`scroll` -- fired when the document view or an element has been scrolled
+
+`change` -- fired for `input`, `select`, and `textarea` elements when a change to the element's value is committed by the user.
+
+`onclick` --  an event handler that is called when the object is clicked
+
+`submit` -- fired when a form is submitted (only on the `<form>` element, not `button` or `submit input`
+
+`unload` -- The unload event is fired when the document or child resource is being unloaded
+
+`load` -- The load event is fired when a resource and its dependent resources have finished loading.
