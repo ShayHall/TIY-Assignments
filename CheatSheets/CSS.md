@@ -1,7 +1,13 @@
 # Reading CSS
 
 ## Selectors
+- Identifies which element in DOM to apply rules.
+- Two ways to use selectors: `tag` (or `type`) names and `attribute` values
+- Selector points to the  `declaration`
+- The `declaration` contains `properties` and `values`
 
+
+#####
 ## Properties
 
 #### [`color` property](https://developer.mozilla.org/en-US/docs/Web/CSS/color)
