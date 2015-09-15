@@ -20,11 +20,17 @@
  			a) Use the property `.innerHTML` on the `label` of the `li`  (https://developer.mozilla.org/en-US/docs/Web/API/Element/innerHTML)
 
 ** I can mark a task as complete so that I remember that I have done it.
-	1)
+
+	1) Attach an `addEventListener` to the button next to the task that...
+		A) Takes `click` as the type...
+			a) when `click` is triggered, a function is fired that...
+		B) Adds the `class = "complete"` in the tasks `li` element:
+			a) Use `.ClassName` to assign `class = "complete"` to `li` element (https://developer.mozilla.org/en-US/docs/Web/API/Element/className)
 
 ** I can mark a completed task as incomplete so that I actually complete it this time.
-	1)
-
+	1) Expand on the function in the previous section to...
+ 		A) Create a `toggle` effect where `class = "complete"` is added or removed...
+			a) Use and `if else` statement to determine whether to add ro remove `class = "complete"` (See example from ViewModeSwitch below)
 ** I can delete a task from my todo list so that I don't have to see it any more.
 	1)
 
@@ -42,3 +48,23 @@
 	// Your starting point. Enjoy the ride!
 
 })(window);
+
+
+
+
+/* VIEW MODE SWITCH if else experiment...
+var buttons = document.querySelector("div #cbp-vm");
+var gridButton = document.querySelector("a.cbp-vm-icon.cbp-vm-grid");
+var listButton = document.querySelector("a.cbp-vm-icon.cbp-vm-list");
+
+gridButton.addEventListener('click', function(event) {
+  if (buttons.className = "cbp-vm-switcher cbp-vm-view-grid") {
+    gridButton.className = "cbp-vm-icon cbp-vm-grid cbp-vm-selected";
+    listButton.className = "cbp-vm-icon cbp-vm-list";
+  } else {
+    listButton.className = "cbp-vm-icon cbp-vm-list cbp-vm-selected";
+    gridButton.className = "cbp-vm-icon cbp-vm-grid";
+	};
+});
+
+*/
