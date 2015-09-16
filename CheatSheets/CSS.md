@@ -10,7 +10,7 @@
 - use the element tag name to identify which element to apply rules
 
 ##### `attribute` selector
--
+- uses `class and id tags
 
 ## Properties
 
@@ -60,7 +60,10 @@ The text color of an element and its decorations (??)
 - behaves like `fixed`, but relative to nearest _positioned_ ancestor (any ancestor that is not `static` instead of viewport.
 
 #### [`float` property](https://developer.mozilla.org/en-US/docs/Web/CSS/float)
-- intended for wrapping text around images. can be `left` or `right`
+- can be `left` or `right`
+- wrapping text around images.
+- changes `width` of the element.
+- other adjacent elements move.
 
 ##### `clear` property
 - controls the behavior of floats by allowing the tagged element to "clear" any floating elements.  Clear can take values of `left`, `right`, or `both`
@@ -90,7 +93,8 @@ The text color of an element and its decorations (??)
 ##### `min-*`
 - set the minimum width/height of given element
 
-##### `box-sizing`
--  used to alter default CSS box model to calculate width and height of elements.
+##### `box-sizing` property
+-  box starts on upper left hand margin.
+- used to alter default CSS box model to calculate width and height of elements.
 - `content-box` default style, width and height are measured including content but not padding, border, or margin.
 - `border-box` width and height including padding and border, but not margin

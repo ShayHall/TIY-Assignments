@@ -1,3 +1,27 @@
+h4:hover {
+  color: #404e4d;
+}
+
+h4:active {
+  color: #e94f37;
+}
+
+h5:hover {
+  color: #404e4d;
+}
+
+h5:active {
+  color: #e94f37;
+}
+
+.cbp-ntaccordion .cbp-nttrigger {
+  color: cornflowerblue;
+}
+
+.cbp-ntaccordion h3 {
+  font-size: 30pt;
+}
+
 * {
   font-family: "Lato", Arial, sans-serif;
 	background-color: #b93848;
