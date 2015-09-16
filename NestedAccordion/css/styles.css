@@ -1,10 +1,11 @@
 h4:hover {
-  color: #404e4d;
 }
+
 h4:before {
   content: '\2192';
 }
 h4:hover:before {
+  color: #404e4d;
   content: '\2198';
 }
 
