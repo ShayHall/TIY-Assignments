@@ -1,0 +1,17 @@
+li {
+  background-color: #46a4da;
+  border: 5px;
+  width: 60%;
+  margin: 5px 75px;
+  float: right;
+  border-radius: 5px
+}
+
+h2 {
+  border-bottom: 1px solid lightgrey;
+  padding: 2px 5px;
+}
+
+time {
+  float:left;
+}
