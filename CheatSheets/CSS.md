@@ -54,36 +54,37 @@ The text color of an element and its decorations (??)
 
 #### `text-*` properties
 
-##### `text-align`
+##### [`text-align`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-align)
+- describes how inline content like text is aligned in its parent block element.
+- ```example text-align: center```
 
-##### `text-decoration`
+##### [`text-decoration`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration)
+- used to set text formatting to `underline`, `overline`, `line-through`, or `blink`
+- ```example text-decoration: underline red```
 
-##### `text-indent`
+##### [`text-indent`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-indent)
+- specify how much horizontal space should be left before beginning of first line of text content of an element
+- ```text-indent: 5em```
 
-##### `text-orientation`
+##### [`text-overflow`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-overflow)
+- determines how overflowed content that is not displayed is signaled to user
+- ```example text-overflow: clip //truncates text at limit of content area```
 
-##### `text-overflow`
-
-##### `text-rendering`
-
-##### `text-shadow`
-
-##### `text-transform`
-
-##### `text-underline-position`
-
+##### [`text-shadow`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow)
+- adds shadow to text.
+- ```text-shadow: 5px 5px #CCC```
 
 
 #### [`line-*` properties]()
 
-##### `line-break`
+##### [`letter-spacing`](https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing)
+- specify behavior between text characters
+- ```example letter-spacing: 3px```
 
-##### `line-height`
-
-
-
-
-
+##### [`line-height`](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height)
+- specify minimum height of line boxes within element on block-level elements
+- specify the height used to calculate line box height on non-replaced inline elements.
+- ``` line-height: 3m5```
 
 ### Spacial Elements
 
