@@ -42,18 +42,6 @@ The text color of an element and its decorations (??)
 
 ##### Other display values - [For a full list of display values see MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
 
-##### `margin`
-- Setting `width` of a block-level element will prevent it from stretching to the edges of its container on left and right. Left and Right margins can be set to `auto` to center the element within its container.  
-
-##### `max-width`
-- This is better than `width-auto` because it accounts for small windows.
-
-##### `border` property
--  assigns border property values like `width`, `style`, and `color`
-
-##### `padding` property
--  assigns padding space on all sides of an element between content and border.
-
 #### [`position` property](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
 ##### `static`
 - This is the default position value.  
@@ -68,10 +56,33 @@ The text color of an element and its decorations (??)
 - behaves like `fixed`, but relative to nearest _positioned_ ancestor (any ancestor that is not `static` instead of viewport.
 
 #### [`float` property](https://developer.mozilla.org/en-US/docs/Web/CSS/float)
-- intended for wrapping text around images.
+- intended for wrapping text around images. can be `left` or `right`
 
 ##### `clear` property
 - controls the behavior of floats by allowing the tagged element to "clear" any floating elements.  Clear can take values of `left`, `right`, or `both`
 
- ##### `@media` media query
+##### `@media` media query
 - a "responsive design" tool used with percentage values to display layout in 1 column whe browser is too small to fit sidebar.
+
+#### [`box model` property](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- Each element is represented as a box.  
+
+##### `margin-*`
+- Setting `width` of a block-level element will prevent it from stretching to the edges of its container on left and right. Left and Right margins can be set to `auto` to center the element within its container.  
+
+##### `padding-*`
+-  assigns padding space on all sides of an element between content and border.
+
+##### `border-*`  
+-  assigns border property values like `width`, `style`, and `color`
+
+##### `max-*`
+- set the maximum width/height of given element.  This is better than `*-auto` because it accounts for small windows.
+
+##### `min-*`
+- set the minimum width/height of given element
+
+##### `box-sizing`
+-  used to alter default CSS box model to calculate width and height of elements.
+- `content-box` default style, width and height are measured including content but not padding, border, or margin.
+- `border-box` width and height including padding and border, but not margin
