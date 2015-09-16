@@ -1,0 +1,33 @@
+body {
+  font-family: sans-serif;
+  font-weight: 100;
+  font-size: 1.2em;
+}
+
+
+li {
+  background-color: #46a4da;
+  border: 5px;
+  width: 60%;
+  margin: 5px 75px;
+  float: right;
+  border-radius: 5px
+}
+
+h2 {
+  border-bottom: 1px solid lightgrey;
+  margin: 10px; 
+  padding: 2px 5px;
+  color: white;
+}
+
+time {
+  float:left;
+}
+
+p {
+  color: white;
+  padding: 5px 10px;
+  margin: 20px;
+  font-size: 100%;
+}
