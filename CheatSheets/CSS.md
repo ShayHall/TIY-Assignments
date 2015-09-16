@@ -6,8 +6,12 @@
 - Selector points to the  `declaration`
 - The `declaration` contains `properties` and `values`
 
+##### `tag name` selectors
+- use the element tag name to identify which element to apply rules
 
-#####
+##### `attribute` selector
+-
+
 ## Properties
 
 #### [`color` property](https://developer.mozilla.org/en-US/docs/Web/CSS/color)
@@ -66,6 +70,10 @@ The text color of an element and its decorations (??)
 
 #### [`box model` property](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
 - Each element is represented as a box.  
+
+![Box-model](https://mdn.mozillademos.org/files/8685/boxmodel-(3)
+
+> [From developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
 
 ##### `margin-*`
 - Setting `width` of a block-level element will prevent it from stretching to the edges of its container on left and right. Left and Right margins can be set to `auto` to center the element within its container.  
