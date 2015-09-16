@@ -10,8 +10,14 @@ li {
 h2 {
   border-bottom: 1px solid lightgrey;
   padding: 2px 5px;
+  color: white;
 }
 
 time {
   float:left;
+}
+
+p {
+  color: white;
+  padding: 5px 10px;
 }
