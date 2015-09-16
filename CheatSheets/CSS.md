@@ -31,19 +31,26 @@ The text color of an element and its decorations (??)
 
 #### [`font-*` properties](https://developer.mozilla.org/en-US/docs/Web/CSS/font)
 
-##### `font-family`
+##### [`font-family`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-family)
+- specify a prioritized list of font family names or generic names for selected element.
+- ``` example- font-family: 'Roboto', sans-serif;```
 
-##### `font-size`
+##### [`font-size`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-family)
+- specify size of font.  May change size of other items since it is used to compute value of em and ex <length> units.
+- ```example font-size: 20pt```
 
-##### `font-weight`
+##### [`font-weight`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight)
+- specify weight or boldness of font
+- ```example font-weight: bold```
+- ``` example font-weight: 300```
 
-##### `font-stretch`
+##### [`font-style`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-style)
+- allows you to select italic or oblique faces within font-family
+- ```example font-style:italic```
 
-##### `font-style`
-
-##### `font-synthesis`
-
-##### `font-variant`
+##### [`font-variant`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant)
+- shorthand for longhand properties: `font-variant-caps`, `font-variant-numeric`, `font-variant-alternates`, `font-variant-ligatures`, `font-variant-east-asian`.
+- ```example font-variant: small-caps```
 
 #### `text-*` properties
 
