@@ -1,3 +1,12 @@
+
+
+@media (max-width:70em) {
+  .cbp-mc-column {
+    float: left;
+    width: 45%;
+  }
+}
+
 @media (max-width:70em) {
   .cbp-mc-column:nth-child(3) {
     float: left;
@@ -11,6 +20,7 @@
     width: 100%;
   }
 }
+
 
 /**
 * Need for a grid
