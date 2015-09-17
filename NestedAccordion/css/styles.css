@@ -52,11 +52,11 @@ h5.cbp-nttrigger {
   margin: 10px 5%;
 }
 
-.cbp-nttrigger:before {
+.cbp-nttrigger::before {
   content: '\292f';
 }
 
-.cbp-nttrigger:hover:before {
+.cbp-nttrigger:hover::before {
   color: #404e4d;
   content: '\2930';
 }
