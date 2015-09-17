@@ -4,9 +4,54 @@ body {
   font-size: 1.2em;
 }
 
+.main {
+  border: 1px solid magenta;
+  overflow: visible;
+}
+
+.cbp_tmtime {
+  border: 1px solid orange;
+}
+
+.cbp_tmlabel {
+  border: 1px solid yellow;
+}
+
+.cbp_tmicon-phone {
+  border: 1px solid green;
+}
 
 li {
+  list-style-type: none;
+}
+
+li .cbp_tmtime:first-child span{
+  border: 1px solid black;
+  font-family: sans-serif;
+  color: cornflowerblue;
+  float:left;
+  display: inline;
+  margin: 10px 0 10px 30px;
+  margin-right: 10px;
+}
+
+
+
+.cbp_tmtimeline > li .cbp_tmlabel {
   background-color: #46a4da;
+  border: 5px;
+  width: 60%;
+  margin: 5px 75px;
+  float: right;
+  border-radius: 5px
+}
+
+.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel {
+  background-color: #6cbfee;
+}
+
+.cbp_tmlabel > li .cbp_tmtimeline  {
+  background-color: #3594cb;
   border: 5px;
   width: 60%;
   margin: 5px 75px;
@@ -16,7 +61,7 @@ li {
 
 h2 {
   border-bottom: 1px solid lightgrey;
-  margin: 10px; 
+  margin: 10px;
   padding: 2px 5px;
   color: white;
 }

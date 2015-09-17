@@ -10,21 +10,111 @@
 - use the element tag name to identify which element to apply rules
 
 ##### `attribute` selector
--
+- uses `class and id tags
 
 ## Properties
+
+### Typographic Elements
 
 #### [`color` property](https://developer.mozilla.org/en-US/docs/Web/CSS/color)
 
 The text color of an element and its decorations (??)
 
 ##### Possible Values: [any `<color>` value](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value)
-- a hexadecimal color value: `#012345`, `#CCC`
-- a color keyword: `cornflowerblue`, `purple`, `orange`
+- text color of an element and its decorations
+
+- hexadecimal color value: `#012345`, `#CCC`
+- color keyword: `cornflowerblue`, `purple`, `orange`
 - RGB decimal notation: `rgb(0,0,0)`, `rgb(255, 255, 255)`
 - RGBa (transparency) notation: `rgba(0,0,0,0)`, `rgba(255, 255, 255, 0.8)`
 - HSL decimal notation: `hsl(0, 100%, 50%)`
-- text color of an element and its decorations
+
+#### [`font-*` properties](https://developer.mozilla.org/en-US/docs/Web/CSS/font)
+
+##### [`font-family`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-family)
+- specify a prioritized list of font family names or generic names for selected element.
+- ``` example- font-family: 'Roboto', sans-serif;```
+
+##### [`font-size`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-family)
+- specify size of font.  May change size of other items since it is used to compute value of em and ex <length> units.
+- ```example font-size: 20pt```
+
+##### [`font-weight`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight)
+- specify weight or boldness of font
+- ```example font-weight: bold```
+- ``` example font-weight: 300```
+
+##### [`font-style`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-style)
+- allows you to select italic or oblique faces within font-family
+- ```example font-style:italic```
+
+##### [`font-variant`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant)
+- shorthand for longhand properties: `font-variant-caps`, `font-variant-numeric`, `font-variant-alternates`, `font-variant-ligatures`, `font-variant-east-asian`.
+- ```example font-variant: small-caps```
+
+#### `text-*` properties
+
+##### [`text-align`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-align)
+- describes how inline content like text is aligned in its parent block element.
+- ```example text-align: center```
+
+##### [`text-decoration`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration)
+- used to set text formatting to `underline`, `overline`, `line-through`, or `blink`
+- ```example text-decoration: underline red```
+
+##### [`text-indent`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-indent)
+- specify how much horizontal space should be left before beginning of first line of text content of an element
+- ```text-indent: 5em```
+
+##### [`text-overflow`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-overflow)
+- determines how overflowed content that is not displayed is signaled to user
+- ```example text-overflow: clip //truncates text at limit of content area```
+
+##### [`text-shadow`](https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow)
+- adds shadow to text.
+- ```text-shadow: 5px 5px #CCC```
+
+
+#### [`line-*` properties]()
+
+##### [`letter-spacing`](https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing)
+- specify behavior between text characters
+- ```example letter-spacing: 3px```
+
+##### [`line-height`](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height)
+- specify minimum height of line boxes within element on block-level elements
+- specify the height used to calculate line box height on non-replaced inline elements.
+- ``` line-height: 3m5```
+
+### Spacial Elements
+
+#### [`box model` property](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+- Each element is represented as a box.  
+
+![Box-model](https://mdn.mozillademos.org/files/8685/boxmodel-(3)
+
+> [From developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+
+##### `margin-*`
+- Setting `width` of a block-level element will prevent it from stretching to the edges of its container on left and right. Left and Right margins can be set to `auto` to center the element within its container.  
+
+##### `padding-*`
+-  assigns padding space on all sides of an element between content and border.
+
+##### `border-*`  
+-  assigns border property values like `width`, `style`, and `color`
+
+##### `max-*`
+- set the maximum width/height of given element.  This is better than `*-auto` because it accounts for small windows.
+
+##### `min-*`
+- set the minimum width/height of given element
+
+##### `box-sizing` property
+-  box starts on upper left hand margin.
+- used to alter default CSS box model to calculate width and height of elements.
+- `content-box` default style, width and height are measured including content but not padding, border, or margin.
+- `border-box` width and height including padding and border, but not margin
 
 #### [`display` property](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
 - every `element` has a default display value.  `block` or `inline` are most common.
@@ -60,37 +150,13 @@ The text color of an element and its decorations (??)
 - behaves like `fixed`, but relative to nearest _positioned_ ancestor (any ancestor that is not `static` instead of viewport.
 
 #### [`float` property](https://developer.mozilla.org/en-US/docs/Web/CSS/float)
-- intended for wrapping text around images. can be `left` or `right`
+- can be `left` or `right`
+- wrapping text around images.
+- changes `width` of the element.
+- other adjacent elements move.
 
 ##### `clear` property
 - controls the behavior of floats by allowing the tagged element to "clear" any floating elements.  Clear can take values of `left`, `right`, or `both`
 
 ##### `@media` media query
-- a "responsive design" tool used with percentage values to display layout in 1 column whe browser is too small to fit sidebar.
-
-#### [`box model` property](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
-- Each element is represented as a box.  
-
-![Box-model](https://mdn.mozillademos.org/files/8685/boxmodel-(3)
-
-> [From developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
-
-##### `margin-*`
-- Setting `width` of a block-level element will prevent it from stretching to the edges of its container on left and right. Left and Right margins can be set to `auto` to center the element within its container.  
-
-##### `padding-*`
--  assigns padding space on all sides of an element between content and border.
-
-##### `border-*`  
--  assigns border property values like `width`, `style`, and `color`
-
-##### `max-*`
-- set the maximum width/height of given element.  This is better than `*-auto` because it accounts for small windows.
-
-##### `min-*`
-- set the minimum width/height of given element
-
-##### `box-sizing`
--  used to alter default CSS box model to calculate width and height of elements.
-- `content-box` default style, width and height are measured including content but not padding, border, or margin.
-- `border-box` width and height including padding and border, but not margin
+- a "responsive design" tool used with percentage values to display layout in 1 column when browser is too small to fit sidebar.
