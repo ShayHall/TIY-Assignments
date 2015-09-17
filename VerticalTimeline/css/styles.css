@@ -8,6 +8,12 @@ li {
   list-style-type: none;
 }
 
+li .cbp_tmtime:first-child span{
+  border: 1px solid black;
+}
+
+
+
 .cbp_tmtimeline > li .cbp_tmlabel {
   background-color: #46a4da;
   border: 5px;
@@ -17,7 +23,7 @@ li {
   border-radius: 5px
 }
 
-.cbp_tmtimeline > li:nth-child(1) .cbp_tmlabel {
+.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel {
   background-color: #6cbfee;
 }
 
