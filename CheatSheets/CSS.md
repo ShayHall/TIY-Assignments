@@ -159,4 +159,4 @@ The text color of an element and its decorations (??)
 - controls the behavior of floats by allowing the tagged element to "clear" any floating elements.  Clear can take values of `left`, `right`, or `both`
 
 ##### `@media` media query
-- a "responsive design" tool used with percentage values to display layout in 1 column whe browser is too small to fit sidebar.
+- a "responsive design" tool used with percentage values to display layout in 1 column when browser is too small to fit sidebar.
