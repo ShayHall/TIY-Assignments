@@ -11,6 +11,7 @@ body {
 
 .cbp_tmtime {
   border: 1px solid orange;
+  content: \1f4f2;
 }
 
 .cbp_tmlabel {
