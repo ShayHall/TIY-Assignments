@@ -1,0 +1,13 @@
+@media (max-width:70em) {
+  .cbp-mc-column:nth-child(3) {
+    float: left;
+    width: 100%;
+  }
+}
+
+@media (max-width:35em) {
+  .cbp-mc-column {
+    float: left;
+    width: 100%;
+  }
+}
