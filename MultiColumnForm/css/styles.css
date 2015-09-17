@@ -10,17 +10,7 @@ container { /* div that holds form and content*/
 .cbp-mc-column {
   float: left;
   width: 33%;
-  margin: 0 0 10px;
-}
-
-.cbp-mc-submit {
-  background-color: rgb(16, 104, 154);
-  clear:both;
-  background-color: #10689;
-  color: #FFF;
-  padding: 15px 30px;
-  border: none;
-  text-align: center;
+  margin: 10px;
 }
 
 .cbp-mc-submit:hover {
@@ -39,8 +29,20 @@ container { /* div that holds form and content*/
 label {
   text-transform: uppercase;
   display:block;
-  padding: 10px 10px;
-  margin: 5px 5px;
   color: #fff;
   border: 2px;
+}
+
+
+.cbp-mc-submit {
+  background-color: rgb(16, 104, 154);
+  clear:both;
+  display:block;
+  background-color: #10689;
+  color: #FFF;
+  padding: 15px 30px;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
 }
