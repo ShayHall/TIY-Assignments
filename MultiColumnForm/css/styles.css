@@ -3,21 +3,27 @@
   background-color: #47a3da;
   color: #fff;
   border: 2px;
-  box-sizing: border-box;
 }
 
 container {
   width: 90%;
 }
 
-body, .main, div, form, header, h1, h2, nav, span {
-    border: 2px solid #47a3da;
+.cbp-mc-column {
+  float: left;
+  border: 1px solid black;
+  width: 33%;
 }
 
-label, .first_name {
-  border: 2px solid #47a3da;
-  text-transform: uppercase;
-    display:block;
+.cbp-mc-column:nth-child(3) {
+  background-color: orange;
+  float: left;
+  width: 33%;
+}
+
+.cbp-mc-submit-wrap {
+  background-color: magenta;
+  clear:both;
 }
 
 .cbp-mc-form input, .cbp-mc-form textarea, .cbp-mc-form select {
@@ -26,12 +32,15 @@ label, .first_name {
   line-height: 1.5px;
   width: 33%;
   border: 2px solid white;
-
 }
 
-.cbp-mc-form label, .cbp-mc-form input, .cbp-mc-form textarea{
-  float:left;
+.cbp-mc-form label, input, textarea, select{
   margin: 15px 10px;
   width: 33%;
   padding: 10px 10px;
+}
+
+label {
+  text-transform: uppercase;
+  display:block;
 }
