@@ -1,48 +1,85 @@
+/* TRACER BULLET!
+div .cbp-mc-column{
+  border: 1px solid yellow;
+}*/
+
 * {/*fonts, background color, color */
   font-family: 'Lato', Calibri, Arial, sans-serif;
   background-color: #47a3da;
 }
 
-container { /* div that holds form and content*/
-  width: 90%;
-}
-
-.cbp-mc-column {
+.cbp-mc-column {/*Create 3 columns side by side*/
   float: left;
   width: 33%;
-  margin: 10px;
+  margin: auto;
 }
 
-.cbp-mc-submit:hover {
-  background-color: rgba(16, 104, 154, 0.5);
+.cbp-mc-form .cbp-mc-column input {
+  color: #FFF;
+  font-size: 14pt;
+  line-height: 1.5px;
+  border: 3px solid #FFF;
+  padding: 15px;
+  display: block;
+  margin:auto;
+  width: 80%;
 }
 
-.cbp-mc-form .cbp-mc-column input, textarea, select {
+.cbp-mc-form .cbp-mc-column textarea {
   color: #FFF;
   line-height: 1.5px;
-  border: 2px solid white;
-  padding: 10px 0;
+  border: 3px solid #FFF;
+  padding: 75px 15px;
   display: block;
-  width: 90%;
+  margin:auto;
+  width: 80%;
+}
+
+.cbp-mc-form .cbp-mc-column select {
+  color: #FFF;
+  line-height: 1.5px;
+  border: 1px solid rgb(166, 166, 166);
+  padding: 15px;
+  display: block;
+  margin:auto;
+  width: 80%;
 }
 
 label {
   text-transform: uppercase;
   display:block;
-  color: #fff;
-  border: 2px;
+  color: #FFF;
+  padding: 20px 0 10px;
+  width:auto;
+  margin: 0 5%;
 }
 
+/*vvv  Submit Button Stuff vvv */
+.cbp-mc-submit-wrap {
+  clear:both;
+  padding-top: 25px;
+}
+
+.cbp-mc-submit:hover {/*Submit button will change color on `hover`*/
+  background-color: rgba(16, 104, 154, 0.5);
+}
 
 .cbp-mc-submit {
   background-color: rgb(16, 104, 154);
   clear:both;
-  display:block;
-  background-color: #10689;
   color: #FFF;
-  padding: 15px 30px;
+  text-transform: uppercase;
+  padding: 20px 40px;
   border: none;
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
+  margin-left: 45%;
+  margin-right: 45%;
+  width: auto;
 }
+
+label .cbp-mc-submit {
+  text-transform: uppercase;
+  display:block;
+  color: #fff;
+  border: 2px;
+}
+/* ^^^ Submit Button Stuff ^^^ */
