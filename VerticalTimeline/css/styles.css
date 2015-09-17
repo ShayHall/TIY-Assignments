@@ -4,12 +4,35 @@ body {
   font-size: 1.2em;
 }
 
+.main {
+  border: 1px solid magenta;
+  overflow: visible;
+}
+
+.cbp_tmtime {
+  border: 1px solid orange;
+}
+
+.cbp_tmlabel {
+  border: 1px solid yellow;
+}
+
+.cbp_tmicon-phone {
+  border: 1px solid green;
+}
+
 li {
   list-style-type: none;
 }
 
 li .cbp_tmtime:first-child span{
   border: 1px solid black;
+  font-family: sans-serif;
+  color: cornflowerblue;
+  float:left;
+  display: inline;
+  margin: 10px 0 10px 30px;
+  margin-right: 10px;
 }
 
 
