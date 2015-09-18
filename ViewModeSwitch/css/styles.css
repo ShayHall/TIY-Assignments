@@ -1,10 +1,10 @@
 div {
-  background-color: thistle;
+  background-color: #fff;
 }
 
 .grid {
   width: 100%;
-  background-color: tomato;
+  color: #47a3da;
 }
 
 [class*='col-'] {
@@ -54,12 +54,10 @@ div {
 
 li {
   list-style: none;
+  text-align: center;
 }
 
 li::before {
-  padding:20px;
-  width:auto;
-  height: 45px;
-  content: '\1f426';
-  align-content: center;
+    padding:20px;
+    width:auto;
 }

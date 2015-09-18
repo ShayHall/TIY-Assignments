@@ -1,0 +1,23 @@
+@media (max-width:50em) {
+  .col-1 {
+    float: left;
+    width: 48%;
+    padding-left: 2%;
+  }
+}
+
+@media (max-width:50em) {
+  .col-2 {
+    float: left;
+    width: 48%;
+    padding-right: 2%;
+  }
+}
+@media (max-width:50em) {
+  .col-3 {
+  clear:both;
+    width: 100%;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+}
