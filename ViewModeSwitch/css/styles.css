@@ -1,0 +1,65 @@
+div {
+  background-color: thistle;
+}
+
+.grid {
+  width: 100%;
+  background-color: tomato;
+}
+
+[class*='col-'] {
+  float:left;
+}
+
+.col-1 {
+  width:33.33%;
+  padding-right: 20px;
+}
+
+.col-2 {
+  width:33.33%;
+  padding-right: 20px;
+}
+
+.col-3 {
+  width: 33.33%;
+  padding-right: 0;
+}
+
+.grid::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+[class*='col-'] {
+  padding-right: 20px;
+}
+
+[class*='col-']:last-of-type {
+  padding-right: 0;
+}
+
+.grid-pad {
+  padding: 20px;
+}
+
+.grid-pad > [class*='col-']:last-of-type {
+  padding:right:20px;
+}
+
+li {
+  list-style: none;
+}
+
+li::before {
+  padding:20px;
+  width:auto;
+  height: 45px;
+  content: '\1f426';
+  align-content: center;
+}
