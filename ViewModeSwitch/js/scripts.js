@@ -1,3 +1,5 @@
+/* View Mode Switch javascript code */
+
 var buttons = document.querySelector("div #cbp-vm");
 var gridButton = document.querySelector("a.cbp-vm-icon.cbp-vm-grid");
 var listButton = document.querySelector("a.cbp-vm-icon.cbp-vm-list")
