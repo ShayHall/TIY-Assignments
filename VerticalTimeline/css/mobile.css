@@ -1,0 +1,66 @@
+/**
+* Fonts for headers and paragraphs get smaller
+    -https://css-tricks.com/viewport-sized-typography/
+* Phone icon moves to top right
+* Date and Time get smaller
+* Thin Blue line disappears
+* Left and Right margins are same width
+**/
+
+@media (max-width:45em) {
+
+  .cbp_tmtimeline > li .cbp_tmicon::before {/* Phone icon */
+  width: 45px;
+  height: 45px;
+  padding: 2px;
+  background-color: #46a4da;
+  color: #fff;
+  border-radius: 50%;
+  text-transform: none;
+  position: relative;
+  text-align: center;
+  font-size: 40px;
+  line-height: 1.5;
+  content: '\260e';
+  }
+
+  .cbp_tmtimeline > li .cbp_tmicon {/* Set light-blue background for phone icon */
+    width: 57px;
+    height: 57px;
+    background-color: #afdcf8;
+    border-radius: 50%;
+    position: absolute;
+    text-align: center;
+    margin-left: 60%;
+    margin-top: -60px;
+  }
+
+  .cbp_tmtimeline::before {/* Make skinny vertical line */
+    content: none;
+
+  }/* I'm not fully sure of what this is doing. */
+
+  .cbp_tmtime {/* Date and Time Box */
+    display: block;
+    padding-right: 30px;
+    position: absolute;
+    margin-left: 18%;
+    margin-top: -35px;
+  }
+
+  time > span:first-of-type {/* Date properties */
+    color: lightgrey;
+    font-size: 50%;
+    display: block;
+    text-align: right;
+    float: right;
+  }
+
+  time > span:last-of-type {/* Time properties */
+    font-size: 125%;
+    color: cornflowerblue;
+    display: block;
+    text-align: right;
+    clear:both;
+  }
+}/* END of @media query*/
