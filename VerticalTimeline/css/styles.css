@@ -1,28 +1,28 @@
-/*Vertical Timeline*/
+/* Vertical Timeline */
 
-body {/*Set font attributes*/
+body {/* Set font attributes */
   font-family: 'Lato', Arial, sans-serif;
   font-weight: 200;
   font-size: 100%;
 }
 
-li {/*Remove bullets on li elements*/
+li {/* Remove bullets on li elements */
   list-style-type: none;
 }
 
-p, h2 { /*Give text color and space*/
+p, h2 { /* Give text color and space */
   color: white;
   margin: 20px;
   padding: 2px 5px;
 }
 
-h2 {/*Add underline to header*/
+h2 {/* Add underline to header */
   border-bottom: 1px solid lightgrey;
 }
 
-.cbp_tmtimeline > li .cbp_tmlabel {/*Set attributes for blue boxes*/
+ .cbp_tmtimeline > li .cbp_tmlabel {/*Set attributes for blue boxes */
   padding: 15px;
-  margin:0 20% 15px;/*Set margin off left*/
+  margin:0 20% 15px;/* Set margin off left */
   background-color: #46a4da;
   line-height: 1.5;
   border-radius: 5px;/* Round edges fo li element*/
@@ -32,9 +32,9 @@ h2 {/*Add underline to header*/
   background-color: #6cbfee;
 }
 
-.cbp_tmtimeline > li .cbp_tmicon {/*Set light-blue background for phone icon*/
-  width: 55px;
-  height: 55px;
+.cbp_tmtimeline > li .cbp_tmicon {/* Set light-blue background for phone icon */
+  width: 57px;
+  height: 57px;
   background-color: #afdcf8;
   border-radius: 50%;
   position: absolute;
@@ -42,9 +42,9 @@ h2 {/*Add underline to header*/
   margin-left: 13.5%;
 }
 
-.cbp_tmtimeline > li .cbp_tmicon::before {/*phone icon*/
-  width: 48px;
-  height: 48px;
+.cbp_tmtimeline > li .cbp_tmicon::before {/* Phone icon */
+  width: 45px;
+  height: 45px;
   background-color: #46a4da;
   color: #fff;
   line-height: 40px;
@@ -52,14 +52,14 @@ h2 {/*Add underline to header*/
   text-transform: none;
   position: absolute;
   text-align: center;
-  font-size: 30px;
+  font-size: 28px;
   line-height: normal;
   content: '\260e';
   margin-left: -40%;
+  margin-top: 6px;
 }
 
-
-.cbp_tmtimeline::before {/*Make skinny vertical line*/
+.cbp_tmtimeline::before {/* Make skinny vertical line */
   content: "";
   position: absolute;
   top: 0;
@@ -69,27 +69,29 @@ h2 {/*Add underline to header*/
   left: 20%;
   text-align: center;
   margin-left: -10px;
+  margin-bottom: -117.2%;
+  margin-top: 15%;
 }
 
-.cbp_tmtime {
+.cbp_tmtime {/* Date and Time Box */
   display: block;
-  padding-right: 100px;
+  padding-right: 30px;
   position: absolute;
-  background-color: tomato;
+  margin-left: 65px;
 }
 
-time > span:first-of-type {
-  font-family: sans-serif;
+time > span:first-of-type {/* Date properties */
   color: lightgrey;
-  margin: 10px 0 10px 30px;
-  font-size: 80%;
-  float: left;
-  border: 1px solid black;
+  font-size: 100%;
+  display: block;
+  text-align: right;
+  float: right;
 }
 
-time > span:last-of-type {
-  font-size: 150%;
+time > span:last-of-type {/* Time properties */
+  font-size: 250%;
   color: cornflowerblue;
-  float:left;
-  border: 1px dotted black;
+  display: block;
+  text-align: right;
+  clear:both;
 }
