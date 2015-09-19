@@ -6,8 +6,16 @@
 * Thin Blue line disappears
 * Left and Right margins are same width
 **/
+* {
+  border: 1px solid black;
+}
 
 @media (max-width:45em) {
+body {/* Set font attributes */
+  font-family: 'Lato', Arial, sans-serif;
+  font-weight: 200;
+  font-size: 80%;
+}
 
   .cbp_tmtimeline > li .cbp_tmicon::before {/* Phone icon */
   width: 45px;
@@ -37,15 +45,16 @@
 
   .cbp_tmtimeline::before {/* Make skinny vertical line */
     content: none;
-
-  }/* I'm not fully sure of what this is doing. */
+  }
 
   .cbp_tmtime {/* Date and Time Box */
     display: block;
+    float: right;
     padding-right: 30px;
     position: absolute;
     margin-left: 18%;
     margin-top: -35px;
+    background-color: tomato;
   }
 
   time > span:first-of-type {/* Date properties */
@@ -60,7 +69,6 @@
     font-size: 125%;
     color: cornflowerblue;
     display: block;
-    text-align: right;
-    clear:both;
+    text-align: right;s
   }
 }/* END of @media query*/
