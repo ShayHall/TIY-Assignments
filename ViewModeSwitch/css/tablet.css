@@ -1,3 +1,5 @@
+/* View Mode Switch */
+
 @media (max-width:50em) {
   .col-1 {
     float: left;
@@ -12,12 +14,22 @@
     width: 48%;
     padding-right: 2%;
   }
+
+  [class*='col-'] {
+    padding-right: 20px;
+  }
 }
+
 @media (max-width:50em) {
   .col-3 {
-  clear:both;
+    float:left;
     width: 100%;
     padding-left: 2%;
     padding-right: 2%;
+    border: 1px solid black;
+  }
+
+  [class*='col-']:last-of-type {
+    padding-right: 0;
   }
 }
