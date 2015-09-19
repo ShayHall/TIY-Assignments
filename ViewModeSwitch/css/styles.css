@@ -39,6 +39,11 @@ li {
 
 /*** START List View Selectors --> ***/
 
+.cbp-vm-image img {
+  width:100px;
+  height: 100px;
+  background-color: tomato;
+}
 
 
 
@@ -104,3 +109,16 @@ li::before {
 }
 
 /*** <-- END Grid View Selectors ***/
+
+
+/*** START Switch View Effects --> ***/
+
+/*.list-pad {
+  display: none;
+}*/
+
+/*.grid-pad {
+   display:none;
+}*/
+
+/*** <-- END Switch View Effects ***/
