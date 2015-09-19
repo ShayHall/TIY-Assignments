@@ -20,12 +20,21 @@ li {
   border-bottom: 3px solid #47a3da;
 }
 
-.cbp-vm-list:before {
+.cbp-vm-list::before { /* List button passive*/
   content: '\25a6';
+  font-size: 250%;
+  margin: 20px;
+  color: #02639d;
+}
+a.cbp-vm-icon.cbp-vm-grid::before { /* Grid button passive*/
+  content: '\25a4';
+  font-size: 250%;
+  margin: 20px;
+  color: #02639d;
 }
 
-.cbp-vm-grid:before {
-  content: '\25a4';
+a.cbp-vm-icon.cbp-vm-grid.cbp-vm-selected::before { /* Active Button Color */
+  color: tomato;
 }
 
 .cbp-vm-options a:before {
@@ -34,25 +43,49 @@ li {
   line-height: 40px;
   display: inline-block;
 }
+
 /*** <-- END Top Buttons ***/
 
 /*** START List View Selectors --> ***/
+
+.list li {
+  display: block;
+  width: 90%;
+}
+
+.list li > div {
+  display: inline-block;
+  width: 23%;
+  vertical-align: middle;
+}
+
+.list .cbp-vm-image img {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  vertical-align: bottom;
+}
+
+.list li > h3 {
+  display: inline-block;
+  width: 23%;
+  vertical-align: middle;
+}
 
 .list li a:last-of-type {
   display: inline-block;
   padding: 10px 20px;
   background-color: #47a3da;
   border-radius: 2px;
+  color: #fff;
+  text-decoration: none;
+  display: inline;
+  width: 23%;
 }
 
 .list li a:last-of-type:hover {
   background-color: #02639d;
   transition: background 0.2s;
-}
-
-.list .cbp-vm-image img {
-  width:100px;
-  height: 100px;
 }
 
 
@@ -123,12 +156,12 @@ li::before {
 
 /*** START Switch View Effects --> ***/
 
-/*.list-pad {
+.list-pad {
   display: none;
-}*/
+}
 
-/*.grid-pad {
+.grid-pad {
    display:none;
-}*/
+}
 
 /*** <-- END Switch View Effects ***/
