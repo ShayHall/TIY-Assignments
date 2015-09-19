@@ -36,13 +36,23 @@ li {
 }
 /*** <-- END Top Buttons ***/
 
-
 /*** START List View Selectors --> ***/
 
-.cbp-vm-image img {
+.list li a:last-of-type {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #47a3da;
+  border-radius: 2px;
+}
+
+.list li a:last-of-type:hover {
+  background-color: #02639d;
+  transition: background 0.2s;
+}
+
+.list .cbp-vm-image img {
   width:100px;
   height: 100px;
-  background-color: tomato;
 }
 
 
