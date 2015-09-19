@@ -1,77 +1,95 @@
-body {
-  font-family: sans-serif;
-  font-weight: 100;
-  font-size: 1.2em;
+/*Vertical Timeline*/
+
+body {/*Set font attributes*/
+  font-family: 'Lato', Arial, sans-serif;
+  font-weight: 200;
+  font-size: 100%;
 }
 
-.main {
-  border: 1px solid magenta;
-  overflow: visible;
-}
-
-.cbp_tmtime {
-  border: 1px solid orange;
-  content: \1f4f2;
-}
-
-.cbp_tmlabel {
-  border: 1px solid yellow;
-}
-
-.cbp_tmicon-phone {
-  border: 1px solid green;
-}
-
-li {
+li {/*Remove bullets on li elements*/
   list-style-type: none;
 }
 
-li .cbp_tmtime:first-child span {
-  border: 1px solid black;
-  font-family: sans-serif;
-  color: cornflowerblue;
-  float:left;
-  display: inline;
-  margin: 10px 0 10px 30px;
-  margin-right: 10px;
+p, h2 { /*Give text color and space*/
+  color: white;
+  margin: 20px;
+  padding: 2px 5px;
 }
 
-.cbp_tmtimeline > li .cbp_tmlabel {
+h2 {/*Add underline to header*/
+  border-bottom: 1px solid lightgrey;
+}
+
+.cbp_tmtimeline > li .cbp_tmlabel {/*Set attributes for blue boxes*/
+  padding: 15px;
+  margin:0 20% 15px;/*Set margin off left*/
   background-color: #46a4da;
-  border: 5px;
-  width: 60%;
-  margin: 5px 75px;
-  float: right;
-  border-radius: 5px
+  line-height: 1.5;
+  border-radius: 5px;/* Round edges fo li element*/
 }
 
-.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel {
+.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel {/* Change color of every other li element*/
   background-color: #6cbfee;
 }
 
-.cbp_tmlabel > li .cbp_tmtimeline  {
-  background-color: #3594cb;
-  border: 5px;
-  width: 60%;
-  margin: 5px 75px;
-  float: right;
-  border-radius: 5px
+.cbp_tmtimeline > li .cbp_tmicon {/*Set light-blue background for phone icon*/
+  width: 55px;
+  height: 55px;
+  background-color: #afdcf8;
+  border-radius: 50%;
+  position: absolute;
+  text-align: center;
+  margin-left: 13.5%;
 }
 
-h2 {
-  border-bottom: 1px solid lightgrey;
-  margin: 10px;
-  padding: 2px 5px;
-  color: white;
+.cbp_tmtimeline > li .cbp_tmicon::before {/*phone icon*/
+  width: 48px;
+  height: 48px;
+  background-color: #46a4da;
+  color: #fff;
+  line-height: 40px;
+  border-radius: 50%;
+  text-transform: none;
+  position: absolute;
+  text-align: center;
+  font-size: 30px;
+  line-height: normal;
+  content: '\260e';
+  margin-left: -40%;
 }
 
-time {
+
+.cbp_tmtimeline::before {/*Make skinny vertical line*/
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 10px;
+  background-color: #afdcf8;
+  left: 20%;
+  text-align: center;
+  margin-left: -10px;
+}
+
+.cbp_tmtime {
+  display: block;
+  padding-right: 100px;
+  position: absolute;
+  background-color: tomato;
+}
+
+time > span:first-of-type {
+  font-family: sans-serif;
+  color: lightgrey;
+  margin: 10px 0 10px 30px;
+  font-size: 80%;
+  float: left;
+  border: 1px solid black;
+}
+
+time > span:last-of-type {
+  font-size: 150%;
+  color: cornflowerblue;
   float:left;
-}
-
-p {
-  color: white;
-  padding: 5px 10px;
-  margin: 20px;
-  font-size: 100%;
+  border: 1px dotted black;
 }
