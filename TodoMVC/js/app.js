@@ -3,15 +3,12 @@
 	'use strict';
 
 	var newTodo = document.querySelector(".new-todo");
-	var itemsList	= [];
-	var item = document.querySelector(".toggle label");
- //Attach `addEventListener` to `input` of `header` taking `change` as type.
+	var itemsList = [];
+
 	newTodo.addEventListener('change', function(event) {
-	var	newList = itemsList.push(newTodo.value);
-		item = itemsList;
-		// console.log(item);
-		console.log(item[item.length-1]);
-	});
+		itemsList.push(newTodo.value);
+		console.log(itemsList[itemsList.length-1]);
+	}); //When class `.new-todo` receives text, it will add that to the newList array and return the most recent value added.
 
 })(window);
 
