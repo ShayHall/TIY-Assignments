@@ -14,30 +14,49 @@ body {/* Set font attributes */
   font-size: 80%;
 }
 
-  .cbp_tmtimeline > li .cbp_tmicon::before {/* Phone icon */
+.cbp_tmtimeline > li .cbp_tmicon::after {/* Phone icon forground*/
   width: 45px;
   height: 45px;
-  padding: 2px;
   background-color: #46a4da;
   color: #fff;
+  line-height: 40px;
   border-radius: 50%;
   text-transform: none;
-  position: relative;
+  position: absolute;
+  left: 70%;
+  right: 30%;
   text-align: center;
-  font-size: 40px;
-  line-height: 1.5;
+  font-size: 28px;
+  line-height: normal;
   content: '\260e';
-  }
+  margin-top: 8px;
+}
+
+.cbp_tmtimeline > li .cbp_tmicon::before {/* Phone icon background*/
+  width: 60px;
+  height: 60px;
+  background-color: #afdcf8;
+  color: #fff;
+  line-height: 40px;
+  border-radius: 50%;
+  text-transform: none;
+  position: absolute;
+  left: 70%;
+  right: 30%;
+  text-align: center;
+  font-size: 28px;
+  line-height: normal;
+  content: '\260e';
+  margin-left: -8px;
+}
 
   .cbp_tmtimeline > li .cbp_tmicon {/* Set light-blue background for phone icon */
     width: 57px;
-    height: 57px;
-    background-color: #afdcf8;
-    border-radius: 50%;
+    height: 65px;
     position: absolute;
     text-align: center;
     margin-left: 60%;
-    margin-top: -60px;
+    margin-top: -70px;
   }
 
   .cbp_tmtimeline::before {/* Make skinny vertical line */
@@ -52,8 +71,9 @@ body {/* Set font attributes */
     margin-left: 18%;
     margin-top: -35px;
   }
+
   .cbp_tmtimeline > li .cbp_tmlabel {
-      margin: 65px 10%;/* Set margin off left */
+      margin:75px 10% 5px 10%;/* Set margin off left */
 
   }
   time > span:first-of-type {/* Date properties */

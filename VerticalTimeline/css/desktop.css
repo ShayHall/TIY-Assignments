@@ -1,5 +1,5 @@
 
-.cbp_tmtimeline > li .cbp_tmicon::before {/* Phone icon */
+.cbp_tmtimeline > li .cbp_tmicon::after {/* Phone icon forground*/
   width: 45px;
   height: 45px;
   background-color: #46a4da;
@@ -14,14 +14,32 @@
   font-size: 28px;
   line-height: normal;
   content: '\260e';
-  margin-top: 6px;
+  margin-top: 10px;
+}
+
+.cbp_tmtimeline > li .cbp_tmicon::before {/* Phone icon background*/
+  width: 65px;
+  height: 65px;
+  background-color: #afdcf8;
+  color: #fff;
+  line-height: 40px;
+  border-radius: 50%;
+  text-transform: none;
+  position: absolute;
+  left: 20%;
+  right: 80%;
+  text-align: center;
+  font-size: 28px;
+  line-height: normal;
+  content: '\260e';
+  margin-left: -10px;
 }
 
  .cbp_tmtimeline > li .cbp_tmlabel {/*Set attributes for blue boxes */
   margin:35px 0 45px 25%;/* Set margin off left */
 }
 
-.cbp_tmtimeline > li .cbp_tmicon {/* Set light-blue background for phone icon */
+/*.cbp_tmtimeline > li .cbp_tmicon {/* Set light-blue background for phone icon */
   width: 57px;
   height: 57px;
   background-color: #afdcf8;
@@ -29,7 +47,7 @@
   position: absolute;
   text-align: center;
   margin-left: 13.5%;
-}
+}*/
 
 .cbp_tmtimeline::before {/* Make skinny vertical line */
   content: "";
