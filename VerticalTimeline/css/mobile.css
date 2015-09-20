@@ -6,9 +6,6 @@
 * Thin Blue line disappears
 * Left and Right margins are same width
 **/
-* {
-  border: 1px solid black;
-}
 
 @media (max-width:45em) {
 body {/* Set font attributes */
@@ -54,9 +51,11 @@ body {/* Set font attributes */
     position: absolute;
     margin-left: 18%;
     margin-top: -35px;
-    background-color: tomato;
   }
+  .cbp_tmtimeline > li .cbp_tmlabel {
+      margin: 65px 10%;/* Set margin off left */
 
+  }
   time > span:first-of-type {/* Date properties */
     color: lightgrey;
     font-size: 50%;
