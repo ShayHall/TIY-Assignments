@@ -4,14 +4,13 @@
 
 	var newTodo = document.querySelector(".new-todo");
 	var itemsList	= [];
+	var item = document.querySelector(".toggle label");
  //Attach `addEventListener` to `input` of `header` taking `change` as type.
 	newTodo.addEventListener('change', function(event) {
 	var	newList = itemsList.push(newTodo.value);
-		console.log(itemsList);
-		console.log(itemsList[0]);
-		console.log(itemsList[1]);
-		console.log(itemsList[2]);
-		console.log(itemsList[3]);
+		item = itemsList;
+		// console.log(item);
+		console.log(item[item.length-1]);
 	});
 
 })(window);
