@@ -39,16 +39,6 @@
   margin:35px 0 45px 25%;/* Set margin off left */
 }
 
-/*.cbp_tmtimeline > li .cbp_tmicon {/* Set light-blue background for phone icon */
-  width: 57px;
-  height: 57px;
-  background-color: #afdcf8;
-  border-radius: 50%;
-  position: absolute;
-  text-align: center;
-  margin-left: 13.5%;
-}*/
-
 .cbp_tmtimeline::before {/* Make skinny vertical line */
   content: "";
   position: absolute;
@@ -58,10 +48,9 @@
   background-color: #afdcf8;
   left: 20%;
   right: 80%;
-  text-align: center;
-  margin-left: -10px;
-  margin-bottom: -117.5%;
-  margin-top: 15%;
+  margin-left: 18px;
+  margin-top: 185px;
+  margin-bottom: -200%;
 }/* I'm not fully sure of what this is doing. */
 
 .cbp_tmtime {/* Date and Time Box */
