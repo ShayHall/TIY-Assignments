@@ -1,17 +1,25 @@
 //Using the HTML file `index.html` as the bones, CSS files and Javascript files are used to manipulate the code.
 (function (window) {
 	'use strict';
-	// Your starting point. Enjoy the ride!
-var newTodo = document.querySelector(".new-todo");
-var todoItem = document.querySelector("placeholder");
 
-newTodo.addEventListener('change', function(event) { //Attach `addEventListener` to `input` of `header` taking `change` as type.
-	console.log(newTodo.value);
+	var newTodo = document.querySelector(".new-todo");
+	var itemsList	= [];
+ //Attach `addEventListener` to `input` of `header` taking `change` as type.
+	newTodo.addEventListener('change', function(event) {
+	var	newList = itemsList.push(newTodo.value);
+		console.log(itemsList);
+		console.log(itemsList[0]);
+		console.log(itemsList[1]);
+		console.log(itemsList[2]);
+		console.log(itemsList[3]);
+	});
+
+})(window);
+
 	//function creates a new `li` element...
 	 //with the data from the `header` `input` logged as a new text node:
 	//if `taskList` and `taskText` work as side effects, I don't need to return anything.
-});
-})(window);
+
 	// ** I can add a task to my todo list so that I can remember to do it later.
 	// 	1) Attach an `addEventListener` to the `input` element of the `header` element of the `document` that...
 	//  		A) Takes `change` as the type...
