@@ -6,12 +6,152 @@
 - Selector points to the  `declaration`
 - The `declaration` contains `properties` and `values`
 
-##### `tag name` selectors
+#### `tag name` selectors
 - use the element tag name to identify which element to apply rules
 
-##### `attribute` selector
-- uses `class and id tags
+#### `attribute` selector
+- uses `class` and `id` tags
 
+#### Selector Declaration
+
+##### `X`- targets all elements according to type
+```
+example:
+div {
+  background-color:red;
+}
+//all `div` elements will have a red background.
+    ```
+##### `*`- targets all elements
+```
+example:
+* {
+  font-family: sans-serif;
+}
+//all text will be sans-serif.
+    ```
+
+##### `#X`- targets a unique ID element
+```
+example:
+* {
+  background-color:red;
+}
+
+#exception {
+  background-color:green;
+}
+//all elements will have a red background except the one with an id = "exception".
+    ```
+##### `.X`- targets a class name
+```
+example:
+* {
+  background-color:red;
+}
+
+.warning {
+  background-color:yellow;
+}
+//all elements will have a red background except the elements with className `warning` will have a yellow background.
+```
+##### `X Y`- targets all Y descendants of element X
+```
+example:
+* {
+  background-color:red;
+}
+
+div li {
+  background-color:blue;
+}
+//all elements will have a red background except the `li` elements inside a `div` element will have a blue background.
+```
+##### `a:link`- _pseudo-class_ that targets all anchor tags not yet clicked
+```
+example:
+a:link {
+  text-decoration:none;
+}
+
+//No links will be underlined
+```
+##### `a:visited`- _pseudo-class_ that targets all anchor tags that have been clicked
+```
+example:
+a:link {
+  color:red;
+}
+
+a:visited {
+  color:orange;
+}
+//Links that have not been clicked will be red.  Links that have been clicked will be orange.
+```
+##### `X + Y`- targets first adjacent selector. (only the element immediately following the first element.)
+```
+example:
+<div id = "first">First</div>
+<div>Second</div>
+
+#first + div {
+  background-color:red;
+}
+
+//Second `div` will have red background.
+```
+##### `X > Y`- targets direct children only
+```
+example:
+<ul>
+  <li>//blue
+    <ol>
+      <li></li> //tomato
+      <li></li> //tomato
+    </ol>
+  </li>
+  <li></li> //blue
+  <li></li> //blue
+  </div>
+</div>
+
+ul li {
+  background-color:tomato;
+}
+//This will turn all `li` elements within the `ul` tomato including children of the `ol`.
+
+ul > li {
+  background-color:blue;
+}
+//This will only turn the `li` elements that are direct children of the `ul` blue.
+```
+##### `X:hover`- targets specified element when mouse hovers.
+```
+example:
+a:link {
+  background-color:red;
+}
+
+a:link:hover {
+  background-color:blue;
+}
+//Link background will be red until mouse hovers, then it will turn blue.
+
+```
+##### `X:nth-child(n)`- targets specific child of element by position number
+```
+example:
+<div>
+  <p>"first"</p>
+  <p>"second"</p>
+  <p>"third"</p> //turns blue
+  <p>"forth"</p>
+</div>
+
+div:nth-child(3) {
+  color:blue;
+}
+```
 ## Properties
 
 ### Typographic Elements
@@ -24,7 +164,7 @@ The text color of an element and its decorations (??)
 - text color of an element and its decorations
 
 - hexadecimal color value: `#012345`, `#CCC`
-- color keyword: `cornflowerblue`, `purple`, `orange`
+- color keyword: `cornflowerblue`, `tomato`, `orange`
 - RGB decimal notation: `rgb(0,0,0)`, `rgb(255, 255, 255)`
 - RGBa (transparency) notation: `rgba(0,0,0,0)`, `rgba(255, 255, 255, 0.8)`
 - HSL decimal notation: `hsl(0, 100%, 50%)`

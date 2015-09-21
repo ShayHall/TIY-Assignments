@@ -1,16 +1,10 @@
-@media (max-width:70em) {
-  .cbp-mc-column:nth-child(3) {
-    float: left;
-    width: 100%;
-  }
-}
-
 @media (max-width:35em) {
   .cbp-mc-column {
     float: left;
     width: 100%;
   }
 }
+
 
 /**
 * Need for a grid
@@ -24,14 +18,14 @@
 
 */
 
-row {
+/*row {
   margin:0;
   border: none;
   padding: 0;
   height:auto;
-  width: auto; /** % of containing element (body)*/
+  width: auto;  % of containing element (body)
 }
 
 column {
-  width: value%;/** % of containing element (row)*/
-}
+  width: value%; % of containing element (row)
+}*/

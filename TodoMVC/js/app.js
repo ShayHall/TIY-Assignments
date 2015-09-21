@@ -1,9 +1,20 @@
 //Using the HTML file `index.html` as the bones, CSS files and Javascript files are used to manipulate the code.
 (function (window) {
 	'use strict';
-	// Your starting point. Enjoy the ride!
 
+	var newTodo = document.querySelector(".new-todo");
+	var itemsList = [];
 
+	newTodo.addEventListener('change', function(event) {
+		itemsList.push(newTodo.value);
+		console.log(itemsList[itemsList.length-1]);
+	}); //When class `.new-todo` receives text, it will add that to the newList array and return the most recent value added.
+
+})(window);
+
+	//function creates a new `li` element...
+	 //with the data from the `header` `input` logged as a new text node:
+	//if `taskList` and `taskText` work as side effects, I don't need to return anything.
 
 	// ** I can add a task to my todo list so that I can remember to do it later.
 	// 	1) Attach an `addEventListener` to the `input` element of the `header` element of the `document` that...
@@ -13,13 +24,9 @@
 	// 			a) Use the listener `document.createElement()` to create a new `li` element with a new `label` element inside it. (https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement)
 	// 			b) Use the method `document.createTextNode` to store text from `input` element  (https://developer.mozilla.org/en-US/docs/Web/API/Document/createTextNode)
 
-var newTask = document.querySelector("header #new-todo");
 
-newTask.addEventListener('change', function(event) { //Attach `addEventListener` to `input` of `header` taking `change` as type.
-	var taskList = document.createElement("li"); //function creates a new `li` element...
-	var taskText = document.createTextNode(newTodo); //with the data from the `header` `input` logged as a new text node:
-	return taskList, taskText;//if `taskList` and `taskText` work as side effects, I don't need to return anything.
-});
+
+
 
 
 	// ** I can edit a task on my todo list so that I can correct typos.
@@ -73,27 +80,3 @@ newTask.addEventListener('change', function(event) { //Attach `addEventListener`
 	// 			a) Takes `click` as the type...
 	// 				i.) When `click` is triggered, a function is fired that...
 	// 			b) adds `class="view"` to all existing `li` elements wit an assigned `class="completed"`.
-
-
-
-})(window);
-
-
-
-
-/* VIEW MODE SWITCH if else experiment...
-var buttons = document.querySelector("div #cbp-vm");
-var gridButton = document.querySelector("a.cbp-vm-icon.cbp-vm-grid");
-var listButton = document.querySelector("a.cbp-vm-icon.cbp-vm-list");
-
-gridButton.addEventListener('click', function(event) {
-  if (buttons.className = "cbp-vm-switcher cbp-vm-view-grid") {
-    gridButton.className = "cbp-vm-icon cbp-vm-grid cbp-vm-selected";
-    listButton.className = "cbp-vm-icon cbp-vm-list";
-  } else {
-    listButton.className = "cbp-vm-icon cbp-vm-list cbp-vm-selected";
-    gridButton.className = "cbp-vm-icon cbp-vm-grid";
-	};
-});
-
-*/

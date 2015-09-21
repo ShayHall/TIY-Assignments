@@ -1,0 +1,93 @@
+/**
+* Fonts for headers and paragraphs get smaller
+    -https://css-tricks.com/viewport-sized-typography/
+* Phone icon moves to top right
+* Date and Time get smaller
+* Thin Blue line disappears
+* Left and Right margins are same width
+**/
+
+@media (max-width:45em) {
+body {/* Set font attributes */
+  font-family: 'Lato', Arial, sans-serif;
+  font-weight: 200;
+  font-size: 80%;
+}
+
+.cbp_tmtimeline > li .cbp_tmicon::after {/* Phone icon forground*/
+  width: 45px;
+  height: 45px;
+  background-color: #46a4da;
+  color: #fff;
+  line-height: 40px;
+  border-radius: 50%;
+  text-transform: none;
+  position: absolute;
+  left: 70%;
+  right: 30%;
+  text-align: center;
+  font-size: 28px;
+  line-height: normal;
+  content: '\260e';
+  margin-top: 8px;
+}
+
+.cbp_tmtimeline > li .cbp_tmicon::before {/* Phone icon background*/
+  width: 60px;
+  height: 60px;
+  background-color: #afdcf8;
+  color: #fff;
+  line-height: 40px;
+  border-radius: 50%;
+  text-transform: none;
+  position: absolute;
+  left: 70%;
+  right: 30%;
+  text-align: center;
+  font-size: 28px;
+  line-height: normal;
+  content: '\260e';
+  margin-left: -8px;
+}
+
+  .cbp_tmtimeline > li .cbp_tmicon {/* Set light-blue background for phone icon */
+    width: 57px;
+    height: 65px;
+    position: absolute;
+    text-align: center;
+    margin-left: 60%;
+    margin-top: -70px;
+  }
+
+  .cbp_tmtimeline::before {/* Make skinny vertical line */
+    content: none;
+  }
+
+  .cbp_tmtime {/* Date and Time Box */
+    display: block;
+    float: right;
+    padding-right: 30px;
+    position: absolute;
+    margin-left: 18%;
+    margin-top: -35px;
+  }
+
+  .cbp_tmtimeline > li .cbp_tmlabel {
+      margin:75px 10% 5px 10%;/* Set margin off left */
+
+  }
+  time > span:first-of-type {/* Date properties */
+    color: lightgrey;
+    font-size: 50%;
+    display: block;
+    text-align: right;
+    float: right;
+  }
+
+  time > span:last-of-type {/* Time properties */
+    font-size: 125%;
+    color: cornflowerblue;
+    display: block;
+    text-align: right;s
+  }
+}/* END of @media query*/

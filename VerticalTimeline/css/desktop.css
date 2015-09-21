@@ -1,0 +1,77 @@
+
+.cbp_tmtimeline > li .cbp_tmicon::after {/* Phone icon forground*/
+  width: 45px;
+  height: 45px;
+  background-color: #46a4da;
+  color: #fff;
+  line-height: 40px;
+  border-radius: 50%;
+  text-transform: none;
+  position: absolute;
+  left: 20%;
+  right: 80%;
+  text-align: center;
+  font-size: 28px;
+  line-height: normal;
+  content: '\260e';
+  margin-top: 10px;
+}
+
+.cbp_tmtimeline > li .cbp_tmicon::before {/* Phone icon background*/
+  width: 65px;
+  height: 65px;
+  background-color: #afdcf8;
+  color: #fff;
+  line-height: 40px;
+  border-radius: 50%;
+  text-transform: none;
+  position: absolute;
+  left: 20%;
+  right: 80%;
+  text-align: center;
+  font-size: 28px;
+  line-height: normal;
+  content: '\260e';
+  margin-left: -10px;
+}
+
+ .cbp_tmtimeline > li .cbp_tmlabel {/*Set attributes for blue boxes */
+  margin:35px 0 45px 25%;/* Set margin off left */
+}
+
+.cbp_tmtimeline::before {/* Make skinny vertical line */
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 10px;
+  background-color: #afdcf8;
+  left: 20%;
+  right: 80%;
+  margin-left: 18px;
+  margin-top: 185px;
+  margin-bottom: -200%;
+}/* I'm not fully sure of what this is doing. */
+
+.cbp_tmtime {/* Date and Time Box */
+  display: block;
+  padding-right: 30px;
+  position: absolute;
+  margin-left: 5%;
+}
+
+time > span:first-of-type {/* Date properties */
+  color: lightgrey;
+  font-size: 100%;
+  display: block;
+  text-align: right;
+  float: right;
+}
+
+time > span:last-of-type {/* Time properties */
+  font-size: 250%;
+  color: cornflowerblue;
+  display: block;
+  text-align: right;
+  clear:both;
+}
