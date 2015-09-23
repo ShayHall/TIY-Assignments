@@ -11,16 +11,26 @@ body {/* Set font attributes */
   font-size: 100%;
 }
 
+.cbp_tmtimeline {
+  margin-top: 30px;
+  li .cbp_tmlabel {/*Set attributes for blue boxes */
+   padding: 15px;
+   margin:35px 0 45px 25%;/* Set margin off left */
+   background-color: #46a4da;
+   line-height: 1.5;
+   border-radius: 5px;/* Round edges fo li element*/
+ }
+  li:nth-child(odd) .cbp_tmlabel {/* Change color of every other li element*/
+    background-color: #6cbfee;
+  }
+}
+
 container > h1 {
   margin: 15px 50px;
 }
 
 .clearfix {
   margin: 25px 15%;
-}
-
-.cbp_tmtimeline {
-  margin-top: 30px;
 }
 
 li {/* Remove bullets on li elements */
@@ -36,16 +46,4 @@ p, h2 { /* Give text color and space */
 
 h2 {/* Add underline to header */
   border-bottom: 1px solid lightgrey;
-}
-
- .cbp_tmtimeline > li .cbp_tmlabel {/*Set attributes for blue boxes */
-  padding: 15px;
-  margin:35px 0 45px 25%;/* Set margin off left */
-  background-color: #46a4da;
-  line-height: 1.5;
-  border-radius: 5px;/* Round edges fo li element*/
-}
-
-.cbp_tmtimeline > li:nth-child(odd) .cbp_tmlabel {/* Change color of every other li element*/
-  background-color: #6cbfee;
 }

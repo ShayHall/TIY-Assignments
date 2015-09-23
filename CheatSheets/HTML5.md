@@ -51,6 +51,7 @@ Gives general info about document.  Includes title and links to stylesheets, fon
 * _content_: `<title>`. `<meta>`, `<link>`, `<script>`
 * _display_: `none`
 
+
 ### Attributes
 
 * Global Attributes
@@ -127,6 +128,21 @@ Represents unordered list of items, typically displayed with a bullet
 
 <hr>
 
+
+## `<ol>`
+
+Represents ordered list of items, typically displayed with a preceding number like numerals, letters, Roman numerals.
+
+* _parents_: Any element that accepts flow content
+* _content_: Flow
+* _display_: `list-item`
+
+### Attributes
+
+* Global Attributes
+
+<hr>
+
 ## `<nav>`
 
 Represents section of page that links to other pages or other parts of a page
@@ -159,13 +175,56 @@ Represents an item in a list
 
 used to embed or reference executable script within HTML documnet
 
-* _parents_: Any element that accepts metadata content or phrasing contnet
+* _parents_: Any element that accepts metadata content or phrasing content
 * _content_: Metadata, Flow, Phrasing
 * _display_: `none`
 
 ### Attributes
 
 * Global Attributes
+
+<hr>
+
+## `<dl>`
+
+encloses a list of pairs of terms and descriptions
+* _parents_: Any element that accepts flow content
+* _content_: Flow, Palpable if `<dl>` children include one name-value pair
+* _display_: `block`
+
+### Attributes
+
+* Global Attributes
+
+<hr>
+
+## `<dt>`
+
+Identifies a term in a definition list.
+
+* _parents_: Can only be a child of a `<dl>`, comes before a `<dt>` or `<dd>`
+* _content_: None
+* _display_: `block`
+
+### Attributes
+
+* Global Attributes
+
+<hr>
+
+## `<dd>`
+
+Indicates description of a term in a description list (`<dl>`)
+
+* _parents_: Can only be a child of a `<dl>`, must follow `<dt>` or another `<dd>`
+* _content_: None
+* _display_: `block`
+
+### Attributes
+
+* Global Attributes
+
+<hr>
 
 <hr>
 <hr>
@@ -176,4 +235,4 @@ used to embed or reference executable script within HTML documnet
 * `id` -- unique identifier that is unique to entire document.
 * `lang` -- helps define the languages of the element
 * `style`-- a way to add CSS style within HTML file (not recommended)
-* `
+* `title`-- contains a text representing information related to the element it belongs to.
