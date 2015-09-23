@@ -175,13 +175,56 @@ Represents an item in a list
 
 used to embed or reference executable script within HTML documnet
 
-* _parents_: Any element that accepts metadata content or phrasing contnet
+* _parents_: Any element that accepts metadata content or phrasing content
 * _content_: Metadata, Flow, Phrasing
 * _display_: `none`
 
 ### Attributes
 
 * Global Attributes
+
+<hr>
+
+## `<dl>`
+
+encloses a list of pairs of terms and descriptions
+* _parents_: Any element that accepts flow content
+* _content_: Flow, Palpable if `<dl>` children include one name-value pair
+* _display_: `block`
+
+### Attributes
+
+* Global Attributes
+
+<hr>
+
+## `<dt>`
+
+Identifies a term in a definition list.
+
+* _parents_: Can only be a child of a `<dl>`, comes before a `<dt>` or `<dd>`
+* _content_: None
+* _display_: `block`
+
+### Attributes
+
+* Global Attributes
+
+<hr>
+
+## `<dd>`
+
+Indicates description of a term in a description list (`<dl>`)
+
+* _parents_: Can only be a child of a `<dl>`, must follow `<dt>` or another `<dd>`
+* _content_: None
+* _display_: `block`
+
+### Attributes
+
+* Global Attributes
+
+<hr>
 
 <hr>
 <hr>
