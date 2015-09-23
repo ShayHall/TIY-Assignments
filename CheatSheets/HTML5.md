@@ -51,6 +51,7 @@ Gives general info about document.  Includes title and links to stylesheets, fon
 * _content_: `<title>`. `<meta>`, `<link>`, `<script>`
 * _display_: `none`
 
+
 ### Attributes
 
 * Global Attributes
@@ -127,6 +128,21 @@ Represents unordered list of items, typically displayed with a bullet
 
 <hr>
 
+
+## `<ol>`
+
+Represents ordered list of items, typically displayed with a preceding number like numerals, letters, Roman numerals.
+
+* _parents_: Any element that accepts flow content
+* _content_: Flow
+* _display_: `list-item`
+
+### Attributes
+
+* Global Attributes
+
+<hr>
+
 ## `<nav>`
 
 Represents section of page that links to other pages or other parts of a page
@@ -176,4 +192,4 @@ used to embed or reference executable script within HTML documnet
 * `id` -- unique identifier that is unique to entire document.
 * `lang` -- helps define the languages of the element
 * `style`-- a way to add CSS style within HTML file (not recommended)
-* `
+* `title`-- contains a text representing information related to the element it belongs to.
