@@ -95,17 +95,57 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+body {
+  margin: 0 40px;
+  background-color: blue;
+  color: white;
+}
 
+section {
+  width: 33%;
+  float:left;
+}
 
+header {
+  margin: 30px 10%;
+}
 
+footer {
+  clear:both;
+  margin-top: 80px;
+}
 
+textarea {
+  width: 80%;
+  height:80pt;
+  background-color: blue;
+  border: 3px solid white;
+}
 
+input {
+  width: 80%;
+  height: 40px;
+  background-color: blue;
+  border: 3px solid white;
+}
 
+select {
+  width: 80%;
+  height: 40px;
+  background-color: blue;
+  border: 1px solid gray;
+}
 
+button {
+  padding: 5px 60px;
+  margin: 35px 40%;
+  background-color: orange;
+}
 
-
-
-
+button:hover {
+  cursor: pointer;
+  background-color: yellow;
+}
 
 
 

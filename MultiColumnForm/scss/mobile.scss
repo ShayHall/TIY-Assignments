@@ -1,0 +1,30 @@
+@media (max-width:65em) {
+  body {
+    background-color: black;
+  }
+}
+
+
+/**
+* Need for a grid
+*
+* - The **width** fo the columns is _relative_ to the width of the viewport
+* - The width of each column is proportionate to the number of columns
+* - All columns contribute to a row in proportion to one another
+* - There is uniform space between each column
+* - At a certain size, all the columns display as rows
+* - Each row has a uniform margin on each side: left and right
+
+*/
+
+/*row {
+  margin:0;
+  border: none;
+  padding: 0;
+  height:auto;
+  width: auto;  % of containing element (body)
+}
+
+column {
+  width: value%; % of containing element (row)
+}*/
