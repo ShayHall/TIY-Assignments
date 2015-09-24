@@ -43,12 +43,12 @@ Comment tag makes content "invisible" or "unreadable to DOM.
 
 <hr>
 
-## `<head>`
+## `<head>` <a id="head"></a>
 
 Gives general info about document.  Includes title and links to stylesheets, fonts, icons, and javascript
 
 * _parents_: `<html>`
-* _content_: `<title>`. `<meta>`, `<link>`, `<script>`
+* _content_: `<title>`. `<meta>`, `<link>`, `script`
 * _display_: `none`
 
 
@@ -58,7 +58,7 @@ Gives general info about document.  Includes title and links to stylesheets, fon
 
 <hr>
 
-## `<body>`
+## `<body>` <a id="body"></a>
 
 Represents content of HTML document.  Like Highlander, there can be only one.
 
@@ -114,6 +114,36 @@ Represents a paragraph of text
 
 <hr>
 
+## `<nav>`
+
+Represents section of page that links to other pages or other parts of a page
+
+* _parents_: Any element that accepts flow content
+* _content_: Flow, Sectioning, Palpable
+* _display_: `block`
+
+### Attributes
+
+* Globla Attributes
+
+<hr>
+
+## `<` `script` `>`
+
+used to embed or reference executable script within HTML documnet
+
+* _parents_: Any element that accepts metadata content or phrasing content
+* _content_: Metadata, Flow, Phrasing
+* _display_: `none`
+
+### Attributes
+
+* Global Attributes
+
+<hr>
+
+# Lists
+
 ## `<ul>`
 
 Represents unordered list of items, typically displayed with a bullet
@@ -127,7 +157,6 @@ Represents unordered list of items, typically displayed with a bullet
 * Global Attributes
 
 <hr>
-
 
 ## `<ol>`
 
@@ -143,20 +172,6 @@ Represents ordered list of items, typically displayed with a preceding number li
 
 <hr>
 
-## `<nav>`
-
-Represents section of page that links to other pages or other parts of a page
-
-* _parents_: Any element that accepts flow content
-* _content_: Flow, Sectioning, Palpable
-* _display_: `block`
-
-### Attributes
-
-* Globla Attributes
-
-<hr>
-
 ## `<li>`
 
 Represents an item in a list
@@ -164,20 +179,6 @@ Represents an item in a list
 * _parents_: `<ol>`, `<ul>`, or `<menu>`
 * _content_: Flow Content
 * _display_: `block`
-
-### Attributes
-
-* Global Attributes
-
-<hr>
-
-## `<script>`
-
-used to embed or reference executable script within HTML documnet
-
-* _parents_: Any element that accepts metadata content or phrasing content
-* _content_: Metadata, Flow, Phrasing
-* _display_: `none`
 
 ### Attributes
 
@@ -229,6 +230,21 @@ Indicates description of a term in a description list (`<dl>`)
 # Forms:
 A variety of elements that can be used together to create forms which a user can fill out and submit to a Web site or application.
 
+
+## `<form>`
+
+represents a document section that contains ineractive controls to submit information to a web server
+
+* _parents_: Any element that accepts flow content
+* _content_: Flow content, but not containing <form> elements
+* _display_:
+
+### Attributes
+
+* Global Attributes
+
+<hr>
+
 ## `<button>`
 
 represents a clickable button
@@ -248,20 +264,6 @@ represents a clickable button
 
 <hr>
 
-## `<form>`
-
-represents a document section that contains ineractive controls to submit information to a web server
-
-* _parents_: Any element that accepts flow content
-* _content_: Flow content, but not containing <form> elements
-* _display_:
-
-### Attributes
-
-* Global Attributes
-
-<hr>
-
 ## `<input>`
 
 used to create interactive controls for web-based forms in order to accept data from user.  Functionality depends on `type`
@@ -273,7 +275,8 @@ used to create interactive controls for web-based forms in order to accept data 
 ### Attributes
 
 * Global Attributes
-### Type Values
+
+#### Type Values
 * `button` push button with no default behavior
 * `checkbox` must use the value attribute to define value submitted by this item.
 * `file` lets user select a file, use the accept attribute to define the types of files available
@@ -301,12 +304,11 @@ represents a caption for an item in a user interface.  can be associated with a 
 
 <hr>
 
-## `<fieldgroup>`
+## `<fieldset>`
 
-description here
-
-* _parents_:
-* _content_:
+used to group several controls as well as `<label>`s within a web form
+* _parents_: Any element that accepts flow
+* _content_: Flow, sectioning root, listed, form-associated, palpable
 * _display_:
 
 ### Attributes
@@ -317,11 +319,10 @@ description here
 
 ## `<legend>`
 
-description here
-
-* _parents_:
-* _content_:
-* _display_:
+represents a caption for the content of its parent `<fieldset>`
+* _parents_: `<fieldset>`
+* _content_: Phrasing
+* _display_: none
 
 ### Attributes
 
@@ -331,10 +332,10 @@ description here
 
 ## `<table>`
 
-description here
+represents data in two demensions or more
 
-* _parents_:
-* _content_:
+* _parents_: Any element accepting flow
+* _content_: Flow Content in this order: optional `<caption>`, 0 or more `<colgroup>`, optional `<thead>`, one of the two alternatives: one `<tfoot>` followed by 0 or more `<tbody>` or one or more `<tr>`, a second alternative followed by an optional `<tfoot>`: either 0 or more `<tbody>` or one or more `<tr>`
 * _display_:
 
 ### Attributes
@@ -357,7 +358,7 @@ contains set of `<option>` elements representing the values availabe for other c
 
 <hr>
 
-## `<keygen>`
+## `<caption>`
 
 description here
 
@@ -371,7 +372,7 @@ description here
 
 <hr>
 
-## `<meter>`
+## `<col>`
 
 description here
 
@@ -385,7 +386,34 @@ description here
 
 <hr>
 
-## `<optgroup>`
+## `<colgroup>`
+
+represents the title of a table. Always first descendant of a `<table>`, its styling might place it elsewhere relative to table with CSS
+
+* _parents_: `<table>`
+* _content_: Flow
+* _display_:
+
+### Attributes
+
+* Global Attributes
+
+<hr>
+
+## `<tbody>`
+
+defines one or more `<tr>` element data-rows to be the body of its parent `<table>` element.  Provides additional semantic info for devices such as printers and displays.  Represents 
+* _parents_:
+* _content_:
+* _display_:
+
+### Attributes
+
+* Global Attributes
+
+<hr>
+
+## `<thead>`
 
 description here
 
@@ -399,7 +427,7 @@ description here
 
 <hr>
 
-## `<option>`
+## `<tfoot>`
 
 description here
 
@@ -413,7 +441,7 @@ description here
 
 <hr>
 
-## `<output>`
+## `<tr>`
 
 description here
 
@@ -427,7 +455,7 @@ description here
 
 <hr>
 
-## `<progress>`
+## `<td>`
 
 description here
 
@@ -441,7 +469,7 @@ description here
 
 <hr>
 
-## `<select>`
+## `<th>`
 
 description here
 
@@ -455,7 +483,21 @@ description here
 
 <hr>
 
-## `<textarea>`
+## `<menu>`
+
+description here
+
+* _parents_:
+* _content_:
+* _display_:
+
+### Attributes
+
+* Global Attributes
+
+<hr>
+
+## `<dialog>`
 
 description here
 
