@@ -402,9 +402,9 @@ represents the title of a table. Always first descendant of a `<table>`, its sty
 
 ## `<tbody>`
 
-defines one or more `<tr>` element data-rows to be the body of its parent `<table>` element.  Provides additional semantic info for devices such as printers and displays.  Represents 
-* _parents_:
-* _content_:
+defines one or more `<tr>` element data-rows to be the body of its parent `<table>` element.  Provides additional semantic info for devices such as printers and displays.  Represents the content which will differ for each printed page when it is longer than a page.  `<thead>` and `<tfoot>` will remain the same on each printed page.
+* _parents_: within required `<table>`, `<tbody>` can be added after a `<caption>`, `<colgroup>`, `<thead>`, and a `<tfoot>`
+* _content_: 0 or more `<tr>`
 * _display_:
 
 ### Attributes
@@ -415,10 +415,10 @@ defines one or more `<tr>` element data-rows to be the body of its parent `<tabl
 
 ## `<thead>`
 
-description here
+defines a set of rows defining the head of the columns of the table
 
-* _parents_:
-* _content_:
+* _parents_: a `<table>`. Must appear after any `<caption>` or `<colgroup>` element, even implicitly defined, but before any `<tbody>`, `<tfoot>` and `<tr>` element.
+* _content_: 0 or more `<tr>`
 * _display_:
 
 ### Attributes
