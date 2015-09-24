@@ -226,6 +226,249 @@ Indicates description of a term in a description list (`<dl>`)
 
 <hr>
 
+# Forms:
+A variety of elements that can be used together to create forms which a user can fill out and submit to a Web site or application.
+
+## `<button>`
+
+represents a clickable button
+
+* _parents_: Any element that accepts phrasing content
+* _content_: Phrasing
+* _display_:
+
+### Attributes
+
+* Global Attributes
+
+### Type Values
+* `submit` default attribute, allows button to submit the form data to server
+* `reset` resets all controls to their initial value
+* `button` no default behavior. "can have client side scripts associate with the element's events, which are triggered when the events occur"???
+
+<hr>
+
+## `<form>`
+
+represents a document section that contains ineractive controls to submit information to a web server
+
+* _parents_: Any element that accepts flow content
+* _content_: Flow content, but not containing <form> elements
+* _display_:
+
+### Attributes
+
+* Global Attributes
+
+<hr>
+
+## `<input>`
+
+used to create interactive controls for web-based forms in order to accept data from user.  Functionality depends on `type`
+
+* _parents_: Any element that accepts phrasing content
+* _content_: Flow, listed, submittable, resettable, form-associated, phrasing, and if type is not `hidden`, labellable and palpable.
+* _display_:
+
+### Attributes
+
+* Global Attributes
+### Type Values
+* `button` push button with no default behavior
+* `checkbox` must use the value attribute to define value submitted by this item.
+* `file` lets user select a file, use the accept attribute to define the types of files available
+* `hidden` control that is not displayed, but whose value is submitted to server
+* `image` graphical submit button, use "src" attribute to define source of image and "alt" attribute to define alternative text.  "height" and "width" attributes can define size of image in pixels.
+* `password` single-line text field whose value is obscured, use maxlength attribute to specify maximum length of value that can be entered
+* `radio` must use the value attribute to define value submitted by this item.  Use checked attribute to indicate whether this item is selected by default.
+* `reset` resets contents of form to default value
+* `submit` button that submits the form
+* `text` single-line text field; line breaks automatically removed from input value
+
+<hr>
+
+## `<label>`
+
+represents a caption for an item in a user interface.  can be associated with a control either by placing the control element inside `<label>` element or by using the `for` attribute.
+* _parents_: Any element that accepts phrasing content
+* _content_: flow, phrasing, interactive, form-associated, palpable
+* _display_:
+
+### Attributes
+
+* Global Attributes
+* for- ID of a labelable form-related element in same document as label element.  first element with matching ID is the labeled control for label element.
+
+<hr>
+
+## `<fieldgroup>`
+
+description here
+
+* _parents_:
+* _content_:
+* _display_:
+
+### Attributes
+
+* Global Attributes
+
+<hr>
+
+## `<legend>`
+
+description here
+
+* _parents_:
+* _content_:
+* _display_:
+
+### Attributes
+
+* Global Attributes
+
+<hr>
+
+## `<table>`
+
+description here
+
+* _parents_:
+* _content_:
+* _display_:
+
+### Attributes
+
+* Global Attributes
+
+<hr>
+
+## `<datalist>`
+
+contains set of `<option>` elements representing the values availabe for other controls
+
+* _parents_: any element that accepts phrasing content
+* _content_: flow, phrasing
+* _display_:
+
+### Attributes
+
+* Only Global Attributes
+
+<hr>
+
+## `<keygen>`
+
+description here
+
+* _parents_:
+* _content_:
+* _display_:
+
+### Attributes
+
+* Global Attributes
+
+<hr>
+
+## `<meter>`
+
+description here
+
+* _parents_:
+* _content_:
+* _display_:
+
+### Attributes
+
+* Global Attributes
+
+<hr>
+
+## `<optgroup>`
+
+description here
+
+* _parents_:
+* _content_:
+* _display_:
+
+### Attributes
+
+* Global Attributes
+
+<hr>
+
+## `<option>`
+
+description here
+
+* _parents_:
+* _content_:
+* _display_:
+
+### Attributes
+
+* Global Attributes
+
+<hr>
+
+## `<output>`
+
+description here
+
+* _parents_:
+* _content_:
+* _display_:
+
+### Attributes
+
+* Global Attributes
+
+<hr>
+
+## `<progress>`
+
+description here
+
+* _parents_:
+* _content_:
+* _display_:
+
+### Attributes
+
+* Global Attributes
+
+<hr>
+
+## `<select>`
+
+description here
+
+* _parents_:
+* _content_:
+* _display_:
+
+### Attributes
+
+* Global Attributes
+
+<hr>
+
+## `<textarea>`
+
+description here
+
+* _parents_:
+* _content_:
+* _display_:
+
+### Attributes
+
+* Global Attributes
+
+<hr>
+
 <hr>
 <hr>
 
