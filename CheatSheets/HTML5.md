@@ -429,10 +429,10 @@ defines a set of rows defining the head of the columns of the table
 
 ## `<tfoot>`
 
-description here
+defines a set of rows summarizing the columns of the table
 
-* _parents_:
-* _content_:
+* _parents_: a `<table>` element.  must apear after any `<caption>`, `<colgroup>`, or `<thead>` element.  Can be before or after all `<tbody>` and `<tr>` elements but not mixed in with them.
+* _content_: 0 or more `<tr>` elements
 * _display_:
 
 ### Attributes
@@ -443,10 +443,9 @@ description here
 
 ## `<tr>`
 
-description here
-
-* _parents_:
-* _content_:
+defines a row of cells in a table.  can be a mix of `<td>` and `<th>` elements
+* _parents_: a `<table>`, `<thead>`, `<tbody>`, or `<tfoot>` element
+* _content_: none
 * _display_:
 
 ### Attributes
@@ -457,57 +456,74 @@ description here
 
 ## `<td>`
 
-description here
-
-* _parents_:
-* _content_:
+defines a cell of a table that contains data.  participates in table model.
+* _parents_: a `<tr>` element
+* _content_: Flow content
 * _display_:
 
 ### Attributes
 
 * Global Attributes
+* `colspan`- contains integer value between 0-10000 that indicates how many columns the cell will be. defaults to 1.
+* `headers`- contains a list of space-separated strings corresponding to the `id` attribute of the `<th>` elements that apply to it
+* `rowspan`- contains integer value between 0-65534 that indicates how many rows the cell extends to.
 
 <hr>
 
 ## `<th>`
 
-description here
+defines a cell that is a header for a group of cells of a table.  Group of cells that it refers to is defined by `scope` and `headers` attributes
 
-* _parents_:
-* _content_:
+* _parents_: a `<tr>` element
+* _content_: phrasing
 * _display_:
 
 ### Attributes
 
 * Global Attributes
+* `colspan`- contains integer value between 0-10000 that indicates how many columns the cell will be. defaults to 1.
+* `headers`- contains a list of space-separated strings corresponding to the `id` attribute of the `<th>` elements that apply to it
+* `rowspan`- contains integer value between 0-65534 that indicates how many rows the cell extends to.
+* `scope`- defines the cels that the header defined in this `<th>` element relates to.  May have the following values:
+
+  `row`- header relates to all cells in the row that this element belongs to;
+
+  `col`- header relates to all cells in the column that this element belongs to;
+
+  `rowgroup`- header relates to all remaining cells in the row group that this element belongs to.  Remaining cells are either those to the right or left of this element depending on the value of `dir` attribute defined on `<table>` element;
+
+  `colgroup`- header relates to all remaining cells in column group that this element belongs to;
 
 <hr>
 
-## `<menu>`
+## `<menu>` !! Experimental !!
 
-description here
+represents a group of commands a user can perform or activate. includes both list menus (like at top of screen) and context menus (like under a button when it has been clicked)
 
-* _parents_:
-* _content_:
+* _parents_: Any element that accepts flow
+* _content_: if element is in the _list menu_ state: flow content or 0 or more `<li>`, `<` `script` `>`, and `<template>`
 * _display_:
 
 ### Attributes
 
 * Global Attributes
+* `label`- name of menu as shown to user.  Used within nested menus, to provide labe through whcih submenu can be accessed.  Accessed only when parent element is a `<menu>`
+* `type`- indicates kind of menu being declared.  can be either `context`:represents a group of commands activated throguh another element, like `menu` attribute of a `<button>` or an element with a contextmenu attribute or `list`: represents a series of commands for user interaction.
 
 <hr>
 
-## `<dialog>`
+## `<dialog>` !! Experimental !!
 
-description here
-
-* _parents_:
-* _content_:
+represents a dialog box or other interactive component, such as an inspector or window.  `<form>` elements can be integrated within a dialog by specifying them with attribute `method="dialog"`  When form is submitted, dialog is closed with a `returnValue` attribute set to value of the submit button used.
+* _parents_: Any element that accepts flow
+* _content_: Flow
 * _display_:
 
 ### Attributes
 
-* Global Attributes
+* Global Attributes except `tabindex`
+* `open` indicates the dialog is active and available for interaction.  When open attribute is not set, it shouldn't be shown to user.
+
 
 <hr>
 
