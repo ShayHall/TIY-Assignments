@@ -96,14 +96,48 @@ textarea {
    ========================================================================== */
 
 body {
+  width: 90%;
   color: cornflowerblue;
+  background-color: whitesmoke;
+  font-family: 'Lato', sans-serif;
 }
 
+h2, h3, h4 {
+  cursor: pointer;
+}
 
+h2::before, h3::before, h4::before {
+  content: '\21d7';
+}
 
+h2:hover::before, h3:hover::before, h4:hover::before {
+  content:'\21d8';
+}
 
+h4 {
+  color:gray;
+}
 
+h2 {
+  border-bottom: 1px solid steelgray;
 
+}
+
+ul.accordion {
+  margin: 10px 0px 10px 30px;
+}
+
+.sub-accordion {
+  margin: 7px 0px 7px 50px;
+}
+
+li {
+  list-style-type: none;
+}
+
+p {
+  color: darkgray;
+}
 
 
 
