@@ -9,7 +9,7 @@
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
-
+        <!-- <link src="js/scripts.js"></script> -->
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
@@ -21,64 +21,64 @@
 
         <!-- Add your site or application content here -->
         <header> <h1>Responsive Multi-Column Form</h1></header>
-        <section>
-          <p> FIRST NAME </p>
-          <input type="text" placeholder="Jonathan"></input>
-          <p> LAST NAME </p>
-          <input type="text" placeholder="Doe"></input>
-          <p> EMAIL ADDRESS</p>
-          <input type="email" placeholder="email@email.me"></input>
-          <p> COUNTRY </p>
-          <select>
-            <option>Choose a country</option>
-            <option>France</option>
-            <option>Italy</option>
-            <option>Portugal</option>
-          </select>
-          <p> BIOGRAPHY </p>
-          <textarea></textarea>
-        </section><!-- Column 1-->
-        <section>
-          <p> PHONE NUMBER </p>
-          <input type="text" placeholder="+351 999 999"></input>
-          <p> AFFILIATIONS </p>
-          <textarea></textarea>
-          <p> OCCCUPATION </p>
-          <select>
-            <option>Choose an occupation</option>
-            <option>Web Designer</option>
-            <option>Web Developer</option>
-            <option>Hybrid</option>
-          </select>
-          <p> CAT'S NAME </p>
-          <input type="text" placeholder="Kitty"</p></input>
-          <p> FAVORITE GADGET </p>
-          <input type="text" placeholder="Annoy-a-tron"</input>
-        </section><!-- Column 2-->
-
-        <section>
-            <p>TYPE OF TALENT</p>
-          <select>
-            <option>Choose a talent</option>
-            <option>Ninja Silence</option>
-            <option>Sumo Power</option>
-            <option>Samurai Precision</option>
-          </select>
-          <p> FAVORITE DRINK </p>
-          <input type="text" placeholder="Green Tea"></input>
-          <p> SPECIAL POWER </p>
-          <input type="text" placeholder="Anti-gravity"></input>
-          <p> WEAPON OF CHOICE </p>
-          <input type="text" placeholder="Lightsaber"></input>
-          <p> BIOGRAPHY </p>
-          <textarea></textarea>
-        </section><!-- Column 3-->
-        <footer>
-          <button>
-            <h3>BUTTON</h3>
-          </button>
-        </footer>
-
+          <form>
+            <section><!-- Column 1-->
+              <p> FIRST NAME </p>
+              <input type="text" placeholder="Jonathan" id="first_name"></input>
+              <p> LAST NAME </p>
+              <input type="text" placeholder="Doe" id="last_name"></input>
+              <p> EMAIL ADDRESS</p>
+              <input type="email" placeholder="email@email.me" id="email"></input>
+              <p> COUNTRY </p>
+              <select id="country">
+                <option>Choose a country</option>
+                <option>France</option>
+                <option>Italy</option>
+                <option>Portugal</option>
+              </select>
+              <p> BIOGRAPHY </p>
+              <textarea id="bio"></textarea>
+            </section><!-- Column 1-->
+            <section><!-- Column 2-->
+              <p> PHONE NUMBER </p>
+              <input type="text" placeholder="+351 999 999" id="phone"></input>
+              <p> AFFILIATIONS </p>
+              <textarea id="affiliations"></textarea>
+              <p> OCCCUPATION </p>
+              <select id="occupation">
+                <option>Choose an occupation</option>
+                <option>Web Designer</option>
+                <option>Web Developer</option>
+                <option>Hybrid</option>
+              </select>
+              <p> CAT'S NAME </p>
+              <input type="text" placeholder="Kitty" id="cat_name"></input>
+              <p> FAVORITE GADGET </p>
+              <input type="text" placeholder="Annoy-a-tron" id="gagdet"></input>
+            </section><!-- Column 2-->
+            <section><!-- Column 3-->
+                <p>TYPE OF TALENT</p>
+              <select id="talent">
+                <option>Choose a talent</option>
+                <option>Ninja Silence</option>
+                <option>Sumo Power</option>
+                <option>Samurai Precision</option>
+              </select>
+              <p> FAVORITE DRINK </p>
+              <input type="text" placeholder="Green Tea" id="drink"></input>
+              <p> SPECIAL POWER </p>
+              <input type="text" placeholder="Anti-gravity" id="power"></input>
+              <p> WEAPON OF CHOICE </p>
+              <input type="text" placeholder="Lightsaber" id="weapon"></input>
+              <p> comments </p>
+              <textarea id="comments"></textarea>
+            </section><!-- Column 3-->
+            <footer>
+              <button type="submit">
+                <h3 id="submit">BUTTON</h3>
+              </button>
+            </footer>
+          </form>
 
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -94,6 +94,6 @@
             e.src='https://www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-        </script>
+
     </body>
 </html>
