@@ -360,10 +360,9 @@ contains set of `<option>` elements representing the values availabe for other c
 
 ## `<caption>`
 
-description here
-
-* _parents_:
-* _content_:
+represents the title of a table
+* _parents_: always first descendent of a `<table>`
+* _content_: flow 
 * _display_:
 
 ### Attributes
@@ -374,10 +373,10 @@ description here
 
 ## `<col>`
 
-description here
+defines a column within a table and used for defining common demantics on all common cells.  Usually found within `<colgroup>` element
 
-* _parents_:
-* _content_:
+* _parents_: `<colgroup>` only, but can be implicitly defined as its start tag is not manditory.
+* _content_: none
 * _display_:
 
 ### Attributes
