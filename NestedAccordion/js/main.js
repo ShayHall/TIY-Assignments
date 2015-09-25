@@ -1,4 +1,4 @@
-var nest = document.querySelector(".accordion");
+var nest = document.querySelector(".accord-trig");
 
 nest.addEventListener("click", function() {
   console.log("Sandy Tracy!");
