@@ -1,45 +1,55 @@
-/* View Mode Switch Styles.css*/
+/* View Mode Switch stylesheet*/
 
 /*** START Global Selectors --> ***/
 
-div {
+  /*** <-- START Header ***/
+header {
+  color: #02639d;
+}
+  /*** <-- END Header ***/
+
+body {
+  font-family: "Lato" sans-serif;
   background-color: #fff;
 }
 
 li {
-  list-style: none;
   text-align: center;
+  list-style: none;
 }
 /*** <-- END Global Selectors ***/
 
+
+
+/*** <-- START JS Switch ***/
+
+
+
+/*** <-- END JS Switch ***/
+
 /*** START Top Buttons --> ***/
+
 
 .cbp-vm-options {
   text-align: right;
   padding-bottom: 10px;
   border-bottom: 3px solid #47a3da;
-  a:before {
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    display: inline-block;
-  }
+    a {
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      display: inline-block;
+      font-family: 'fontawesome';
+      color: #02639d;
+        .cbp-vm-list::before {
+          content: "\f00b";
+        }
+        .cbp-vm-grid::before {
+          content: '\f00a';
+        }
+    }
 }
 
-.cbp-vm-list::before { /* List button passive*/
-  content: '\25a6';
-  font-size: 250%;
-  margin: 20px;
-  color: #02639d;
-}
-a.cbp-vm-icon.cbp-vm-grid::before { /* Grid button passive*/
-  content: '\25a4';
-  font-size: 250%;
-  margin: 20px;
-  color: #02639d;
-  .cbp-vm-grid.cbp-vm-selected::before { /* Active Button Color */
-  }
-}
 /*** <-- END Top Buttons ***/
 
 /*** START List View Selectors --> ***/
@@ -79,8 +89,6 @@ a.cbp-vm-icon.cbp-vm-grid::before { /* Grid button passive*/
 
 /*** <-- END List View Selectors ***/
 
-
-
 /*** START Grid View Selectors --> ***/
 
 .grid {
@@ -97,54 +105,7 @@ li::before {
     width:auto;
 }
 
-[class*='col-'] {
-  float:left;
-  padding-right: 20px;
-  :last-of-type {
-    padding-right: 0;
-  }
-}
-
-
-
-.col-1 {
-  width:33.33%;
-  padding-right: 20px;
-}
-
-.col-2 {
-  width:33.33%;
-  padding-right: 20px;
-}
-
-.col-3 {
-  width: 33.33%;
-  padding-right: 0;
-}
-
-.grid::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.grid-pad {
-  padding: 20px;
-  [class*='col-']:last-of-type {
-    padding-right:20px;
-  }
-}
 /*** <-- END Grid View Selectors ***/
 
-
-/*** START Switch View Effects FIX NAME OF CLASS!--> ***/
-
-// .list-pad {
-//   display: none;
-// }
-//
-// .grid-pad {
-//    display:none;
-// }
 
 /*** <-- END Switch View Effects ***/
