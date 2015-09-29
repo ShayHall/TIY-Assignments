@@ -112,3 +112,21 @@ Here you can see that you the next page is page 2 and there are 33 more pages to
 Link: <https://api.github.com/search/code?q=addClass+user%3Amozilla&page=2>; rel="next",
   <https://api.github.com/search/code?q=addClass+user%3Amozilla&page=34>; rel="last"
 ```
+
+
+
+
+    What are the endpoints for fetching...
+        the profile data for a user?
+        the organizations a user belongs to?
+        the repositories a user has created?
+        a filtered list of repositories?
+        a sorted list of repositories?
+        public events for a user?
+    When fetching public events for a user...
+        How many results are returned by default?
+        What limitations exist on fetching more results?
+        What is the basic structure of the results?
+        What fields are included in each result?
+        What are the data types for each field?
+        What are some of the different values for the type field?
