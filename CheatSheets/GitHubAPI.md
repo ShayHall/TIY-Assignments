@@ -112,3 +112,98 @@ Here you can see that you the next page is page 2 and there are 33 more pages to
 Link: <https://api.github.com/search/code?q=addClass+user%3Amozilla&page=2>; rel="next",
   <https://api.github.com/search/code?q=addClass+user%3Amozilla&page=34>; rel="last"
 ```
+
+## [Endpoints](https://developer.github.com/v3/enterprise/#endpoint-urls)
+Endpoints are any URL that returns info.
+
+>What are the endpoints for fetching the profile data for a user?
+
+```
+https://api.github.com/users/USERNAME
+```
+
+>What are the endpoints for fetching the organizations a user belongs to?
+
+```
+https://api.github.com/users/USERNAME/orgs
+```
+
+>What are the endpoints for fetching the repositories a user has created?
+
+```
+https://api.github.com/users/USERNAME/repos
+```
+>What are the endpoints for fetching a filtered list of repositories?
+
+Repositories can be filtered by `visibiity`, `affiliation`, `type`, or `direction`
+
+>What are the endpoints for fetching a sorted list of repositories?
+
+???
+
+>What are the endpoints for fetching public events for a user?
+
+```
+https://api.github.com/users/**username**/events/public
+```
+
+## [Public Event](https://developer.github.com/v3/activity/events/)
+
+>When fetching public events for a user: How many results are returned by default?
+
+30 items is the default with up to 10 pages supported for a total of 300.
+
+>When fetching public events for a user: What limitations exist on fetching more results?
+
+Events expire after 90 days.
+
+>When fetching public events for a user: What is the basic structure of the results?
+```
+Status: 200 OK
+Link: <https://api.github.com/resource?page=2>; rel="next",
+      <https://api.github.com/resource?page=5>; rel="last"
+X-RateLimit-Limit: 5000
+X-RateLimit-Remaining: 4999
+```
+
+>When fetching public events for a user: What fields are included in each result?
+
+```
+[
+  {
+    "type": "Event",
+    "public": true,
+    "payload": {
+    },
+    "repo": {
+      "id": 3,
+      "name": "octocat/Hello-World",
+      "url": "https://api.github.com/repos/octocat/Hello-World"
+    },
+    "actor": {
+      "id": 1,
+      "login": "octocat",
+      "gravatar_id": "",
+      "avatar_url": "https://github.com/images/error/octocat_happy.gif",
+      "url": "https://api.github.com/users/octocat"
+    },
+    "org": {
+      "id": 1,
+      "login": "github",
+      "gravatar_id": "",
+      "url": "https://api.github.com/orgs/github",
+      "avatar_url": "https://github.com/images/error/octocat_happy.gif"
+    },
+    "created_at": "2011-09-06T17:26:27Z",
+    "id": "12345"
+  }
+]
+```
+
+>When fetching public events for a user: What are the data types for each field?
+
+All fields are "strings" except `id` is a Number and `public is a Boolean.
+
+>When fetching public events for a user: What are some of the [different values](https://developer.github.com/v3/activity/events/types/) for the type field?
+
+Sting, object, array, integer, url, boolean
