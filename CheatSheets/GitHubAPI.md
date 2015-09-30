@@ -207,3 +207,23 @@ All fields are "strings" except `id` is a Number and `public is a Boolean.
 >When fetching public events for a user: What are some of the [different values](https://developer.github.com/v3/activity/events/types/) for the type field?
 
 Sting, object, array, integer, url, boolean
+
+
+
+
+
+>How can I use the Github API to get all the comments for a particular issue?
+
+>How can I use the Github API to add a comment to an issue?
+
+
+>How can I use the jQuery API to get the HTML contents of an element?
+
+>How can I use the jQuery API to create a new HTML element?
+
+>How can I use the jQuery API to add an HTML element to the page?
+
+
+>How can I use the Lodash API to replace placeholders with values from an object?
+
+>How can I use the Lodash API to repeat code for every item of an array
