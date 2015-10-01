@@ -230,11 +230,20 @@ POST /repos/:owner/:repo/issues/:number/comments
 
 To get the HTML contents of the _first_ element in the set of matched elements: `.html()`
 
->How can I use the jQuery API to create a new HTML element?
+To get the HTML contents of _each_ element in the set of matched elements: `.html(htmlString)`
 
->How can I use the jQuery API to add an HTML element to the page?
+>How can I use the jQuery API to create a new HTML element?
+Using `.add(elements)` with one or more elements as arguments.
+
+>How can I use the jQuery API to [add an HTML element](https://api.jquery.com/category/manipulation/dom-insertion-inside/) to the page?
+
+`.append()`, `.appendTo()`, `.prepend()` or `.prependTo()`
 
 
 >How can I use the Lodash API to replace placeholders with values from an object?
 
+`_.bind`, `_.curry`, and `_.partial` can all serve as placeholders.
+
 >How can I use the Lodash API to repeat code for every item of an array
+
+`_.forEach(collection, [iteratee=_.identity], [thisArg])` where `collection` is the array to iterate over, `iteratee=_.identity` is the function invoked on each item, and `thisArg` binds the iteratee to `this`
