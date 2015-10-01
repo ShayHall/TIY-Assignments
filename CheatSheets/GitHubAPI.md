@@ -214,10 +214,21 @@ Sting, object, array, integer, url, boolean
 
 >How can I use the Github API to get all the comments for a particular issue?
 
+Issue Comments are ordered by ascending ID.  You can filter the search using `since` with will only give comments after a designated date.
+```
+GET /repos/:owner/:repo/issues/:number/comments
+```
+
 >How can I use the Github API to add a comment to an issue?
+
+```
+POST /repos/:owner/:repo/issues/:number/comments
+```
 
 
 >How can I use the jQuery API to get the HTML contents of an element?
+
+To get the HTML contents of the _first_ element in the set of matched elements: `.html()`
 
 >How can I use the jQuery API to create a new HTML element?
 
