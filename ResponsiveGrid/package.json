@@ -1,0 +1,17 @@
+{
+  "name": "responsivegrid",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "browser-sync start --server --startPath tests.html --files='js/*.js'",
+    "start": "browser-sync start --server --startPath='index.html' --files='index.html,css/*.css,js/*.js'",
+    "sass": "node-sass --output css/ scss/main.scss",
+    "sass:watch": "npm run sass -- --watch"  },  
+    "devDependencies": {
+    "browser-sync": "^2.9.7",
+    "node-sass": "^3.3.3"
+  },
+  "author": "ShayHall <shayhall@nccumc.org>",
+  "license": "ISC"
+}
