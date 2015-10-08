@@ -4,14 +4,14 @@ section {
   li {
   box-sizing: border-box;
   display: block;
-  width: 16.66%;
-  height: 220px;
+  float:left;
+  width: 50%;
   list-style-type: none;
   position: relative;
   background-color: teal;
     img {
       width:100%;
-      display: inline;
+      display: block;
     }
     div {
       box-sizing: border-box;
@@ -25,6 +25,9 @@ section {
       background-color: rgba(71,163,218, 0);
         h1 {
           color:rgba(255,255,255, 0);
+          font-size: 5vw;
+          text-align: center;
+          margin: 50% 25%;
         }
     }
     div:hover {
