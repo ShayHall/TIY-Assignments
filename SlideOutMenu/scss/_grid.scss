@@ -38,6 +38,10 @@ a[href] {
   }
 }
 
-
-    // content: '\2353'; //chevron down for active
-    // color: #02639d; //for active
+a[href].dropdown.active {
+  color: #02639d; //for active
+  &::after {
+    content: '\2353'; //chevron down for active
+    color: #02639d; //for active
+  }
+}
