@@ -1,0 +1,18 @@
+ul.dropdown {
+  display:none;
+  &.active li{
+    // box-sizing: border-box;
+    // display: block;
+    // width:100%;
+    color: $gray-light;
+    border-bottom: 1px solid lighten($gray-light, 12%);
+    img {
+      display: inline-block;
+      max-width: 100%;
+      max-height: 50px;
+    }
+    h3 {
+      display: inline-block;
+    }
+  }
+}
