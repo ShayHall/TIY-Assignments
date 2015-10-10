@@ -1,5 +1,7 @@
 $("a.dropdown").click(function(){
   $(this).toggleClass("active");
-  $(".dropdown").not(this).has(".active").removeClass("active");
   $(this).siblings().toggleClass("active");
+  $("a.dropdown").not(this).removeClass("active");
+  $("a.dropdown").not(this).siblings().removeClass("active");
+
 });
