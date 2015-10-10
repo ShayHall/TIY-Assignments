@@ -1,0 +1,6 @@
+ul.dropdown {
+  display:none;
+  &.active {
+    display: block;
+  }
+}
