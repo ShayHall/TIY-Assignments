@@ -1,0 +1,41 @@
+section {
+  box-sizing: border-box;
+  width: 100%;
+  li {
+  box-sizing: border-box;
+  display: block;
+  float:left;
+  width: 50%;
+  list-style-type: none;
+  position: relative;
+  background-color: teal;
+    img {
+      width:100%;
+      display: block;
+    }
+    div {
+      box-sizing: border-box;
+      position: absolute;
+      display: inline;
+      visibility:visible;
+      width:80%;
+      height:80%;
+      margin:10%;
+      top: 10px;
+      background-color: rgba(71,163,218, 0);
+        h1 {
+          color:rgba(255,255,255, 0);
+          font-size: 5vw;
+          text-align: center;
+          margin: 50% 25%;
+        }
+    }
+    div:hover {
+      visibility: visible;
+      background-color: rgba(71,163,218, 0.3);
+        h1 {
+          color:rgba(255,255,255, 1);
+        }
+    }
+  }
+}
