@@ -1,0 +1,92 @@
+@media (min-width: 851px) {
+  ul.dropdown {
+    display:none;
+    top:0;
+  }
+  li.grid {
+    box-sizing: border-box;
+    background-color: $gray-lighter;
+    margin: 0;
+    width: 100%;
+    ul.dropdown.active {
+      width: 100%;
+      margin: 0 auto;
+      position:absolute;
+      top: 62px;
+      left: 0;
+      right:0;
+      li {
+        margin: 0 auto;
+        width: 100% * (3/12);
+        display: inline-block;
+        margin-top: 15px;
+        border-bottom: 0px;
+      }
+      li.content {
+        margin: 0 auto;
+        width: 98% * (1/6);
+        display: inline-block;
+        margin-top: 15px;
+      }
+    }
+  }
+
+//////
+
+  ul.active div {
+    &.lovely-spirits{
+      left: 9%;
+    }
+    &.delicious-beverages{
+      left: 29%;
+    }
+    &.fine-liquors{
+      left: 49%;
+    }
+  }//caret
+
+  a[href] {
+    float:left;
+    width: 100% * (1/5);
+    position: relative;
+    font-size: 0.9em;
+    padding: 7px 0 11px;
+    &:hover {
+      color: #02639d;
+    }
+    &.dropdown {
+      &::before {
+        content: '\234c';
+        font-size: 145%;
+      }
+      &::after {
+        content: none;
+      }
+      &:hover::before {
+        color: #02639d;
+      }
+      &.active {
+        &::after {
+          content: none;
+        }
+        &.no::after {
+        content: none;
+        }
+      &::before {
+        content: '\2353'; //chevron down for active
+        color: #02639d; //for active
+      }
+      } // &::active
+    } // &.dropdown
+    &.no.dropdown {
+      &::before {
+      color:#47a3da;
+      top:10%;
+      bottom: 10%;
+      }
+      &:hover::before {
+        color:#47a3da;
+      }
+    } // .no.dropdown
+  } // a[href]
+} // @media
