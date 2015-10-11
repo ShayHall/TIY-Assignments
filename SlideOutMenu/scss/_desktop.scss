@@ -1,40 +1,4 @@
 @media (min-width: 851px) {
-  ul.dropdown.active {
-    box-sizing: border-box;
-    position:absolute;
-    top: 62px;
-    left: 0;
-    right:0;
-    background-color: $gray-lighter;
-  }
-  ul.dropdown {
-    display:none;
-    position: relative;
-    &.active li{
-      box-sizing: border-box;
-      display: block;
-      width:100% ;
-      position: relative;
-      color: $gray-light;
-      border-bottom: 1px solid lighten($gray-light, 12%);
-      img {
-        display: inline-block;
-        position: absolute;
-        opacity: 1;
-        bottom: 5px;
-        max-width: 100%;
-        max-height: 85%;
-      }
-      h3 {
-        display: inline-block;
-        font-size: 1.1em;
-        padding:7px 15%;
-      }
-    }
-  }
-
-
-/////////
   li.grid {
     box-sizing: border-box;
     background-color: $gray-lighter;
@@ -43,96 +7,82 @@
     ul.dropdown.active {
       width: 100%;
       margin: 0 auto;
-      li{
+      position:absolute;
+      top: 62px;
+      left: 0;
+      right:0;
+      li {
         margin: 0 auto;
         width: 100% * (3/12);
         display: inline-block;
         margin-top: 15px;
         border-bottom: 0px;
       }
-      li.content{
+      li.content {
         margin: 0 auto;
         width: 98% * (1/6);
         display: inline-block;
         margin-top: 15px;
       }
-      img {
-        position: static;
-        display: inline-block;
-        width: 80%;
-        margin-left:10%;
-        margin-right: 10%;
-        margin-bottom: -20px;
-        margin-top: 20px;
-      }
-      h3 {
-        box-sizing: border-box;
-        margin:0;
-        margin-bottom: 5px;
-        padding: 30px 0;
-        font-size: .9em;
-        width: auto;
-        text-align: center;
-        display: block;
-      }
     }
   }
 
-
-
 //////
 
+  ul.active div {
+    &.lovely-spirits{
+      left: 9%;
+    }
+    &.delicious-beverages{
+      left: 29%;
+    }
+    &.fine-liquors{
+      left: 49%;
+    }
+  }//caret
 
-
-
-
-ul.active div{
-  position: absolute;
-  left: 46%;
-  right:46%;
-  top: -5px;
-  width: 0;
-  height: 0;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-top: 15px solid #47a3da;
-}//caret
-
-
-a[href] {
-  display: block;
-  float:left;
-  width: 100% * (1/5);
-  position: relative;
-  font-size: 0.9em;
-  padding: 7px 0 11px;
-  &.dropdown::before {
-    content: '\234c';//chevron up
-    font-size: 145%;
-    color:#53BFFF;
-    position:relative;
-    left:-5px;
-    top:10%;
-    bottom: 10%;
-  }
-  &.dropdown::after {
-    content: none;//chevron up
-  }
-  &.no.dropdown::before {
-    color:#47a3da;
-    top:10%;
-    bottom: 10%;
-  }
-  &:hover {
-    color: #02639d;
-  }
-  &.dropdown:hover::before {
-    color: #02639d;
-  }
-  &.no.dropdown:hover::before {
-    color:#47a3da;
-  }
-}
-
-
-}//END @media
+  a[href] {
+    float:left;
+    width: 100% * (1/5);
+    position: relative;
+    font-size: 0.9em;
+    padding: 7px 0 11px;
+    &:hover {
+      color: #02639d;
+    }
+    &.dropdown {
+      &::before {
+        content: '\234c';
+        font-size: 145%;
+      }
+      &::after {
+        content: none;
+      }
+      &:hover::before {
+        color: #02639d;
+      }
+      &.active {
+        &::after {
+          content: none;
+        }
+        &.no::after {
+        content: none;
+        }
+      &::before {
+        content: '\2353'; //chevron down for active
+        color: #02639d; //for active
+      }
+      } // &::active
+    } // &.dropdown
+    &.no.dropdown {
+      &::before {
+      color:#47a3da;
+      top:10%;
+      bottom: 10%;
+      }
+      &:hover::before {
+        color:#47a3da;
+      }
+    } // .no.dropdown
+  } // a[href]
+} // @media
