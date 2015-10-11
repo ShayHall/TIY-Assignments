@@ -1,0 +1,9 @@
+ul.dropdown {
+  display:none;
+  &.active {
+    box-sizing: border-box;
+    display: block;
+    width:100%;
+    background-color: $gray-lighter;
+  }
+}
