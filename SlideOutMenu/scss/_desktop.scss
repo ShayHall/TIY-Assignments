@@ -1,4 +1,8 @@
 @media (min-width: 851px) {
+  ul.dropdown {
+    display:none;
+    top:0;
+  }
   li.grid {
     box-sizing: border-box;
     background-color: $gray-lighter;
