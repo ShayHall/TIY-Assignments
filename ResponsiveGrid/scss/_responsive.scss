@@ -1,0 +1,31 @@
+@media (min-width: 0) {
+  section li {
+    $X:2;
+    width: 100% * (1/$X);
+  }
+}
+@media (min-width: 401px) {
+  section li {
+    $X:3;
+    width: 100% * (1/$X);
+  }
+}
+
+@media (min-width: 726px) {
+  section li {
+    $X:4;
+    width: 100% * (1/$X);
+  }
+}
+@media (min-width: 1001px) {
+  section li {
+    $X:5;
+    width: 100% * (1/$X);
+  }
+}
+@media (min-width: 1213px) {
+  section li {
+    $X:6;
+    width: 100% * (1/$X);
+  }
+}
