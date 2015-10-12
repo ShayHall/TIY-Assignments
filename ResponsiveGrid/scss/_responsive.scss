@@ -1,31 +1,27 @@
-@media (min-width: 0) {
-  section li {
-    $X:2;
-    width: 100% * (1/$X);
-  }
-}
-@media (min-width: 401px) {
-  section li {
-    $X:3;
-    width: 100% * (1/$X);
+@mixin n-columns-min($width, $nCats){
+  @media (min-width: $width){
+    width: 100% * (1/$nCats);
   }
 }
 
-@media (min-width: 726px) {
-  section li {
-    $X:4;
-    width: 100% * (1/$X);
-  }
-}
-@media (min-width: 1001px) {
-  section li {
-    $X:5;
-    width: 100% * (1/$X);
-  }
-}
-@media (min-width: 1213px) {
-  section li {
-    $X:6;
-    width: 100% * (1/$X);
-  }
+// @mixin n-columns-max($width, $nCats){
+//   @media (max-width: $width){
+//     width: 100% * (1/$nCats);
+//   }
+// }
+
+section li {
+  width: 100% * (1/2); // Default at Mobile
+
+  @include n-columns-min(401px, 3);
+  @include n-columns-min(726px, 4);
+  @include n-columns-min(1001px, 5);
+  @include n-columns-min(1213px, 6);
+
+  // @import n-columns-max(401px, 3);
+  // @import n-columns-max(726px, 4);
+  // @import n-columns-max(1001px, 5);
+  // @import n-columns-max(1213px, 6);
+  //
+  // width: 100% * (1/6); // Default at Desktop
 }
