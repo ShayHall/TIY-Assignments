@@ -48,3 +48,43 @@ The locale information to be submitted as a pipe delimited tuple of 3 elements:
 * Currency
 * Language
 * Region
+
+
+  * What Resource in the API represents an individual product?
+`fields` and `associations`
+
+  * What Resource in the API represents a group or collection of products?
+`associations`  
+
+  * What Resource in the API represents images associated with a product?
+loads only first image (limit 1, offset 0): `/v2/listings/active?includes=Images:1:0`
+
+  * [What Resource in the API represents sizes and colors for a product?](https://www.etsy.com/developers/documentation/reference/variations_property)
+`variations_property`
+
+  * **What actions and endpoints exist for each of these Resources?**
+
+
+  * **What parameters do each endpoint require or accept?**
+  * What fields are returned for each Resource, specifically, an individual product?
+  * What fields are returned for each Resource, specifically, a group or collection of products?
+  * **What _additional_ fields can be requested for each?**
+
+
+* For the product list (category) page what data is needed from...
+  * the `Listing` resource?
+  * the `ListingImage` resource?
+  * the `Variations_*` resources?
+  * the `Category` resource?
+  * the `Shop` resource?
+* On the product detail page what data is needed from...
+  * the `Listing` resource?
+  * the `ListingImage` resource?
+  * the `Variations_*` resources?
+  * the `Category` resource?
+  * the `Shop` resource?
+* Identified for each:
+  * API endpoint
+  * required query params
+  * additional params needed (`fields`, `includes`)
+  * sample data returned
