@@ -27,6 +27,9 @@
         width: 98% * (1/6);
         display: inline-block;
         margin-top: 15px;
+        &.first {
+          margin-left:  98% * (3/12);
+        }
       }
     }
   }
